@@ -1,0 +1,55 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block pageContent %}
+<div class="items-center max-w-6xl mx-auto px-6 my-12">
+    <h1 class="text-4xl font-bold md:text-5xl">Resources</h1>
+
+    <h2 class="bg-blue-900 py-1 px-2 text-xl text-white mt-8 rounded md:text-2xl">DTI - Business Name Registration Forms</h2>
+    <div class="space-y-4 mt-2">
+        <a class="text-lg text-sky-700 hover:text-blue-950 hover:underline" href="{% static 'downloads/BN-Application-Form.pdf' %}" target="_blank">
+            <p>Business Name Application Form (New/Renewal)</p>
+        </a>
+        <a class="text-lg text-sky-700 hover:text-blue-950 hover:underline" href="{% static 'downloads/Other-BN-Form.pdf' %}" target="_blank">
+            <p>Other Business Name-Related Application Form</p>
+        </a>
+    </div>
+
+    <h2 class="bg-blue-900 py-1 px-2 text-xl text-white mt-8 rounded md:text-2xl">Barangay Micro Business Enterprise Application Forms</h2>
+    <div class="space-y-4 mt-2">
+        <a class="text-lg text-sky-700 hover:text-blue-950 hover:underline" href="{% static 'downloads/BMBE-Application-Form.pdf' %}" target="_blank">
+            <p>BMBE Application Form (New/Renewal)</p>
+        </a>
+        <a class="text-lg text-sky-700 hover:text-blue-950 hover:underline" href="{% static 'downloads/breakdown-of-asset.pdf' %}" target="_blank">
+            <p>Breakdown of Asset Form</p>
+        </a>
+    </div>
+
+    <h2 class="bg-blue-900 py-1 px-2 text-xl text-white mt-8 rounded md:text-2xl">Consumer Complaint Forms</h2>
+    <div class="space-y-4 mt-2">
+        <a class="text-lg text-sky-700 hover:text-blue-950 hover:underline" href="{% static 'downloads/Initial-Complaint-Form.pdf' %}" target="_blank">
+            <p>Initial Consumer Complaint Form</p>
+        </a>
+    </div>
+
+    <h2 class="bg-blue-900 py-1 px-2 text-xl text-white mt-8 rounded md:text-2xl">Repair Shop Accreditation Forms</h2>
+    <div class="space-y-4 mt-2">
+        <a class="text-lg text-sky-700 hover:text-blue-950 hover:underline" href="{% static 'downloads/Application-Form-and-Warranty-Undertaking.pdf' %}" target="_blank">
+            <p>Application Form and Warranty Undertaking</p>
+        </a>
+        <a class="text-lg text-sky-700 hover:text-blue-950 hover:underline" href="{% static 'downloads/SRE-Evaluation-Sheet.pdf' %}" target="_blank">
+            <p>Service and Repair Enterprise Evaluation Sheet</p>
+        </a>
+        <a class="text-lg text-sky-700 hover:text-blue-950 hover:underline" href="{% static 'downloads/Biodata.pdf' %}" target="_blank">
+            <p>Bio-Data</p>
+        </a>
+    </div>
+
+    <h2 class="bg-blue-900 py-1 px-2 text-xl text-white mt-8 rounded md:text-2xl">Sales Promotion Application Forms</h2>
+    <div class="space-y-4 mt-2">
+        <a class="text-lg text-sky-700 hover:text-blue-950 hover:underline" href="{% static 'downloads/SP-Application-Form.pdf' %}" target="_blank">
+            <p>SP Application Form</p>
+        </a>
+    </div>
+</div>
+{% endblock pageContent %}
