@@ -42,7 +42,19 @@ module.exports = {
         // '../../**/*.py'
     ],
     theme: {
-        extend: {},
+        extend: {
+            colors: {
+                blueGreen: '#025464',
+                myOrange: '#E57C23',
+                myMustard: '#E8AA42',
+                cream: '#F8F1F1',
+                
+                myNavy: '#142850',
+                paleBlue: '#27496D',
+                turquoise: '#0C7B93',
+                skyBlue: '#0C7B93',
+            }
+        },
     },
     plugins: [
         /**
