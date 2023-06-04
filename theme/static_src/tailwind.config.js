@@ -52,7 +52,7 @@ module.exports = {
                 myNavy: '#142850',
                 paleBlue: '#27496D',
                 turquoise: '#0C7B93',
-                skyBlue: '#0C7B93',
+                skyBlue: '#00A8CC',
             }
         },
     },
