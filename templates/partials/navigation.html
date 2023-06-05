@@ -22,11 +22,12 @@
             </a>
 
             <!--Menu Icon-->
-            <div id="menuButton" onclick="toggleAltNavigation()" class="group cursor-pointer flex flex-col justify-center items-center space-y-1 md:hidden">
-                <span class="h-1 w-6 rounded bg-blue-950 group-hover:bg-blue-500"></span>
-                <span class="h-1 w-6 rounded bg-blue-950 group-hover:bg-blue-500"></span>
-                <span class="h-1 w-6 rounded bg-blue-950 group-hover:bg-blue-500"></span>
+            <div id="menuButton" onclick="toggleAltNavigation()" class="focus:outline-none active:ring-2 focus:ring-skyBlue group cursor-pointer flex flex-col justify-center items-center space-y-1 md:hidden">
+                <span class="h-1 w-6 rounded bg-myNavy group-hover:bg-paleBlue"></span>
+                <span class="h-1 w-6 rounded bg-myNavy group-hover:bg-paleBlue"></span>
+                <span class="h-1 w-6 rounded bg-myNavy group-hover:bg-paleBlue"></span>
             </div>
+
             <!--Alt Navigation-->
             <div id="altNavigation" class="hidden absolute divide-y top-5 right-8 h-auto w-48 bg-turquoise shadow flex-col justify-center rounded-lg text-lg font-bold text-white text-center md:hidden">
                 <a class="px-2 py-1 hover:rounded-md hover:bg-skyBlue min-w-full mx-auto" href="{% url 'home' %}">Home</a>

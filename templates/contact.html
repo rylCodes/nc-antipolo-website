@@ -3,7 +3,7 @@
 
 {% block pageContent %}
 <div class="max-w-6xl mx-auto px-6 my-12">
-    <h1 class="font-bold text-4xl lg:text-5xl">Contact</h1>
+    <h1 class="text-myNavy font-bold text-4xl lg:text-5xl">Contact</h1>
     
     <div class="container flex flex-col justify-between items-center mx-auto mt-8 space-y-8 space-x-0 md:flex-row md:space-x-12 md:space-y-0 md:items-start">
         <div class="max-w-lg px-4 py-2 md:w-1/2">
@@ -11,18 +11,18 @@
                 Please don't hesitate to leave us a message. We value your feedback.</p>
             <form action="" method="POST" class="mt-6">
                 <p class="mt-2 text-lg font-bold">Full Name:</p>
-                <input class="rounded w-full" type="text" name="fullname" id="" required>
+                <input class="rounded w-full focus:outline-none focus:ring-1 focus:ring-skyBlue" type="text" name="fullname" id="" required>
                 <p class="mt-2 text-lg font-bold">Business Name:</p>
-                <input class="rounded w-full" type="text" name="fullname" id="" placeholder="Enter your business name if any.">
+                <input class="rounded w-full focus:outline-none focus:ring-1 focus:ring-skyBlue" type="text" name="fullname" id="" placeholder="Enter your business name if any.">
                 <p class="mt-2 text-lg font-bold">Address:</p>
-                <input class="rounded w-full" type="text" name="fullname" id="">
+                <input class="rounded w-full focus:outline-none focus:ring-1 focus:ring-skyBlue" type="text" name="fullname" id="">
                 <p class="mt-2 text-lg font-bold">Email:</p>
-                <input class="rounded w-full" type="email" name="email" id="email" placeholder="sample@gmail.com">
+                <input class="rounded w-full focus:outline-none focus:ring-1 focus:ring-skyBlue" type="email" name="email" id="email" placeholder="sample@gmail.com">
                 <p class="mt-2 text-lg font-bold">Contact number:</p>
-                <input class="rounded w-full" type="number" name="contact" id="contact" required>
+                <input class="rounded w-full focus:outline-none focus:ring-1 focus:ring-skyBlue" type="number" name="contact" id="contact" required>
                 <p class="text-lg font-bold mt-2">Your comment/suggestion:</p>
                 <textarea class="rounded mt-2 w-full h-36" type="text" name="message" id="message" required placeholder="Type your comment/suggestion here..."></textarea><br>
-                <button class="font-bold rounded py-2 px-4 bg-turquoise text-white hover:bg-skyBlue" type="submit">
+                <button class="font-bold text-sm rounded py-2 px-4 bg-turquoise text-white hover:bg-skyBlue" type="submit">
                     SUBMIT</button>
             </form>
         </div>
@@ -49,13 +49,13 @@
 
                 <div class="flex justify-center px-4 py-2 mt-4 space-x-4">
                     <a href="https://www.facebook.com/negosyocenterantipolocity" target="_blank">
-                        <img class="h-14 w-auto hover:scale-110" src="{% static 'img/social_media/facebook.png' %}" alt="">
+                        <img class="h-14 w-auto hover:scale-105" src="{% static 'img/social_media/facebook.png' %}" alt="">
                     </a>
                     <a href="#">   
-                        <img class="h-14 w-auto hover:scale-110" src="{% static 'img/social_media/instagram.png' %}" alt="">
+                        <img class="h-14 w-auto hover:scale-105" src="{% static 'img/social_media/instagram.png' %}" alt="">
                     </a>
                     <a href="#">
-                        <img class="h-14 w-auto hover:scale-110" src="{% static 'img/social_media/twitter.png' %}" alt="">
+                        <img class="h-14 w-auto hover:scale-105" src="{% static 'img/social_media/twitter.png' %}" alt="">
                     </a>
                 </div>
                 <p class="mt-4 text-gray-500 text-center">Weekdays: 8:00 am - 5:00 pm, excluding holidays.</p>

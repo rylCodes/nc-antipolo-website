@@ -5,19 +5,19 @@
         <section>
             <div class="max-w-6xl mx-auto px-6 mt-12">
                 <!--Heading-->
-                <h1 class="text-4xl font-bold lg:text-5xl">About Negosyo Center Antipolo</h1>
+                <h1 class="text-myNavy text-4xl font-bold lg:text-5xl">About Negosyo Center Antipolo</h1>
 
                 <!--Flex Container-->
-                <div class="container flex flex-col mt-8 justify-between items-center space-y-4 lg:space-y-0 lg:space-x-4 lg:flex-row lg:justify-evenly">
+                <div class="container flex flex-col mt-8 mx-auto items-center space-y-4 max-w-6xl space-x-0 lg:space-y-0 lg:space-x-4 lg:flex-row">
                     <!--Left Item-->
-                    <div class="lg:w-2/3 shadow">
-                        <video controls>
+                    <div class="lg:w-3/5">
+                        <video controls poster="{% static 'img/video-thumbnail.png' %}">
                             <source src="{% static 'media/about-negosyo-center.mp4' %}" type="video/mp4">
                             Your browser does not support the video tag.
                         </video>                          
                     </div>
                     <!--Right Item-->
-                    <div class="flex-1 space-y-6 ">
+                    <div class="space-y-6 lg:w-2/5">
                         <p class="text-justify">
                             Negosyo Center Antipolo is one of the satelite offices of the Department of Trade and Industry - Rizal, that caters to the needs of aspiring entrepreneurs and existing micro, small and medium enterprises (MSMEs) in Antipolo City.
                         </p>
@@ -30,7 +30,7 @@
                     </div>
                 </div>
 
-                <div class="flex flex-col mx-auto mt-6 space-y-6">
+                <div class="flex flex-col mx-auto mt-6 space-y-6 lg:max-w-full">
                     <p class="text-justify">
                         The highly trained and experienced business counselors are committed to providing quality and responsive services to clients.
                         NC-Antipolo also collaborates with government agencies, non-government organizations, and private sector partners to provide clients with more comprehensive and effective support.
@@ -44,24 +44,21 @@
         </section>
 
         <!--Partners-->
-        <section class="bg-blue-900 mt-12">
-            <div class="container flex flex-col items-center py-3 max-w-6xl mx-auto px-6 space-y-4 lg:items-start">
-                <div class="flex flex-col items-center space-y-10 md:space-y-0 md:space-x-8 md:flex-row md:items-start">
-                    <h2 class="text-3xl font-bold text-white self-center"> Partners:</h3>
-                    <a href="https://www.facebook.com/DTIRizalProvincial" target="_blank">
-                        <img class="rounded h-32 w-auto hover:scale-110" src="{% static 'img/dti-rizal.jpg' %}" alt="DTI-Rizal Logo">
-                    </a>
-                    <a href="https://antipoloonline.egapsonline.com/antipoloos/public/login" target="_blank">
-                        <img class="h-32 w-auto hover:scale-110" src="{% static 'img/Antipolo Gov.png' %}" alt="Antipolo e-Services Logo">
-                    </a>
-                    <a href="https://www.facebook.com/antipo.ncantipolo" target="_blank">
-                        <img class="rounded h-28 w-auto hover:scale-110" src="{% static 'img/Antipo.jpg' %}" alt="ANTIPO Logo">
-                    </a>
-                    <a href="https://www.facebook.com/pcciantipolocity/" target="_blank">
-                        <img class="rounded h-28 w-auto hover:scale-110" src="https://tfa.ph/wp-content/uploads/2021/02/SBGFC-Logo-with-tagline-2019-768x247.jpg" alt="SBCorp Logo">
-                    </a>
-
-                </div>
+        <section class="bg-myNavy mt-12">
+            <div class="flex flex-col mx-auto max-w-6xl items-center py-4 px-6 space-y-6 lg:space-y-0 lg:space-x-8 lg:flex-row">
+                <h2 class="text-3xl font-bold text-white self-center"> Partners:</h3>
+                <a href="https://www.facebook.com/DTIRizalProvincial" target="_blank">
+                    <img class="rounded h-auto w-28 hover:scale-105" src="{% static 'img/dti-rizal.jpg' %}" alt="DTI-Rizal Logo">
+                </a>
+                <a href="https://antipoloonline.egapsonline.com/antipoloos/public/login" target="_blank">
+                    <img class="h-auto w-32 hover:scale-105" src="{% static 'img/Antipolo Gov.png' %}" alt="Antipolo e-Services Logo">
+                </a>
+                <a href="https://www.facebook.com/antipo.ncantipolo" target="_blank">
+                    <img class="rounded h-auto w-44 hover:scale-105" src="{% static 'img/Antipo.jpg' %}" alt="ANTIPO Logo">
+                </a>
+                <a href="https://www.facebook.com/pcciantipolocity/" target="_blank">
+                    <img class="rounded h-24 w-auto hover:scale-105" src="{% static 'img/sbCorp.jpg' %}" alt="SBCorp Logo">
+                </a>
             </div>
         </section>    
 
