@@ -26,13 +26,13 @@ def assistance(request):
     }
     return render(request, 'assistance.html', context)
 
-def business_registration(request):
+def registration(request):
     business_types = BusinessType.objects.all()
     context = {
         'page_title': 'Business Registration',
         'business_types': business_types
     }
-    return render(request, 'business_registration.html', context)
+    return render(request, 'registration.html', context)
 
 def contact(request):
     context = {
@@ -45,3 +45,9 @@ def faqs(request):
         'page_title': 'FAQs'
     }
     return render(request, 'faqs.html', content)
+
+def advisory(request):
+    content = {
+        'page_title': 'Business Advisory'
+    }
+    return render(request, 'advisory.html', content)
