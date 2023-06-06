@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from .models import BusinessType
+from .models import BusinessType, Expert, Education, Experience, Detail
 
 # Create your views here.
 def home(request):
@@ -47,7 +47,10 @@ def faqs(request):
     return render(request, 'faqs.html', content)
 
 def advisory(request):
+    experts = Expert.objects.all()
+
     content = {
-        'page_title': 'Business Advisory'
+        'page_title': 'Business Advisory',
+        'experts': experts
     }
     return render(request, 'advisory.html', content)
