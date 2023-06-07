@@ -13,7 +13,7 @@ class Expert(models.Model):
     company = models.CharField(max_length=200)
     expertise = models.CharField(max_length=200)
     email = models.EmailField(max_length=200)
-    image = models.ImageField(upload_to='mentor_images', blank=True, null=True)
+    image = models.ImageField(upload_to='experts', blank=True, null=True)
 
 class Education(models.Model):
     mentor = models.ForeignKey(Expert, on_delete=models.CASCADE, related_name='educations')

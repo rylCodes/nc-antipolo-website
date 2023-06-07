@@ -47,10 +47,17 @@ def faqs(request):
     return render(request, 'faqs.html', content)
 
 def advisory(request):
+    filter_value = request.GET.get('filter')
     experts = Expert.objects.all()
+
+    if filter_value:
+        experts = experts.filter(expertise=filter_value)
 
     content = {
         'page_title': 'Business Advisory',
-        'experts': experts
+        'experts': experts,
+        'selected_filter': filter_value  # Add this line to pass the selected filter to the template
     }
     return render(request, 'advisory.html', content)
+
+
