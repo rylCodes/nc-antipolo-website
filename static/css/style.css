@@ -1,0 +1,23 @@
+/* Advisory.html flex container */
+
+.container-advisory > div {
+    flex: 0 0 calc(25% - .9375rem); /* Adjust this value to set the desired gap */
+  }
+
+  @media (max-width: 1200px) {
+    .container-advisory > div {
+      flex: 0 0 calc(33.33% - .8334rem); /* Adjust this value to set the desired gap */
+    }
+  }
+
+  @media (max-width: 768px) {
+    .container-advisory > div {
+      flex: 0 0 calc(50% - .625rem); /* Adjust this value to set the desired gap */
+    }
+  }
+
+  @media (max-width: 576px) {
+    .container-advisory > div {
+      flex: 0 0 100%;
+    }
+  }

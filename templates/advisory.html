@@ -1,0 +1,58 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block pageContent %}
+   <section id="">
+        <div class="items-center max-w-4xl mx-auto px-6 my-12 space-x-0 lg:items-start lg:max-w-6xl">
+            <!--Heading-->
+            <h1 class="text-4xl font-bold lg:text-5xl">Assistance - 
+                <span class="text-myNavy">Business Advisory</span>
+            </h1>  
+
+            <div class="max-w-6xl mt-8 space-y-6">
+                <h2 class="text-4xl font-bold text-myNavy px-2">Tap into DTI's network of expert mentors and consultants.</h2>
+                <p class="text-justify text-lg px-4">
+                    Mentorship is a priceless asset for business growth. Gain insights from experienced professionals to accelerate progress, implement proven strategies, and evade costly errors in crucial areas of your business.</p>
+                <div class="relative">
+                    <button onclick="addFilter()" class="font-bold text-sm rounded py-2 px-4 bg-turquoise text-white hover:bg-skyBlue">
+                        ADD FILTER
+                    </button>
+                    {% csrf_token %}
+                    <form action="{% url 'advisory' %}?filter={{ selected_filter }}" method="GET">
+                        <div id="filterOption" class="hidden absolute flex-col bg-white shadow h-auto w-48 rounded-lg border-2 mt-2">
+                            <button type="submit" name="filter" value="Finance" class="{% if selected_filter == 'Finance' %}bg-gray-200{% endif %} text-left px-2 py-1 hover:rounded-md hover:bg-gray-200 min-w-full mx-auto">Finance</button>
+                            <button type="submit" name="filter" value="Marketing" class="{% if selected_filter == 'Marketing' %}bg-gray-200{% endif %} text-left px-2 py-1 hover:rounded-md hover:bg-gray-200 min-w-full mx-auto">Marketing</button>
+                            <button type="submit" name="filter" value="Organization" class="{% if selected_filter == 'Organization' %}bg-gray-200{% endif %} text-left px-2 py-1 hover:rounded-md hover:bg-gray-200 min-w-full mx-auto">Organization</button>
+                            <button type="submit" name="filter" value="Production" class="{% if selected_filter == 'Production' %}bg-gray-200{% endif %} text-left px-2 py-1 hover:rounded-md hover:bg-gray-200 min-w-full mx-auto">Production</button>
+                        </div>
+                    </form>
+                </div>  
+            </div>           
+              
+            <div class="mx-auto bg-gray-100 mt-8">
+                <div class="container-advisory flex flex-wrap justify-start gap-5">
+                    {% for expert in experts %}
+                    <div class="bg-white shadow">
+                      <a href="">
+                        <img src="{{expert.image.url}}" alt="">
+                      </a>
+                      <div class="text-lg text-center">
+                        <p class="font-bold">{{ expert.name }}</p>
+                        <p class="text-center">{{ expert.position }}</p>
+                      </div>
+                      <div class="h-auto w-10 mx-auto pb-2">
+                        <a href="mailto:{{expert.email}}">
+                          <img src="{% static 'img/contacts/email-mentor.png' %}" alt="">
+                        </a>
+                      </div>
+                    </div>
+                    {% empty %}
+                    <p>No experts found.</p>
+                    {% endfor %}
+                </div>
+                
+            </div>              
+                
+        </div>  
+    </section>
+{% endblock pageContent %}
