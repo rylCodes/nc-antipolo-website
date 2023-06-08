@@ -1,0 +1,40 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block pageContent %}
+   <section id="">
+        <div class="items-center max-w-4xl mx-auto px-6 my-12 space-x-0 lg:items-start lg:max-w-6xl">
+            <!--Heading-->
+            <h1 class="text-4xl font-bold lg:text-5xl">Expert Mentors and Consultants</h1>             
+              
+            <div class="mx-auto mt-8">
+                <div class="flex flex-col justify-between items-center lg:flex-row">
+                    <div class="bg-white shadow lg:w-1/2">
+                      <a href="">
+                        <img src="{{experts.image.url}}" alt="">
+                      </a>
+                      <div class="text-lg text-center">
+                        <p class="font-bold">{{ experts.name }}</p>
+                        <p class="text-center">{{ experts.position }}</p>
+                      </div>
+                      <div class="h-auto w-10 mx-auto pb-2">
+                        <a href="mailto:{{experts.email}}">
+                          <img src="{% static 'img/contacts/email-mentor.png' %}" alt="">
+                        </a>
+                      </div>
+                    </div>
+
+                    <div class="flex items-start space-y-6 lg:w-1/2">
+                        <h2 class="text-4xl font-bold text-myNavy px-2">{{experts.name}}</h2>
+                        <p class="text-justify text-lg px-4">
+                            Mentorship is a priceless asset for business growth. Gain insights from experienced professionals to accelerate progress, implement proven strategies, and evade costly errors in crucial areas of your business.</p>
+                        <div class="">
+                        </div>  
+                    </div>
+                </div>
+
+            </div>      
+
+        </div>  
+    </section>
+{% endblock pageContent %}

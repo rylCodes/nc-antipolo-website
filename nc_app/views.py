@@ -1,5 +1,6 @@
 from django.shortcuts import render
 from .models import BusinessType, Expert, Education, Experience, Detail
+from django.shortcuts import get_object_or_404
 
 # Create your views here.
 def home(request):
@@ -59,5 +60,13 @@ def advisory(request):
         'selected_filter': filter_value  # Add this line to pass the selected filter to the template
     }
     return render(request, 'advisory.html', content)
+
+def expert_mentor(request, id_name):
+    experts = Expert.objects.get(id_name=id_name)
+    content = {
+        'experts': experts,
+        'page_title': 'Mentors'
+    }
+    return render(request, 'expert_mentor.html', content)
 
 

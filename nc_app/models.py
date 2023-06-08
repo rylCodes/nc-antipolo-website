@@ -9,6 +9,7 @@ from django.db import models
 
 class Expert(models.Model):
     name = models.CharField(max_length=200)
+    id_name = models.CharField(max_length=200)
     position = models.CharField(max_length=200)
     company = models.CharField(max_length=200)
     expertise = models.CharField(max_length=200)
