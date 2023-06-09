@@ -14,7 +14,7 @@
                 <p class="text-justify text-lg px-4">
                     Mentorship is a priceless asset for business growth. Gain insights from experienced professionals to accelerate progress, implement proven strategies, and evade costly errors in crucial areas of your business.</p>
                 <div class="relative">
-                    <button onclick="addFilter()" class="font-bold text-sm rounded py-2 px-4 bg-turquoise text-white hover:bg-skyBlue">
+                    <button onclick="toggleAddFilter()" class="font-bold text-sm rounded py-2 px-4 bg-turquoise text-white hover:bg-skyBlue">
                         ADD FILTER
                     </button>
                     {% csrf_token %}
@@ -36,22 +36,30 @@
                       <a href="/expert_mentor/{{expert.id_name}}">
                         <img src="{{expert.image.url}}" alt="">
                       </a>
-                      <div class="text-lg text-center">
+                      <div class="text-lg text-center mt-2">
                         <p class="font-bold">{{ expert.name }}</p>
                         <p class="text-center">{{ expert.position }}</p>
                       </div>
-                      <div class="h-auto w-10 mx-auto pb-2">
+                      <div class="h-auto w-10 mx-auto mb-6">
                         <a href="mailto:{{expert.email}}">
                           <img src="{% static 'img/contacts/email-mentor.png' %}" alt="">
                         </a>
                       </div>
                     </div> 
                     {% empty %}
-                    <p>No experts found.</p>
+                    <p>No expert/s found.</p>
                     {% endfor %}
                 </div>
-                
-            </div>              
+            </div>
+            
+            <div class="mt-12">
+                <div class="flex justify-center space-x-2 mx-auto">
+                    <p id="page" class="px-4 py-3 shadow rounded-lg text-sm bg-gray-100">Previous</p>
+                    <p id="page" class="px-4 py-3 shadow rounded-lg text-sm bg-gray-100">1</p>
+                    <p id="page" class="px-4 py-3 shadow rounded-lg text-sm bg-gray-100">2</p>
+                    <p id="page" class="px-4 py-3 shadow rounded-lg text-sm bg-gray-100">Next</p>
+                </div>
+            </div>
                 
         </div>  
     </section>

@@ -7,17 +7,22 @@
                     <img class="h-16 w-auto" src="{% static 'img/dti_nc.png' %}" alt="">
                 </a>
                 <!--Main Navigation-->
-                <div id="mainNavigation" class="hidden divide-x-2 min-w-fit md:flex">
-                    <a class="px-3 py-2 hover:bg-slate-200" href="{% url 'home' %}">Home</a>
-                    <a class="px-3 py-2 hover:bg-slate-200" href="{% url 'about' %}">About</a>
-                    <a class="px-3 py-2 hover:bg-slate-200" href="{% url 'resources' %}">Resources</a>
-                    <a class="px-3 py-2 hover:bg-slate-200" href="{% url 'faqs' %}">FAQs</a>
-                    <a class="px-3 py-2 hover:bg-slate-200" href="{% url 'contact' %}">Contact</a>
+                <div id="mainNavigation" class="hidden min-w-fit md:flex">
+                    <a class="{% if request.path == '/' %}border-b-4 border-turquoise{% endif %} px-3 py-2 hover:border-b-4 hover:border-turquoise"
+                        href="{% url 'home' %}">Home</a>
+                    <a class="{% if request.path == '/about/' %}border-b-4 border-turquoise{% endif %} px-3 py-2 hover:border-b-4 hover:border-turquoise"
+                        href="{% url 'about' %}">About</a>
+                    <a class="{% if request.path == '/resources/' %}border-b-4 border-turquoise{% endif %} px-3 py-2 hover:border-b-4 hover:border-turquoise"
+                        href="{% url 'resources' %}">Resources</a>
+                    <a class="{% if request.path == '/faqs/' %}border-b-4 border-turquoise{% endif %} px-3 py-2 hover:border-b-4 hover:border-turquoise"
+                        href="{% url 'faqs' %}">FAQs</a>
+                    <a class="{% if request.path == '/contact/' %}border-b-4 border-turquoise{% endif %} px-3 py-2 hover:border-b-4 hover:border-turquoise"
+                        href="{% url 'contact' %}">Contact</a>
                 </div>
             </div>
 
             <!--Get Started Button-->
-            <a id="getStartedButton" href="{% url 'assistance' %}" class="hidden p-3 px-6 pt-2 text-white font-bold whitespace-nowrap bg-myNavy rounded-full hover:bg-paleBlue md:block">
+            <a id="getStartedButton" href="{% url 'assistance' %}" class="{% if request.path == '/assistance/' %}md:hidden{% endif %} hidden p-3 px-6 pt-2 text-white font-bold whitespace-nowrap bg-myNavy rounded-full hover:bg-paleBlue md:block">
                 Get started
             </a>
 
@@ -30,16 +35,18 @@
 
             <!--Alt Navigation-->
             <div id="altNavigation" class="hidden absolute divide-y top-5 right-8 h-auto w-48 bg-turquoise shadow flex-col justify-center rounded-lg text-lg font-bold text-white text-center md:hidden">
-                <a class="{% if request.path == '/' %}rounded-md bg-skyBlue{% endif %}
-                            px-2 py-1 hover:rounded-md hover:bg-skyBlue min-w-full mx-auto"
+                <a class="{% if request.path == '/' %}rounded-md bg-skyBlue{% endif %} px-2 py-1 hover:rounded-md hover:bg-skyBlue min-w-full mx-auto"
                     href="{% url 'home' %}">Home</a>
-                <a class="{% if request.path == '/about/' %}rounded-md bg-skyBlue{% endif %}
-                            px-2 py-1 hover:rounded-md hover:bg-skyBlue min-w-full mx-auto" 
+                <a class="{% if request.path == '/about/' %}rounded-md bg-skyBlue{% endif %} px-2 py-1 hover:rounded-md hover:bg-skyBlue min-w-full mx-auto" 
                     href="{% url 'about' %}">About</a>
-                <a class="px-2 py-1 hover:rounded-md hover:bg-skyBlue min-w-full mx-auto" href="{% url 'assistance'%}">Assistance</a>
-                <a class="px-2 py-1 hover:rounded-md hover:bg-skyBlue min-w-full mx-auto" href="{% url 'resources' %}">Resources</a>
-                <a class="px-2 py-1 hover:rounded-md hover:bg-skyBlue min-w-full mx-auto" href="{% url 'faqs' %}">FAQs</a>
-                <a class="px-2 py-1 hover:rounded-md hover:bg-skyBlue min-w-full mx-auto" href="{% url 'contact' %}">Contact</a>
+                <a class="{% if request.path == '/assistance/' %}rounded-md bg-skyBlue{% endif %} px-2 py-1 hover:rounded-md hover:bg-skyBlue min-w-full mx-auto"
+                    href="{% url 'assistance'%}">Assistance</a>
+                <a class="{% if request.path == '/resources/' %}rounded-md bg-skyBlue{% endif %} px-2 py-1 hover:rounded-md hover:bg-skyBlue min-w-full mx-auto"
+                    href="{% url 'resources' %}">Resources</a>
+                <a class="{% if request.path == '/about/' %}rounded-md bg-skyBlue{% endif %} px-2 py-1 hover:rounded-md hover:bg-skyBlue min-w-full mx-auto"
+                    href="{% url 'faqs' %}">FAQs</a>
+                <a class="{% if request.path == '/contact/' %}rounded-md bg-skyBlue{% endif %} px-2 py-1 hover:rounded-md hover:bg-skyBlue min-w-full mx-auto"
+                    href="{% url 'contact' %}">Contact</a>
             </div>
         </div>
     </div>
