@@ -62,10 +62,10 @@ def advisory(request):
     return render(request, 'advisory.html', content)
 
 def expert_mentor(request, id_name):
-    experts = Expert.objects.get(id_name=id_name)
+    mentors = Expert.objects.get(id_name=id_name)
     content = {
-        'experts': experts,
-        'page_title': 'Mentors'
+        'mentors': mentors,
+        'page_title': 'Expert Mentors'
     }
     return render(request, 'expert_mentor.html', content)
 

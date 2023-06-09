@@ -5,7 +5,6 @@ class BusinessType(models.Model):
     title = models.CharField(max_length=1000)
     details = models.TextField(blank=True, null=True)
 
-from django.db import models
 
 class Expert(models.Model):
     name = models.CharField(max_length=200)
@@ -15,20 +14,37 @@ class Expert(models.Model):
     expertise = models.CharField(max_length=200)
     email = models.EmailField(max_length=200)
     image = models.ImageField(upload_to='experts', blank=True, null=True)
+    availability = models.CharField(max_length=200, blank=True, null=True)
+ 
+    def __str__(self):
+        return f"{self.name}"
 
+
+# Using ForeignKey Expert
 class Education(models.Model):
-    mentor = models.ForeignKey(Expert, on_delete=models.CASCADE, related_name='educations')
+    expert = models.ForeignKey(Expert, on_delete=models.CASCADE, related_name='educations')
     degree = models.CharField(max_length=200)
     institution = models.CharField(max_length=200)
-    # Other fields specific to education
+ 
+    def __str__(self):
+        return f"{self.expert.name} - Education {self.pk}"
+
 
 class Experience(models.Model):
-    Expert = models.ForeignKey(Expert, on_delete=models.CASCADE, related_name='experiences')
+    expert = models.ForeignKey(Expert, on_delete=models.CASCADE, related_name='experiences')
     role = models.CharField(max_length=200)
     company = models.CharField(max_length=200)
-    # Other fields specific to experience
+
+    def __str__(self):
+        return f"{self.expert.name} - Experience {self.pk}"
+
 
 class Detail(models.Model):
-    Expert = models.ForeignKey(Expert, on_delete=models.CASCADE, related_name='details')
-    description = models.TextField(max_length=200)
-    # Other fields specific to details
+    expert = models.ForeignKey(Expert, on_delete=models.CASCADE, related_name='details')
+    description = models.TextField()
+
+    def __str__(self):
+        return f"{self.expert.name} - Detail {self.pk}"
+    
+    #class Meta:
+        #ordering = ['id']
