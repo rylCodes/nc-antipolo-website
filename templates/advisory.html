@@ -10,8 +10,8 @@
             </h1>  
 
             <div class="max-w-6xl mt-8 space-y-6">
-                <h2 class="text-4xl font-bold text-myNavy px-2">Tap into DTI's network of expert mentors and consultants.</h2>
-                <p class="text-justify text-lg px-4">
+                <h2 class="text-3xl font-bold text-myNavy px-2 md:text-4xl">Tap into DTI's network of expert mentors and consultants.</h2>
+                <p class="text-justify px-4 md:text-lg">
                     Mentorship is a priceless asset for business growth. Gain insights from experienced professionals to accelerate progress, implement proven strategies, and evade costly errors in crucial areas of your business.</p>
                 <div class="relative">
                     <button onclick="toggleAddFilter()" class="font-bold text-sm rounded py-2 px-4 bg-turquoise text-white hover:bg-skyBlue">
@@ -29,20 +29,20 @@
                 </div>  
             </div>           
               
-            <div class="mx-auto bg-gray-100 mt-8">
+            <div class="mx-auto mt-8">
                 <div class="container-advisory flex flex-wrap justify-start gap-5">
                     {% for expert in experts %}
-                    <div class="bg-white shadow">
+                    <div class="border space-y-2 shadow">
                       <a href="/expert_mentor/{{expert.id_name}}">
-                        <img src="{{expert.image.url}}" alt="">
+                        <img src="{{expert.image.url}}" alt="email-icon">
                       </a>
                       <div class="text-lg text-center mt-2">
                         <p class="font-bold">{{ expert.name }}</p>
                         <p class="text-center">{{ expert.position }}</p>
                       </div>
-                      <div class="h-auto w-10 mx-auto mb-6">
+                      <div class="h-auto w-10 mx-auto pb-4">
                         <a href="mailto:{{expert.email}}">
-                          <img src="{% static 'img/contacts/email-mentor.png' %}" alt="">
+                          <img src="{% static 'img/contacts/email-blue.png' %}" alt="email-icon">
                         </a>
                       </div>
                     </div> 
@@ -54,10 +54,10 @@
             
             <div class="mt-12">
                 <div class="flex justify-center space-x-2 mx-auto">
-                    <p id="page" class="px-4 py-3 shadow rounded-lg text-sm bg-gray-100">Previous</p>
-                    <p id="page" class="px-4 py-3 shadow rounded-lg text-sm bg-gray-100">1</p>
-                    <p id="page" class="px-4 py-3 shadow rounded-lg text-sm bg-gray-100">2</p>
-                    <p id="page" class="px-4 py-3 shadow rounded-lg text-sm bg-gray-100">Next</p>
+                    <p id="page" class="border px-4 py-3 shadow rounded-lg text-sm bg-gray-100">Previous</p>
+                    <p id="page" class="border px-4 py-3 shadow rounded-lg text-sm bg-gray-100">1</p>
+                    <p id="page" class="border px-4 py-3 shadow rounded-lg text-sm bg-gray-100">2</p>
+                    <p id="page" class="border px-4 py-3 shadow rounded-lg text-sm bg-gray-100">Next</p>
                 </div>
             </div>
                 

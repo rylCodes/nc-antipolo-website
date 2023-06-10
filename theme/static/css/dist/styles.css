@@ -754,6 +754,10 @@ select {
   top: 1.75rem;
 }
 
+.top-0 {
+  top: 0px;
+}
+
 .mx-auto {
   margin-left: auto;
   margin-right: auto;
@@ -762,6 +766,11 @@ select {
 .my-12 {
   margin-top: 3rem;
   margin-bottom: 3rem;
+}
+
+.my-auto {
+  margin-top: auto;
+  margin-bottom: auto;
 }
 
 .mb-2 {
@@ -816,20 +825,8 @@ select {
   display: block;
 }
 
-.inline-block {
-  display: inline-block;
-}
-
-.inline {
-  display: inline;
-}
-
 .flex {
   display: flex;
-}
-
-.inline-flex {
-  display: inline-flex;
 }
 
 .hidden {
@@ -949,13 +946,12 @@ select {
   max-width: 32rem;
 }
 
-.max-w-xl {
-  max-width: 36rem;
+.max-w-md {
+  max-width: 28rem;
 }
 
-.max-w-fit {
-  max-width: -moz-fit-content;
-  max-width: fit-content;
+.max-w-xl {
+  max-width: 36rem;
 }
 
 .grow {
@@ -1091,20 +1087,10 @@ select {
   margin-bottom: calc(2rem * var(--tw-space-y-reverse));
 }
 
-.divide-x-2 > :not([hidden]) ~ :not([hidden]) {
-  --tw-divide-x-reverse: 0;
-  border-right-width: calc(2px * var(--tw-divide-x-reverse));
-  border-left-width: calc(2px * calc(1 - var(--tw-divide-x-reverse)));
-}
-
 .divide-y > :not([hidden]) ~ :not([hidden]) {
   --tw-divide-y-reverse: 0;
   border-top-width: calc(1px * calc(1 - var(--tw-divide-y-reverse)));
   border-bottom-width: calc(1px * var(--tw-divide-y-reverse));
-}
-
-.self-end {
-  align-self: flex-end;
 }
 
 .self-center {
@@ -1140,12 +1126,20 @@ select {
   border-bottom-left-radius: 9999px;
 }
 
+.border {
+  border-width: 1px;
+}
+
 .border-2 {
   border-width: 2px;
 }
 
 .border-b {
   border-bottom-width: 1px;
+}
+
+.border-b-4 {
+  border-bottom-width: 4px;
 }
 
 .border-l-8 {
@@ -1162,10 +1156,6 @@ select {
 
 .border-t-8 {
   border-top-width: 8px;
-}
-
-.border-b-4 {
-  border-bottom-width: 4px;
 }
 
 .border-myNavy {
@@ -1186,19 +1176,9 @@ select {
   border-right-color: transparent;
 }
 
-.border-t-gray-300 {
+.border-t-white {
   --tw-border-opacity: 1;
-  border-top-color: rgb(209 213 219 / var(--tw-border-opacity));
-}
-
-.bg-blue-500 {
-  --tw-bg-opacity: 1;
-  background-color: rgb(59 130 246 / var(--tw-bg-opacity));
-}
-
-.bg-blue-900 {
-  --tw-bg-opacity: 1;
-  background-color: rgb(30 58 138 / var(--tw-bg-opacity));
+  border-top-color: rgb(255 255 255 / var(--tw-border-opacity));
 }
 
 .bg-gray-100 {
@@ -1211,34 +1191,9 @@ select {
   background-color: rgb(229 231 235 / var(--tw-bg-opacity));
 }
 
-.bg-gray-300 {
-  --tw-bg-opacity: 1;
-  background-color: rgb(209 213 219 / var(--tw-bg-opacity));
-}
-
-.bg-green-500 {
-  --tw-bg-opacity: 1;
-  background-color: rgb(34 197 94 / var(--tw-bg-opacity));
-}
-
 .bg-myNavy {
   --tw-bg-opacity: 1;
   background-color: rgb(20 40 80 / var(--tw-bg-opacity));
-}
-
-.bg-orange-500 {
-  --tw-bg-opacity: 1;
-  background-color: rgb(249 115 22 / var(--tw-bg-opacity));
-}
-
-.bg-red-500 {
-  --tw-bg-opacity: 1;
-  background-color: rgb(239 68 68 / var(--tw-bg-opacity));
-}
-
-.bg-sky-500 {
-  --tw-bg-opacity: 1;
-  background-color: rgb(14 165 233 / var(--tw-bg-opacity));
 }
 
 .bg-skyBlue {
@@ -1251,11 +1206,6 @@ select {
   background-color: rgb(241 245 249 / var(--tw-bg-opacity));
 }
 
-.bg-slate-200 {
-  --tw-bg-opacity: 1;
-  background-color: rgb(226 232 240 / var(--tw-bg-opacity));
-}
-
 .bg-turquoise {
   --tw-bg-opacity: 1;
   background-color: rgb(12 123 147 / var(--tw-bg-opacity));
@@ -1264,11 +1214,6 @@ select {
 .bg-white {
   --tw-bg-opacity: 1;
   background-color: rgb(255 255 255 / var(--tw-bg-opacity));
-}
-
-.bg-red-400 {
-  --tw-bg-opacity: 1;
-  background-color: rgb(248 113 113 / var(--tw-bg-opacity));
 }
 
 .p-3 {
@@ -1415,14 +1360,14 @@ select {
   color: rgb(107 114 128 / var(--tw-text-opacity));
 }
 
+.text-green-600 {
+  --tw-text-opacity: 1;
+  color: rgb(22 163 74 / var(--tw-text-opacity));
+}
+
 .text-myNavy {
   --tw-text-opacity: 1;
   color: rgb(20 40 80 / var(--tw-text-opacity));
-}
-
-.text-sky-700 {
-  --tw-text-opacity: 1;
-  color: rgb(3 105 161 / var(--tw-text-opacity));
 }
 
 .text-skyBlue {
@@ -1469,21 +1414,6 @@ select {
   border-color: rgb(12 123 147 / var(--tw-border-opacity));
 }
 
-.hover\:border-skyBlue:hover {
-  --tw-border-opacity: 1;
-  border-color: rgb(0 168 204 / var(--tw-border-opacity));
-}
-
-.hover\:bg-blue-400:hover {
-  --tw-bg-opacity: 1;
-  background-color: rgb(96 165 250 / var(--tw-bg-opacity));
-}
-
-.hover\:bg-blue-800:hover {
-  --tw-bg-opacity: 1;
-  background-color: rgb(30 64 175 / var(--tw-bg-opacity));
-}
-
 .hover\:bg-gray-200:hover {
   --tw-bg-opacity: 1;
   background-color: rgb(229 231 235 / var(--tw-bg-opacity));
@@ -1494,29 +1424,9 @@ select {
   background-color: rgb(209 213 219 / var(--tw-bg-opacity));
 }
 
-.hover\:bg-green-400:hover {
-  --tw-bg-opacity: 1;
-  background-color: rgb(74 222 128 / var(--tw-bg-opacity));
-}
-
-.hover\:bg-orange-400:hover {
-  --tw-bg-opacity: 1;
-  background-color: rgb(251 146 60 / var(--tw-bg-opacity));
-}
-
 .hover\:bg-paleBlue:hover {
   --tw-bg-opacity: 1;
   background-color: rgb(39 73 109 / var(--tw-bg-opacity));
-}
-
-.hover\:bg-red-400:hover {
-  --tw-bg-opacity: 1;
-  background-color: rgb(248 113 113 / var(--tw-bg-opacity));
-}
-
-.hover\:bg-sky-400:hover {
-  --tw-bg-opacity: 1;
-  background-color: rgb(56 189 248 / var(--tw-bg-opacity));
 }
 
 .hover\:bg-skyBlue:hover {
@@ -1524,19 +1434,19 @@ select {
   background-color: rgb(0 168 204 / var(--tw-bg-opacity));
 }
 
-.hover\:bg-turquoise:hover {
-  --tw-bg-opacity: 1;
-  background-color: rgb(12 123 147 / var(--tw-bg-opacity));
-}
-
-.hover\:text-black:hover {
-  --tw-text-opacity: 1;
-  color: rgb(0 0 0 / var(--tw-text-opacity));
-}
-
 .hover\:text-paleBlue:hover {
   --tw-text-opacity: 1;
   color: rgb(39 73 109 / var(--tw-text-opacity));
+}
+
+.hover\:text-skyBlue:hover {
+  --tw-text-opacity: 1;
+  color: rgb(0 168 204 / var(--tw-text-opacity));
+}
+
+.hover\:text-turquoise:hover {
+  --tw-text-opacity: 1;
+  color: rgb(12 123 147 / var(--tw-text-opacity));
 }
 
 .hover\:underline:hover {
@@ -1630,9 +1540,19 @@ select {
     line-height: 2rem;
   }
 
+  .md\:text-4xl {
+    font-size: 2.25rem;
+    line-height: 2.5rem;
+  }
+
   .md\:text-5xl {
     font-size: 3rem;
     line-height: 1;
+  }
+
+  .md\:text-lg {
+    font-size: 1.125rem;
+    line-height: 1.75rem;
   }
 }
 

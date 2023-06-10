@@ -1,11 +1,13 @@
 from django.db import models
 
-# Create your models here.
+# Registration Page.
 class BusinessType(models.Model):
     title = models.CharField(max_length=1000)
     details = models.TextField(blank=True, null=True)
 
 
+
+# Advisory and Expert Mentor Page.
 class Expert(models.Model):
     name = models.CharField(max_length=200)
     id_name = models.CharField(max_length=200)
@@ -20,7 +22,6 @@ class Expert(models.Model):
         return f"{self.name}"
 
 
-# Using ForeignKey Expert
 class Education(models.Model):
     expert = models.ForeignKey(Expert, on_delete=models.CASCADE, related_name='educations')
     degree = models.CharField(max_length=200)
@@ -45,6 +46,20 @@ class Detail(models.Model):
 
     def __str__(self):
         return f"{self.expert.name} - Detail {self.pk}"
-    
     #class Meta:
         #ordering = ['id']
+
+class Specialization(models.Model):
+    expert = models.ForeignKey(Expert, on_delete=models.CASCADE, related_name='expertises')
+    field = models.CharField(max_length=200)
+
+
+
+# Contact Page.
+class ClientFeedback(models.Model):
+    name = models.CharField(max_length=200)
+    business_name = models.CharField(max_length=200, null=True, blank=True)
+    address = models.CharField(max_length=200, null=True, blank=True)
+    email = models.CharField(max_length=200, null=True, blank=True)
+    contact_number = models.CharField(max_length=200)
+    message = models.TextField()

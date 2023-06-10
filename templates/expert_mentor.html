@@ -12,17 +12,17 @@
                 <div class="lg:w-2/5">
                     <div class="flex flex-col text-center space-y-2 bg-white shadow ">
                         <div class="">
-                            <img src="{{mentors.image.url}}" alt="">
+                            <img src="{{mentor.image.url}}" alt="">
                         </div>
                         <div class="h-auto w-10 mx-auto pt-2">
-                            <a href="mailto:{{mentors.email}}">
-                                <img src="{% static 'img/contacts/email-mentor.png' %}" alt="">
+                            <a href="mailto:{{mentor.email}}">
+                                <img src="{% static 'img/contacts/email-blue.png' %}" alt="">
                             </a>
                         </div>
                         <div class="text-lg space-y-2 pb-4">
-                            {% if mentors.availability %}
+                            {% if mentor.availability %}
                             <p class="font-bold">AVAILABILITY</p>
-                            <p class="">{{mentors.availability}}</p>
+                            <p class="">{{mentor.availability}}</p>
                             {% else %} {% endif %}
                             <p>To book an appointment, email us at r04a.rizal@dti.gov.ph</p>
                         </div>
@@ -32,20 +32,20 @@
                 <!--Right Items-->
                 <div class="flex flex-col text-lg items-start px-4 space-y-6 lg:w-3/5">
                     <div class="space-y-2">
-                        <h2 class="text-4xl font-bold text-myNavy">{{mentors.name}}</h2>
-                        <p class="text-2xl">{{mentors.position}}</p>
-                        <p class="text-2xl">{{mentors.company}}</p>
+                        <h2 class="text-4xl font-bold text-myNavy">{{mentor.name}}</h2>
+                        <p class="text-2xl">{{mentor.position}}</p>
+                        <p class="text-2xl">{{mentor.company}}</p>
                     </div>
-                    <p class="text-xl"><span class="font-bold">Specialization:</span> {{mentors.expertise}}</p>
-                    {% if mentors.details.all %}
-                        {% for detail in mentors.details.all %}
+                    <p class="text-xl"><span class="font-bold">Specialization:</span> {{mentor.expertise}}</p>
+                    {% if mentor.details.all %}
+                        {% for detail in mentor.details.all %}
                         <p class="text-justify text-lg">{{detail.description}}</p>
                         {% endfor %}
                     {% else %}
                         <div class="space-y-1">
                             <h3 class="text-xl font-bold">Work Experience:</h3>
                             <ul class="list-disc pl-6">
-                            {% for experience in mentors.experiences.all %}
+                            {% for experience in mentor.experiences.all %}
                             <li class="">{{experience.role}} at {{experience.company}}</li> 
                             {% endfor %}
                             </ul>
@@ -53,7 +53,7 @@
                         <div class="space-y-1">
                             <h3 class="text-xl font-bold">Education Background:</h3>
                             <ul class="list-disc pl-6">
-                            {% for education in mentors.educations.all %}
+                            {% for education in mentor.educations.all %}
                             <li class="">{{education.degree}}, {{education.institution}}</li> 
                             {% endfor %}
                             </ul>
@@ -65,10 +65,10 @@
             <!--Similar Experts-->
             <div class="space-y-4 mt-12">
                 <h2 class="font-bold text-3xl">Similar Experts</h2>
-                <div class="mx-auto bg-gray-100 mt-8">
+                <div class="mx-auto mt-8">
                     <div class="container-advisory flex flex-wrap justify-start gap-5">
                         {% for related_mentor in related_mentors %}
-                        <div class="bg-white shadow">
+                        <div class="border shadow">
                           <a href="/expert_mentor/{{related_mentor.id_name}}">
                             <img src="{{related_mentor.image.url}}" alt="">
                           </a>
@@ -92,7 +92,7 @@
         </div> 
 
         <div class="pt-10 text-skyBlue text-lg">
-            <a href="{% url 'advisory' %}"><< Back</a>
+            <a class="hover:text-turquoise" href="{% url 'advisory' %}"><< Back</a>
         </div>
     </div>  
 </section>

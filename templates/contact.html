@@ -3,23 +3,31 @@
 
 {% block pageContent %}
 <div class="max-w-6xl mx-auto px-6 my-12">
+    {% for message in messages %}
+    <div id="received_feedback" class="mb-4 my-auto">
+        <p class="mx-auto max-w-md text-center text-lg shadow border bg-white rounded text-green-600 px-2 py-1">
+            {{message}}
+        </p> 
+    </div>
+    {% endfor %}
+
     <h1 class="text-myNavy font-bold text-4xl lg:text-5xl">Contact</h1>
-    
     <div class="container flex flex-col justify-between items-center mx-auto mt-8 space-y-8 space-x-0 md:flex-row md:space-x-12 md:space-y-0 md:items-start">
         <div class="max-w-lg px-4 py-2 md:w-1/2">
             <p class="text-2xl font-bold text-myNavy">
                 Please don't hesitate to leave us a message. We value your feedback.</p>
             <form action="" method="POST" class="mt-6">
+                {% csrf_token %}
                 <p class="mt-2 text-lg font-bold">Full Name:</p>
-                <input class="rounded w-full focus:outline-none focus:ring-1 focus:ring-skyBlue" type="text" name="fullname" id="" required>
+                <input class="rounded w-full focus:outline-none focus:ring-1 focus:ring-skyBlue" type="text" name="fullname" id="fullname" required>
                 <p class="mt-2 text-lg font-bold">Business Name:</p>
-                <input class="rounded w-full focus:outline-none focus:ring-1 focus:ring-skyBlue" type="text" name="fullname" id="" placeholder="Enter your business name if any.">
+                <input class="rounded w-full focus:outline-none focus:ring-1 focus:ring-skyBlue" type="text" name="business_name" id="" placeholder="Enter your business name (if any).">
                 <p class="mt-2 text-lg font-bold">Address:</p>
-                <input class="rounded w-full focus:outline-none focus:ring-1 focus:ring-skyBlue" type="text" name="fullname" id="">
+                <input class="rounded w-full focus:outline-none focus:ring-1 focus:ring-skyBlue" type="text" name="address" id="">
                 <p class="mt-2 text-lg font-bold">Email:</p>
                 <input class="rounded w-full focus:outline-none focus:ring-1 focus:ring-skyBlue" type="email" name="email" id="email" placeholder="sample@gmail.com">
                 <p class="mt-2 text-lg font-bold">Contact number:</p>
-                <input class="rounded w-full focus:outline-none focus:ring-1 focus:ring-skyBlue" type="number" name="contact" id="contact" required>
+                <input class="rounded w-full focus:outline-none focus:ring-1 focus:ring-skyBlue" type="number" name="contact_number" id="contact" pattern="[0-9]{11}" placeholder="Enter a valid 11-digit mobile number" maxlength="11">
                 <p class="text-lg font-bold mt-2">Your comment/suggestion:</p>
                 <textarea class="rounded mt-2 h-36 w-full focus:outline-none focus:ring-1 focus:ring-skyBlue" type="text" name="message" id="message" required placeholder="Type your comment/suggestion here..."></textarea><br>
                 <button class="font-bold text-sm rounded py-2 px-4 bg-turquoise text-white hover:bg-skyBlue" type="submit">

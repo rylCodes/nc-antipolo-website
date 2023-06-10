@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import BusinessType, Expert, Education, Experience, Detail
+from .models import BusinessType, Expert, Education, Experience, Detail, ClientFeedback, Specialization
 
 # Register your models here.
 admin.site.register(BusinessType)
@@ -7,3 +7,5 @@ admin.site.register(Expert)
 admin.site.register(Education)
 admin.site.register(Experience)
 admin.site.register(Detail)
+admin.site.register(ClientFeedback)
+admin.site.register(Specialization)
