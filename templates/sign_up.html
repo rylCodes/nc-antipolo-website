@@ -1,0 +1,50 @@
+{% load static %}
+{% load static tailwind_tags %}
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+	{% if page_title %}
+    <title>{{page_title}} | Negosyo Center Antipolo</title>
+	{% else %}
+	<title>Negosyo Center Antipolo</title>
+	{% endif %}
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta http-equiv="X-UA-Compatible" content="ie=edge">
+		<link rel="stylesheet" href="{% static 'css/style.css' %}">
+		{% tailwind_css %}
+	</head>
+
+	<body>
+        <div class="max-w-6xl mx-auto px-6">
+            <form class="flex flex-col max-w-3xl mx-auto p-6 my-12 border shadow-lg rounded" action="" method="POST">
+                {% csrf_token %}
+                <h1 class="font-bold text-center text-2xl text-myNavy">CREATE YOUR ACCOUNT</h1>
+                <input class="mt-6" type="text" name="first_name" required placeholder="First Name">
+                <input class="mt-6" type="text" name="last_name" required placeholder="Last Name">
+                <div class="flex justify-start space-x-4 items-center mt-6">
+                    <input type="radio" id="male" name="sex" value="male" required>  
+                    <label for="male">Male</label>
+                    <input type="radio" id="female" name="sex" value="female"> 
+                    <label for="female">Female</label>  
+                </div>
+                <input class="mt-6" type="text" name="business_name" required placeholder="Business Name">
+                <input class="mt-6" type="text" name="position" required placeholder="Position / Job Title">
+                <input class="mt-6" type="email" name="email" required placeholder="Email">
+                <input class="mt-6" type="number" name="mobile_number" pattern="\d{11}" required placeholder="Enter a valid 11-digit mobile number">
+                <div class="flex items-center space-x-4 mt-6">
+                    <input type="checkbox" id="terms-and-conditions" name="terms-and-conditions" required>
+                    <p class="text-sm">By clicking Sign Up, you are indicating that you have read and agree to the<br><a class="text-skyBlue" href="">Terms & Conditions and Privacy Policy</a></p>
+                </div>
+                <button class="py-2 px-1 text-white font-bold bg-turquoise h-auto w-72 mt-6 mx-auto" type="submit">SIGN UP</button>
+                <div class="flex items-center space-x-4 mt-6">
+                    <input type="checkbox" id="receive-marketing-communications" name="receive-marketing-communications">
+                    <p class="text-sm">Yes, I would like to receive marketing communications regarding DTI MSME Profile's products, services, and events.</p>
+                </div>
+                <p class="mt-6 text-center"><span class="font-bold">Already have an account? </span><a class="text-skyBlue" href="{% url 'msme_profile' %}">Log In here</a></p>
+            </form>
+        </div>
+
+        <footer class="border-t-2">{% include 'partials/footer.html' %}</footer>
+	</body>
+</html> 

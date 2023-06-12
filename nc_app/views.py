@@ -104,6 +104,17 @@ def expert_mentor(request, id_name):
     }
     return render(request, 'expert_mentor.html', content)
 
+def msme_profile(request):
+    context = {
+        'page_title': 'MSME Profile'
+    }
+    return render(request, 'msme_profile.html', context)
+
+def sign_up(request):
+    context = {
+        'page_title': 'Sign Up'
+    }
+    return render(request, 'sign_up.html', context)
 
 
 
