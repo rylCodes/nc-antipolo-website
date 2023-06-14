@@ -1,11 +1,12 @@
 from django.contrib import admin
-from .models import BusinessType, Expert, Education, Experience, Detail, ClientFeedback, Specialization
+from .models import BusinessType, Mentor, MentorEducation, MentorExperience, MentorBiography, ClientFeedback, MentorSpecialization, SignUp
 
 # Register your models here.
 admin.site.register(BusinessType)
-admin.site.register(Expert)
-admin.site.register(Education)
-admin.site.register(Experience)
-admin.site.register(Detail)
+admin.site.register(Mentor)
+admin.site.register(MentorEducation)
+admin.site.register(MentorExperience)
+admin.site.register(MentorBiography)
 admin.site.register(ClientFeedback)
-admin.site.register(Specialization)
+admin.site.register(MentorSpecialization)
+admin.site.register(SignUp)

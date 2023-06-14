@@ -1,7 +1,7 @@
 from django.shortcuts import render, redirect
-from .models import BusinessType, Expert, Specialization, ClientFeedback
-from django.http import HttpResponse
+from .models import BusinessType, Mentor, MentorEducation, MentorExperience, MentorBiography, ClientFeedback, MentorSpecialization, SignUp
 from django.core.paginator import Paginator
+from django.contrib.auth.models import User, auth
 from django.contrib import messages
 
 # Home Page.
@@ -49,12 +49,12 @@ def registration(request):
 # Contact Page.
 def contact(request):
     if request.method == 'POST':
-        name = request.POST.get('fullname')
-        business_name = request.POST.get('business_name')
-        email = request.POST.get('email')
-        contact_number = request.POST.get('contact_number')
-        message = request.POST.get('message')
-        client_feedback = ClientFeedback(name=name, business_name=business_name, email=email, contact_number=contact_number, message=message)
+        name = request.POST['fullname']
+        business_name = request.POST['business_name']
+        email = request.POST['email']
+        contact_number = request.POST['contact_number']
+        comment = request.POST['comment']
+        client_feedback = ClientFeedback(name=name, business_name=business_name, email=email, contact_number=contact_number, comment=comment)
         client_feedback.save()
         messages.success(request, 'Your feedback has been received. Thank you!')
         return redirect('contact')
@@ -75,17 +75,17 @@ def faqs(request):
 
 # Advisory Page.
 def advisory(request):
-    experts = Expert.objects.all()
+    mentors = Mentor.objects.all()
     filter_value = request.GET.get('filter')
-    #experts_per_page = 8
-    #paginator = Paginator(experts, experts_per_page)
+    #mentors_per_page = 8
+    #paginator = Paginator(mentors, mentors_per_page)
 
     if filter_value:
-        experts = experts.filter(expertise__contains=filter_value)
+        mentors = mentors.filter(expertise__contains=filter_value)
 
     content = {
         'page_title': 'Business Advisory',
-        'experts': experts,
+        'mentors': mentors,
         'selected_filter': filter_value
     }
     return render(request, 'advisory.html', content)
@@ -93,9 +93,9 @@ def advisory(request):
 
 # Expert Mentor Page.
 def expert_mentor(request, id_name):
-    mentor = Expert.objects.get(id_name=id_name)
+    mentor = Mentor.objects.get(id_name=id_name)
     specializations = mentor.expertises.values_list('field', flat=True)  # Get the list of specializations for the mentor
-    related_mentors = Expert.objects.filter(expertises__field__in=specializations).exclude(id_name=id_name).distinct()
+    related_mentors = Mentor.objects.filter(expertises__field__in=specializations).exclude(id_name=id_name).distinct()
     
     content = {
         'mentor': mentor,
@@ -104,13 +104,31 @@ def expert_mentor(request, id_name):
     }
     return render(request, 'expert_mentor.html', content)
 
+
+# MSME Profile Page.
 def msme_profile(request):
     context = {
         'page_title': 'MSME Profile'
     }
     return render(request, 'msme_profile.html', context)
 
+# Sign-Up Page.
 def sign_up(request):
+    if request.method == 'POST':
+        first_name = request.POST['first_name']
+        last_name = request.POST['last_name']
+        email = request.POST['email']
+        password = request.POST['password']
+        
+        if User.objects.filter(email=email).exists():
+            messages.error(request, 'Email is already in use')
+            return redirect('sign_up')
+        else:
+            user = User.objects.create_user(first_name=first_name, last_name=last_name, email=email, password=password)
+            user.save()
+            messages.success(request, 'Your account has been registered successfully')
+            return redirect('msme_profile')
+
     context = {
         'page_title': 'Sign Up'
     }

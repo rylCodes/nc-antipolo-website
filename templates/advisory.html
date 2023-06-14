@@ -31,23 +31,23 @@
               
             <div class="mx-auto mt-8">
                 <div class="container-advisory flex flex-wrap justify-start gap-5">
-                    {% for expert in experts %}
+                    {% for mentor in mentors %}
                     <div class="border space-y-2 shadow">
-                      <a href="/expert_mentor/{{expert.id_name}}">
-                        <img src="{{expert.image.url}}" alt="email-icon">
+                      <a href="/expert_mentor/{{mentor.id_name}}">
+                        <img src="{{mentor.image.url}}" alt="email-icon">
                       </a>
                       <div class="text-lg text-center mt-2">
-                        <p class="font-bold">{{ expert.name }}</p>
-                        <p class="text-center">{{ expert.position }}</p>
+                        <p class="font-bold">{{ mentor.name }}</p>
+                        <p class="text-center">{{ mentor.position }}</p>
                       </div>
                       <div class="h-auto w-10 mx-auto pb-4">
-                        <a href="mailto:{{expert.email}}">
+                        <a href="mailto:{{mentor.email}}">
                           <img src="{% static 'img/contacts/email-blue.png' %}" alt="email-icon">
                         </a>
                       </div>
                     </div> 
                     {% empty %}
-                    <p>No expert/s found.</p>
+                    <p>No mentor/s found.</p>
                     {% endfor %}
                 </div>
             </div>
