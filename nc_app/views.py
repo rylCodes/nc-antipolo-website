@@ -1,9 +1,12 @@
 from django.shortcuts import render, redirect
-from .models import BusinessType, Mentor, ClientFeedback, MsmeAccount
+from .models import BusinessType, Mentor, ClientFeedback
 from django.core.paginator import Paginator
-from django.contrib.auth.models import auth
+from django.contrib.auth.models import User, auth
 from django.contrib import messages
 from django.contrib.auth.decorators import login_required
+from django.contrib.auth import login, logout, authenticate
+from django.http import HttpResponse
+import json
 
 # Home Page.
 def home(request):
@@ -122,13 +125,13 @@ def sign_up(request):
         email = request.POST['email']
         password = request.POST['password']
         
-        if MsmeAccount.objects.filter(email=email).exists():
+        if User.objects.filter(email=email).exists():
             messages.error(request, 'Email is already in use')
             return redirect('sign_up')
         else:
-            msme_account = MsmeAccount(first_name=first_name, last_name=last_name, email=email, password=password)
+            msme_account = User.objects.create_user(first_name=first_name, last_name=last_name, email=email, password=password)
             msme_account.save()
-            messages.success(request, 'Your account has been registered successfully')
+            messages.success(request, 'Your account has been registered successfully. You can log-in now')
             return redirect('msme_profile')
 
     context = {
@@ -137,13 +140,27 @@ def sign_up(request):
     return render(request, 'sign_up.html', context)
 
 
-# Log In Page.
-def log_in(request):
+# Log-In Page.
+def login_user(request):
+    logout(request) # Clear any existing user session
+    response = {'status': 'failed', 'msg': ''} # Create a response dictionary
+    email = ''
+    password = ''
+
     if request.method == 'POST':
         email = request.POST['email']
         password = request.POST['password']
+        user = authenticate(email=email, password=password)
+        if user is not None:
+            if user.is_active: # Check if the user account is active
+                response['status'] = 'success'
+            else:
+                response['msg'] = 'Incorrect email or password'
+        else:
+            response['msg'] = 'Incorrect email or password'
+    return HttpResponse(json.dumps(response), content_type='application/json') # Return the response as JSON
 
-    context = {
-        'page_title': 'Log In'
-    }
-    return render(request, 'log_in.html', context)
+# Log-Out Function
+def logout_user(request):
+    logout(request)
+    return redirect(request, 'log_in.html')

@@ -1,12 +1,12 @@
 from django.db import models
 
-# Registration Page.
+# Registration
 class BusinessType(models.Model):
     title = models.CharField(max_length=1000)
     details = models.TextField(blank=True, null=True)
 
 
-# Advisory and Expert Mentor Page.
+# Advisory and Expert Mentor
 class Mentor(models.Model):
     name = models.CharField(max_length=200)
     id_name = models.CharField(max_length=200)
@@ -53,7 +53,7 @@ class MentorSpecialization(models.Model):
     field = models.CharField(max_length=200)
 
 
-# Contact Page.
+# Contact
 class ClientFeedback(models.Model):
     name = models.CharField(max_length=200)
     business_name = models.CharField(max_length=200, null=True, blank=True)
@@ -61,11 +61,3 @@ class ClientFeedback(models.Model):
     email = models.EmailField(max_length=200, null=True, blank=True)
     contact_number = models.IntegerField()
     comment = models.TextField()
-
-
-# MSME Account Page.
-class MsmeAccount(models.Model):
-    first_name = models.CharField(max_length=200)
-    last_name = models.CharField(max_length=200)
-    email = models.EmailField(max_length=200, unique=True)
-    password = models.CharField(max_length=200)

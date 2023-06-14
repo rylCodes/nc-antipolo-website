@@ -1,4 +1,4 @@
-const form = document.getElementById('signupForm');
+const form = document.getElementById('signup-form');
 const passwordInput = document.getElementById('password');
 
 form.addEventListener('submit', (event) => {
