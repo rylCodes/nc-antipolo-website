@@ -37,9 +37,9 @@
                         <p class="text-2xl">{{mentor.company}}</p>
                     </div>
                     <p class="text-xl"><span class="font-bold">Specialization:</span> {{mentor.expertise}}</p>
-                    {% if mentor.details.all %}
-                        {% for detail in mentor.details.all %}
-                        <p class="text-justify text-lg">{{detail.description}}</p>
+                    {% if mentor.biography.all %}
+                        {% for biography in mentor.biography.all %}
+                        <p class="text-justify text-lg">{{biography.description}}</p>
                         {% endfor %}
                     {% else %}
                         <div class="space-y-1">

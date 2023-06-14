@@ -1,0 +1,55 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block pageContent %}
+<div class="container flex items-center space-x-16 max-w-7xl py-12 px-6 mx-auto">
+    <!--Right Item: Form-->
+    <div class="w-full p-10 max-w-xl mx-auto border shadow-xl rounded-xl lg:w-2/5">
+        {% for message in messages %}
+        <div id="account_created" class="mb-4 my-auto">
+            <p class="mx-auto max-w-md text-center text-lg shadow border bg-white rounded text-green-600 px-2 py-1">
+                {{message}}
+            </p> 
+        </div>
+        {% endfor %}
+        <form class="flex flex-col" action="" method="POST">
+            {% csrf_token %}
+            <div class="items-center">
+                <div class="h-28 w-auto">
+                    <img class="object-contain h-full w-full" src="{% static 'img/dti_nc.png' %}" alt="">
+                </div>
+                <p class="text-sm text-gray-500 text-center">Monitoring and Evaluation</p>
+            </div>
+            <input class="mt-10" type="email" name="email" required placeholder="Email Address">    
+            <input id="password" class="mt-10" type="password" name="password" required placeholder="Password">
+            <a href="" class="text-right mt-2 text-skyBlue">Forgot your password?</a>
+            <button class="py-2 px-1 text-white font-bold bg-turquoise h-auto w-72 mt-10 mx-auto" type="submit">SIGN IN</button>
+        </form>
+        <div>
+            <!--Continue with Google or Facebook-->
+            <div class="flex items-center mt-10">
+                <hr class="flex-grow border-gray-300 border-t mr-4">
+                <span class="">Or continue with</span>
+                <hr class="flex-grow border-gray-300 border-t ml-4">
+            </div>
+            <div class="flex space-x-4 mx-auto mt-10 items-center">
+                <div class="cursor-pointer flex space-x-3 justify-center items-center bg-blue-800 shadow w-60 rounded-full px-4 py-2 border">
+                    <img class="h-5 w-auto" src="{% static 'img/social_media/fb-icon-white.png' %}" alt="fb">
+                    <p class="text-white font-bold">Facebook</p>
+                </div>
+                <div class="cursor-pointer flex space-x-3 justify-center items-center bg-white shadow w-60 rounded-full px-4 py-2 border">
+                    <img class="h-5 w-auto" src="{% static 'img/social_media/google.png' %}" alt="google">
+                    <p class="text-gray-400 font-bold" >Google</p>
+                </div>
+            </div>
+            <!--New here? Sign Up-->
+            <p class="mt-10 text-center"><span class="font-bold">New here?</span> <a class="text-skyBlue" href="{% url 'sign_up' %}">Sign Up now</a></p>
+        </div>
+    </div>
+
+    <!--Left Item: Image-->
+    <div class="hidden max-w-2xl w-3/5 flex-1 lg:block">
+        <img class="h-full w-full object-cover" src="{% static 'img/store.png' %}" alt="">
+    </div>
+</div>
+{% endblock pageContent %}

@@ -1,8 +1,9 @@
 from django.shortcuts import render, redirect
-from .models import BusinessType, Mentor, MentorEducation, MentorExperience, MentorBiography, ClientFeedback, MentorSpecialization, SignUp
+from .models import BusinessType, Mentor, ClientFeedback, MsmeAccount
 from django.core.paginator import Paginator
-from django.contrib.auth.models import User, auth
+from django.contrib.auth.models import auth
 from django.contrib import messages
+from django.contrib.auth.decorators import login_required
 
 # Home Page.
 def home(request):
@@ -106,13 +107,14 @@ def expert_mentor(request, id_name):
 
 
 # MSME Profile Page.
+@login_required
 def msme_profile(request):
     context = {
         'page_title': 'MSME Profile'
     }
     return render(request, 'msme_profile.html', context)
 
-# Sign-Up Page.
+# Sign Up Page.
 def sign_up(request):
     if request.method == 'POST':
         first_name = request.POST['first_name']
@@ -120,12 +122,12 @@ def sign_up(request):
         email = request.POST['email']
         password = request.POST['password']
         
-        if User.objects.filter(email=email).exists():
+        if MsmeAccount.objects.filter(email=email).exists():
             messages.error(request, 'Email is already in use')
             return redirect('sign_up')
         else:
-            user = User.objects.create_user(first_name=first_name, last_name=last_name, email=email, password=password)
-            user.save()
+            msme_account = MsmeAccount(first_name=first_name, last_name=last_name, email=email, password=password)
+            msme_account.save()
             messages.success(request, 'Your account has been registered successfully')
             return redirect('msme_profile')
 
@@ -135,6 +137,13 @@ def sign_up(request):
     return render(request, 'sign_up.html', context)
 
 
+# Log In Page.
+def log_in(request):
+    if request.method == 'POST':
+        email = request.POST['email']
+        password = request.POST['password']
 
-
-
+    context = {
+        'page_title': 'Log In'
+    }
+    return render(request, 'log_in.html', context)

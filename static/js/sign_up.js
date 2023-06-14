@@ -17,6 +17,6 @@ function isPasswordValid(password) {
 function displayPasswordError() {
   // Display an error message to the user
   const errorContainer = document.getElementById('passwordError');
-  errorContainer.innerText = 'Password should be at least 8 characters long with 1 uppercase letter, 1 lowercase letter, 1 special character, and 1 number.';
-  errorContainer.classList.add("text-center", "text-sm", "text-red-600", "my-4");
+  errorContainer.innerHTML = 'Password should be at least 8 characters long with 1 uppercase letter, 1 lowercase letter, 1 special character, and 1 number.';
+  errorContainer.classList.add("text-center", "text-sm", "text-red-500", "mb-6")
 }

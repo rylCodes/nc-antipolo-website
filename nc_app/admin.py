@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import BusinessType, Mentor, MentorEducation, MentorExperience, MentorBiography, ClientFeedback, MentorSpecialization, SignUp
+from .models import BusinessType, Mentor, MentorEducation, MentorExperience, MentorBiography, ClientFeedback, MentorSpecialization, MsmeAccount
 
 # Register your models here.
 admin.site.register(BusinessType)
@@ -9,4 +9,4 @@ admin.site.register(MentorExperience)
 admin.site.register(MentorBiography)
 admin.site.register(ClientFeedback)
 admin.site.register(MentorSpecialization)
-admin.site.register(SignUp)
+admin.site.register(MsmeAccount)

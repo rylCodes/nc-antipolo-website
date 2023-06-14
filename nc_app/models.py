@@ -40,7 +40,7 @@ class MentorExperience(models.Model):
 
 
 class MentorBiography(models.Model):
-    mentor = models.ForeignKey(Mentor, on_delete=models.CASCADE, related_name='details')
+    mentor = models.ForeignKey(Mentor, on_delete=models.CASCADE, related_name='biography')
     description = models.TextField()
 
     def __str__(self):
@@ -59,13 +59,13 @@ class ClientFeedback(models.Model):
     business_name = models.CharField(max_length=200, null=True, blank=True)
     address = models.CharField(max_length=200, null=True, blank=True)
     email = models.EmailField(max_length=200, null=True, blank=True)
-    contact_number = models.IntegerField(max_length=11)
+    contact_number = models.IntegerField()
     comment = models.TextField()
 
 
-# Sign-Up Page.
-class SignUp(models.Model):
+# MSME Account Page.
+class MsmeAccount(models.Model):
     first_name = models.CharField(max_length=200)
     last_name = models.CharField(max_length=200)
-    email = models.EmailField(max_length=200)
+    email = models.EmailField(max_length=200, unique=True)
     password = models.CharField(max_length=200)
