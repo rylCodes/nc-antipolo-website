@@ -15,5 +15,8 @@ urlpatterns = [
     path('contact_us/', views.contact_us, name='contact_us'),
     path('business_advisory/', views.advisory, name='advisory'),
     path('expert_mentor/<str:id_name>', views.expert_mentor, name='expert_mentor'),
-
+    path('msme_profile/', views.msme_profile, name='msme_profile'),
+    path('log_in/', views.login_user, name='log_in'),
+    path('sign_up/', views.sign_up, name='sign_up'),
+    
 ]

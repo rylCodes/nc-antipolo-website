@@ -4,67 +4,9 @@ from django.core.paginator import Paginator
 from django.contrib.auth.models import User
 from django.contrib import messages
 from django.contrib.auth.decorators import login_required
-from django.contrib.auth import logout, login, authenticate
+from django.contrib.auth import login, logout, authenticate
 from django.http import HttpResponse
-
-# Sign Up Page.
-def signup(request):
-    if request.method == 'POST':
-        first_name = request.POST['first_name']
-        last_name = request.POST['last_name']
-        email = request.POST['email']
-        password = request.POST['password']
-        password2 = request.POST['password2']
-        
-        if password == password2:
-            if User.objects.filter(email=email).exists():
-                messages.error(request, 'Email is already in use')
-                return redirect('signup')
-            else:
-                new_user = User.objects.create_user(username=email, first_name=first_name, last_name=last_name, email=email, password=password)
-                new_user.save()
-                messages.success(request, 'Your account has been registered successfully. You can log-in now')
-                return redirect('user_login')
-        else:
-            messages.error(request, 'Password is not the same')
-            return redirect('signup')
-    else:
-        context = {
-        'page_title': 'Sign Up'
-        }
-        return render(request, 'signup.html', context)
-
-
-# Login User Page.
-def user_login(request):
-    if request.method == 'POST':
-        logout(request)
-        email = request.POST['email']
-        password = request.POST['password']
-        user = authenticate(username=email, password=password)
-        if user is not None:
-            login(request, user)
-            return redirect('msme_profiling')
-        else:
-            messages.error(request, 'Invalid email or password')
-            return redirect('user_login')
-    else:
-        return render(request, 'user_login.html')
-
-# Logout Function
-def user_logout(request):
-    logout(request)
-    return redirect('user_login')
-
-
-# MSME Profile Page.
-@login_required
-def msme_profiling(request):
-    context = {
-        'page_title': 'MSME Profiling'
-    }
-    return render(request, 'msme_profiling.html', context)
-
+import json
 
 # Home Page.
 def home(request):
