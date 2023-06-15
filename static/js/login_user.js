@@ -7,7 +7,7 @@
 
     // Make an AJAX request to the login_user view
     $.ajax({
-      url: '/log_in/',  // Replace with your login URL
+      url: '/login_user/',  // Replace with your login URL
       method: 'POST',
       data: formData,
       dataType: 'json',

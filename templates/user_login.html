@@ -5,25 +5,25 @@
 <div class="container flex items-center space-x-16 max-w-7xl py-12 px-6 mx-auto">
     <!--Right Item: Form-->
     <div class="w-full p-10 max-w-xl mx-auto border shadow-xl rounded-xl lg:w-2/5">
-        {% for message in messages %}
-        <div id="account_created" class="mb-4 my-auto">
-            <p class="mx-auto max-w-md text-center text-lg shadow border bg-white rounded text-green-600 px-2 py-1">
-                {{message}}
-            </p> 
-        </div>
-        {% endfor %}
-        <form id="login-form" class="flex flex-col" action="" method="POST">
-            {% csrf_token %}
-            <div class="items-center">
-                <div class="h-28 w-auto">
-                    <img class="object-contain h-full w-full" src="{% static 'img/dti_nc.png' %}" alt="">
-                </div>
-                <p class="text-sm text-gray-500 text-center">Monitoring and Evaluation</p>
+        <div class="items-center">
+            <div class="h-28 w-auto">
+                <img class="object-contain h-full w-full" src="{% static 'img/dti_nc.png' %}" alt="">
             </div>
+            <p class="text-sm text-gray-500 text-center">Monitoring and Evaluation</p>
+        </div>
+        <!--Error Message-->
+        {% for message in messages %}
+        <p class="{% if message.tags == 'success' %}text-green-600{% else %}text-red-600{% endif %} text-center px-2 py-1 mt-2">
+            {{message}}
+        </p>
+        {% endfor %}
+        <!--User Credentials-->
+        <form id="login-form" class="flex flex-col" action="user_login" method="POST">
+            {% csrf_token %}
             <input class="mt-10" type="email" name="email" required placeholder="Email Address">    
             <input id="password" class="mt-10" type="password" name="password" required placeholder="Password">
             <a href="" class="text-right mt-2 text-skyBlue">Forgot your password?</a>
-            <button class="py-2 px-1 text-white font-bold bg-turquoise h-auto w-72 mt-10 mx-auto" type="submit">SIGN IN</button>
+            <button class="py-2 px-1 text-white font-bold bg-turquoise h-auto w-72 mt-10 mx-auto" type="submit">LOGIN</button>
         </form>
         <div>
             <!--Continue with Google or Facebook-->
@@ -43,7 +43,7 @@
                 </div>
             </div>
             <!--New here? Sign Up-->
-            <p class="mt-10 text-center"><span class="font-bold">New here?</span> <a class="text-skyBlue" href="{% url 'sign_up' %}">Sign Up now</a></p>
+            <p class="mt-10 text-center"><span class="font-bold">New here?</span> <a class="text-skyBlue hover:text-turquoise" href="{% url 'signup' %}">Sign Up now</a></p>
         </div>
     </div>
 

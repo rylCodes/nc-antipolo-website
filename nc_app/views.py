@@ -4,9 +4,68 @@ from django.core.paginator import Paginator
 from django.contrib.auth.models import User, auth
 from django.contrib import messages
 from django.contrib.auth.decorators import login_required
-from django.contrib.auth import login, logout, authenticate
+from django.contrib.auth import logout, authenticate
 from django.http import HttpResponse
-import json
+
+# Sign Up Page.
+def signup(request):
+    if request.method == 'POST':
+        first_name = request.POST['first_name']
+        last_name = request.POST['last_name']
+        email = request.POST['email']
+        password = request.POST['password']
+        password2 = request.POST['password2']
+        
+        if password == password2:
+            if User.objects.filter(email=email).exists():
+                messages.error(request, 'Email is already in use')
+                return redirect('signup')
+            else:
+                new_user = User.objects.create_user(username=email, first_name=first_name, last_name=last_name, email=email, password=password)
+                new_user.save()
+                messages.success(request, 'Your account has been registered successfully. You can log-in now')
+                return redirect('user_login')
+        else:
+            messages.error(request, 'Password is not the same')
+            return redirect('signup')
+    else:
+        context = {
+        'page_title': 'Sign Up'
+        }
+        return render(request, 'signup.html', context)
+
+
+# Login User Page.
+def user_login(request):
+    if request.method == 'POST':
+        auth.logout(request)
+        email = request.POST['email']
+        password = request.POST['password']
+        user = auth.authenticate(username=email, password=password)
+        if user is not None:
+            auth.login(request, user)
+            return redirect('msme_profiling')
+        else:
+            messages.error(request, 'Invalid email or password')
+            return redirect('user_login')
+    else:
+        return render(request, 'user_login.html')
+
+# Logout Function
+def user_logout(request):
+    if request.method == 'POST':
+        auth.logout(request)
+        return redirect('user_login')
+
+
+# MSME Profile Page.
+@login_required
+def msme_profiling(request):
+    context = {
+        'page_title': 'MSME Profiling'
+    }
+    return render(request, 'msme_profiling.html', context)
+
 
 # Home Page.
 def home(request):
@@ -107,60 +166,3 @@ def expert_mentor(request, id_name):
         'page_title': 'Expert Mentors'
     }
     return render(request, 'expert_mentor.html', content)
-
-
-# MSME Profile Page.
-@login_required
-def msme_profile(request):
-    context = {
-        'page_title': 'MSME Profile'
-    }
-    return render(request, 'msme_profile.html', context)
-
-# Sign Up Page.
-def sign_up(request):
-    if request.method == 'POST':
-        first_name = request.POST['first_name']
-        last_name = request.POST['last_name']
-        email = request.POST['email']
-        password = request.POST['password']
-        
-        if User.objects.filter(email=email).exists():
-            messages.error(request, 'Email is already in use')
-            return redirect('sign_up')
-        else:
-            msme_account = User.objects.create_user(first_name=first_name, last_name=last_name, email=email, password=password)
-            msme_account.save()
-            messages.success(request, 'Your account has been registered successfully. You can log-in now')
-            return redirect('msme_profile')
-
-    context = {
-        'page_title': 'Sign Up'
-    }
-    return render(request, 'sign_up.html', context)
-
-
-# Log-In Page.
-def login_user(request):
-    logout(request) # Clear any existing user session
-    response = {'status': 'failed', 'msg': ''} # Create a response dictionary
-    email = ''
-    password = ''
-
-    if request.method == 'POST':
-        email = request.POST['email']
-        password = request.POST['password']
-        user = authenticate(email=email, password=password)
-        if user is not None:
-            if user.is_active: # Check if the user account is active
-                response['status'] = 'success'
-            else:
-                response['msg'] = 'Incorrect email or password'
-        else:
-            response['msg'] = 'Incorrect email or password'
-    return HttpResponse(json.dumps(response), content_type='application/json') # Return the response as JSON
-
-# Log-Out Function
-def logout_user(request):
-    logout(request)
-    return redirect(request, 'log_in.html')

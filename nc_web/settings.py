@@ -137,5 +137,4 @@ NPM_BIN_PATH = r'C:\Program Files\nodejs\npm.cmd'
 
 INTERNAL_IPS = ['127.0.0.1'],
 
-LOGIN_URL = '/log_in/'
-LOGIN_REDIRECT_URL = '/msme_profile/'
+LOGIN_URL = 'user_login'

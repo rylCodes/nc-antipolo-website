@@ -1,0 +1,35 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block pageContent %}
+<div class="max-w-6xl mx-auto px-6">
+    <div class="max-w-3xl mx-auto p-10 my-12 border shadow-xl rounded">
+        <!--Error Message-->
+        {% for message in messages %}
+            <div id="passwordError" class="{% if message.tags == 'error' %}text-red-600{% else %}text-green-600{% endif %} text-center mb-6 text-sm">
+                {{message}}
+            </div>
+        {% endfor %}
+        <!--Form-->
+        <form id="signup-form" class="flex flex-col" action="signup" method="POST">
+            {% csrf_token %}
+            <h1 class="font-bold text-center text-2xl text-myNavy">CREATE YOUR ACCOUNT</h1>
+            <input class="mt-6" type="text" name="first_name" required placeholder="First Name">
+            <input class="mt-6" type="text" name="last_name" required placeholder="Last Name">
+            <input class="mt-6" type="email" name="email" required placeholder="Email">
+            <input id="password" class="mt-6" type="password" name="password" pattern="{8}" required placeholder="Password">
+            <input id="password2" class="mt-6" type="password" name="password2" pattern="{8}" required placeholder="Repeat password">
+            <div class="flex items-center space-x-4 mt-6">
+                <input type="checkbox" id="terms-and-conditions" name="terms-and-conditions" required>
+                <p class="text-sm">By clicking Sign Up, you are indicating that you have read and agree to the<br><a class="text-skyBlue" href="">Terms & Conditions and Privacy Policy</a></p>
+            </div>
+            <button class="py-2 px-1 text-white font-bold bg-turquoise h-auto w-72 mt-6 mx-auto" type="submit">SIGN UP</button>
+            <div class="flex items-center space-x-4 mt-6">
+                <input type="checkbox" id="receive-marketing-communications" name="receive-marketing-communications">
+                <p class="text-sm">Yes, I would like to receive marketing communications regarding DTI MSME Profile's products, services, and events.</p>
+            </div>
+            <p class="mt-6 text-center"><span class="font-bold">Already have an account? </span><a class="text-skyBlue" href="{% url 'user_login' %}">Log In here</a></p>
+        </form>
+    </div>
+</div>
+{% endblock pageContent %}
