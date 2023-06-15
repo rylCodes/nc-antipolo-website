@@ -1,10 +1,10 @@
 from django.shortcuts import render, redirect
 from .models import BusinessType, Mentor, ClientFeedback
 from django.core.paginator import Paginator
-from django.contrib.auth.models import User, auth
+from django.contrib.auth.models import User
 from django.contrib import messages
 from django.contrib.auth.decorators import login_required
-from django.contrib.auth import logout, authenticate
+from django.contrib.auth import logout, login, authenticate
 from django.http import HttpResponse
 
 # Sign Up Page.
@@ -38,12 +38,12 @@ def signup(request):
 # Login User Page.
 def user_login(request):
     if request.method == 'POST':
-        auth.logout(request)
+        logout(request)
         email = request.POST['email']
         password = request.POST['password']
-        user = auth.authenticate(username=email, password=password)
+        user = authenticate(username=email, password=password)
         if user is not None:
-            auth.login(request, user)
+            login(request, user)
             return redirect('msme_profiling')
         else:
             messages.error(request, 'Invalid email or password')
@@ -53,9 +53,8 @@ def user_login(request):
 
 # Logout Function
 def user_logout(request):
-    if request.method == 'POST':
-        auth.logout(request)
-        return redirect('user_login')
+    logout(request)
+    return redirect('user_login')
 
 
 # MSME Profile Page.
@@ -109,8 +108,8 @@ def registration(request):
     return render(request, 'registration.html', context)
 
 
-# Contact Page.
-def contact(request):
+# Contact Us Page.
+def contact_us(request):
     if request.method == 'POST':
         name = request.POST['fullname']
         business_name = request.POST['business_name']
@@ -120,12 +119,12 @@ def contact(request):
         client_feedback = ClientFeedback(name=name, business_name=business_name, email=email, contact_number=contact_number, comment=comment)
         client_feedback.save()
         messages.success(request, 'Your feedback has been received. Thank you!')
-        return redirect('contact')
+        return redirect('contact_us')
 
     context = {
-        'page_title': 'Contact',
+        'page_title': 'Contact Us',
     }
-    return render(request, 'contact.html', context)
+    return render(request, 'contact_us.html', context)
 
 
 # FAQs Page.

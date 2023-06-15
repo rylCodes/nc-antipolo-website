@@ -2,47 +2,42 @@
 <div class="container flex flex-col max-w-6xl mx-auto py-3 justify-between space-y-8 mt-6 lg:flex-row lg:space-y-0 lg:space-x-8">
     <!--Logo and Office Address-->
     <div class="flex flex-col items-center justify-start mb-2">
-        <div class="">
-            <img class="h-32 w-auto" src="{% static 'img/dti_nc.png' %}" alt="">
-        </div>
-
-        <div>
-            <p class="text-sm">
-                3F CMA Bldg., Olalia Road, Brgy. Dela Paz, Antipolo City,<br>Rizal, Philippines
-            </p>
-        </div>
+        <img class="h-32 w-auto" src="{% static 'img/dti_nc.png' %}" alt="">
+        <p class="text-sm mt-2 lg:mt-3">
+            3F CMA Bldg., Olalia Road, Brgy. Dela Paz, Antipolo City,<br>Rizal, Philippines
+        </p>
     </div>
 
     <!--Nav Options-->
-    <div class="flex flex-col items-center justify-center py-3 space-y-4 lg:justify-start lg:items-start">
+    <div class="flex flex-col items-center justify-center py-3 text-xs space-y-4 lg:justify-start lg:items-start lg:space-y-5">
         <div>
-            <p class="font-bold text-xs text-myNavy">Negosyo Center Antipolo:</p>
+            <p class="font-bold text-myNavy text-sm">Negosyo Center Antipolo:</p>
         </div>
-        <div class="flex flex-col items-center justify-center space-y-2 lg:justify-start lg:items-start">
-            <a href="{% url 'home' %}" class="text-xs text-turquoise hover:text-paleBlue">Home</a>
-            <a href="{% url 'about' %}" class="text-xs text-turquoise hover:text-paleBlue">About Us</a>
-            <a href="{% url 'resources' %}" class="text-xs text-turquoise hover:text-paleBlue">Resources</a>
-            <a href="{% url 'faqs' %}" class="text-xs text-turquoise hover:text-paleBlue">FAQs</a>
-            <a href="{% url 'contact' %}" class="text-xs text-turquoise hover:text-paleBlue">Contact</a>
+        <div class="flex flex-col items-center justify-center space-y-4 lg:justify-start lg:items-start">
+            <a href="{% url 'home' %}" class="text-turquoise hover:text-paleBlue">Home</a>
+            <a href="{% url 'about' %}" class="text-turquoise hover:text-paleBlue">About Us</a>
+            <a href="{% url 'resources' %}" class="text-turquoise hover:text-paleBlue">Resources</a>
+            <a href="{% url 'faqs' %}" class="text-turquoise hover:text-paleBlue">FAQs</a>
+            <a href="{% url 'contact_us' %}" class="text-turquoise hover:text-paleBlue">Contact Us</a>
         </div>
     </div>
 
     <!--NC Functions-->
-    <div class="flex flex-col items-center justify-center py-3 space-y-4 lg:justify-start lg:items-start">
+    <div class="flex flex-col items-center justify-center py-3 text-xs space-y-4 lg:justify-start lg:items-start lg:space-y-5">
         <div>
-            <p class="font-bold text-xs text-myNavy">Services:</p>
+            <p class="font-bold text-myNavy text-sm">Services:</p>
         </div>
-        <div class="flex flex-col items-center justify-center space-y-2 lg:justify-start lg:items-start">
-            <a href="{% url 'advisory' %}" class="text-xs text-turquoise hover:text-paleBlue">Business Advisory</a>
-            <a href="{% url 'registration' %}" class="text-xs text-turquoise hover:text-paleBlue">Business Registration</a>
-            <a href="#" class="text-xs text-turquoise hover:text-paleBlue">Business Information</a>
-            <a href="{% url 'msme_profiling' %}" class="text-xs text-turquoise hover:text-paleBlue">Monitoring and Evaluation</a>
+        <div class="flex flex-col items-center justify-center space-y-4 lg:justify-start lg:items-start">
+            <a href="{% url 'advisory' %}" class="text-turquoise hover:text-paleBlue">Business Advisory</a>
+            <a href="{% url 'registration' %}" class="text-turquoise hover:text-paleBlue">Business Registration</a>
+            <a href="#" class="text-turquoise hover:text-paleBlue">Business Information</a>
+            <a href="{% url 'msme_profiling' %}" class="text-turquoise hover:text-paleBlue">Monitoring and Evaluation</a>
         </div>
     </div>
 
     <!--Reach Us Out-->
-    <div class="flex flex-col items-center justify-center py-3 space-y-4 lg:justify-start lg:items-start">
-        <p class="text-xs font-bold text-myNavy">Reach out to us:</p>
+    <div class="flex flex-col items-center justify-center py-3 space-y-4 lg:justify-start lg:items-start lg:space-y-5">
+        <p class="font-bold text-myNavy text-sm">Reach out to us:</p>
         <div class="flex space-x-2">
             <a href="https://www.facebook.com/negosyocenterantipolocity" target="_blank">
                 <img class="h-14 w-auto hover:scale-105" src="{% static 'img/social_media/facebook.png' %}" alt="">
@@ -54,9 +49,9 @@
                 <img class="h-14 w-auto hover:scale-105" src="{% static 'img/social_media/twitter.png' %}" alt="">
             </a>
         </div>
-        <div>
-            <p class="text-xs">Antipolo.LGU@negosyocenter.go.ph</p>
-            <p class="text-xs">nc.antipolorizal@gmail.com</p>
+        <div class="text-sm">
+            <p>Antipolo.LGU@negosyocenter.go.ph</p>
+            <p>nc.antipolorizal@gmail.com</p>
         </div>
 
     </div>

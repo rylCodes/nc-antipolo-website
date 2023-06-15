@@ -1,7 +1,13 @@
     {% load static %}
     <div class="max-w-6xl mx-auto px-6">
         <div class="relative flex items-center justify-between mx-auto">
-            <div class="flex justify-start items-center space-x-4">
+            <div class="flex justify-start items-center space-x-4 md:space-x-0">
+                <!--Menu Icon-->
+                <div id="menuButton" onclick="toggleAltNavigation()" class="group cursor-pointer flex flex-col justify-center items-center space-y-1 md:hidden">
+                    <span class="h-1 w-6 rounded bg-myNavy group-hover:bg-paleBlue"></span>
+                    <span class="h-1 w-6 rounded bg-myNavy group-hover:bg-paleBlue"></span>
+                    <span class="h-1 w-6 rounded bg-myNavy group-hover:bg-paleBlue"></span>
+                </div>
                 <!--Logo-->
                 <a href="{% url 'home' %}">
                     <img class="h-16 w-auto" src="{% static 'img/dti_nc.png' %}" alt="">
@@ -17,24 +23,32 @@
                     <a class="{% if request.path == '/faqs/' %}border-b-4 border-turquoise{% endif %} px-3 py-2 hover:border-b-4 hover:border-turquoise"
                         href="{% url 'faqs' %}">FAQs</a>
                     <a class="{% if request.path == '/contact/' %}border-b-4 border-turquoise{% endif %} px-3 py-2 hover:border-b-4 hover:border-turquoise"
-                        href="{% url 'contact' %}">Contact</a>
+                        href="{% url 'contact_us' %}">Contact Us</a>
+                    <a class="{% if request.path == '/assistance/' %}border-b-4 border-turquoise{% endif %} px-3 py-2 hover:border-b-4 hover:border-turquoise"
+                        href="{% url 'assistance' %}">Assistance</a>
                 </div>
             </div>
-
-            <!--Get Started Button-->
-            <a id="getStartedButton" href="{% url 'assistance' %}" class="{% if request.path == '/assistance/' %}md:hidden{% endif %} hidden p-3 px-6 pt-2 text-white font-bold whitespace-nowrap bg-myNavy rounded-full hover:bg-paleBlue md:block">
-                Get started
+            {% if user.is_authenticated %}
+            <!--Logout Button-->
+            <a href="{% url 'user_logout' %}">
+                <div class="{% if request.path == '/user_logout/' %}hidden{% endif %} flex items-center py-2 px-1 text-white font-bold bg-turquoise rounded-lg hover:bg-skyBlue lg:space-x-1 lg:px-2">
+                    <p class="hidden lg:block">Logout</p>
+                    <div class="lg:w-1/2">
+                        <img class="h-6 w-auto lg:h-7" src="{% static 'img/logout.png' %}" alt="">
+                    </div>
+                </div>
             </a>
-
-            <!--Menu Icon-->
-            <div id="menuButton" onclick="toggleAltNavigation()" class="group cursor-pointer flex flex-col justify-center items-center space-y-1 md:hidden">
-                <span class="h-1 w-6 rounded bg-myNavy group-hover:bg-paleBlue"></span>
-                <span class="h-1 w-6 rounded bg-myNavy group-hover:bg-paleBlue"></span>
-                <span class="h-1 w-6 rounded bg-myNavy group-hover:bg-paleBlue"></span>
-            </div>
-
+            {% else %}
+            <!--Login Button-->
+            <a href="{% url 'user_login' %}">
+                <div class="{% if request.path == '/user_login/' %}hidden{% endif %} flex items-center py-2 px-1 text-white font-bold bg-turquoise rounded-lg hover:bg-skyBlue lg:space-x-1 lg:px-2">
+                    <img class="h-6 w-auto lg:h-7" src="{% static 'img/login.png' %}" alt="">
+                    <p class="hidden w-1/2 lg:block">Login</p>
+                </div>
+            </a>
+            {% endif %}
             <!--Alt Navigation-->
-            <div id="altNavigation" class="hidden absolute divide-y top-5 right-8 h-auto w-48 bg-turquoise shadow flex-col justify-center rounded-lg text-lg font-bold text-white text-center md:hidden">
+            <div id="altNavigation" class="hidden absolute divide-y top-16 left-0 h-auto w-48 bg-turquoise shadow flex-col justify-center rounded-lg text-lg font-bold text-white text-center md:hidden">
                 <a class="{% if request.path == '/' %}rounded-md bg-skyBlue{% endif %} px-2 py-1 hover:rounded-md hover:bg-skyBlue min-w-full mx-auto"
                     href="{% url 'home' %}">Home</a>
                 <a class="{% if request.path == '/about/' %}rounded-md bg-skyBlue{% endif %} px-2 py-1 hover:rounded-md hover:bg-skyBlue min-w-full mx-auto" 
@@ -46,7 +60,7 @@
                 <a class="{% if request.path == '/about/' %}rounded-md bg-skyBlue{% endif %} px-2 py-1 hover:rounded-md hover:bg-skyBlue min-w-full mx-auto"
                     href="{% url 'faqs' %}">FAQs</a>
                 <a class="{% if request.path == '/contact/' %}rounded-md bg-skyBlue{% endif %} px-2 py-1 hover:rounded-md hover:bg-skyBlue min-w-full mx-auto"
-                    href="{% url 'contact' %}">Contact</a>
+                    href="{% url 'contact_us' %}">Contact Us</a>
             </div>
         </div>
     </div>
