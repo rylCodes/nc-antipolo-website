@@ -16,4 +16,6 @@ urlpatterns = [
     path('business_advisory/', views.advisory, name='advisory'),
     path('expert_mentor/<str:id_name>', views.expert_mentor, name='expert_mentor'),
 
+    path('client_contacts/', views.client_contacts, name='client_contacts'),
+
 ]

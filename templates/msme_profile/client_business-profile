@@ -1,0 +1,77 @@
+<div class="items-center max-w-4xl mx-auto px-6 my-12 lg:items-start lg:max-w-6xl">
+    <form>
+        <h3>BUSINESS PROFILE</h3>
+        
+        <label for="yearEstablished">YEAR ESTABLISHED:</label>
+        <input type="text" id="yearEstablished" name="yearEstablished">
+        
+        <label for="formOfOrganization">FORM OF ORGANIZATION (BUSINESS OWNERSHIP):</label><br>
+        <input type="checkbox" id="soleProprietorship" name="formOfOrganization" value="Sole Proprietorship">
+        <label for="soleProprietorship">Sole Proprietorship</label><br>
+        <input type="checkbox" id="partnership" name="formOfOrganization" value="Partnership">
+        <label for="partnership">Partnership</label><br>
+        <input type="checkbox" id="association" name="formOfOrganization" value="Association">
+        <label for="association">Association</label><br>
+        <input type="checkbox" id="corporation" name="formOfOrganization" value="Corporation">
+        <label for="corporation">Corporation</label><br>
+        <input type="checkbox" id="cooperative" name="formOfOrganization" value="Cooperative">
+        <label for="cooperative">Cooperative</label><br>
+        <input type="checkbox" id="workersAssociation" name="formOfOrganization" value="Worker's/Rural Association (DOLE)">
+        <label for="workersAssociation">Worker's/Rural Association (DOLE)</label><br>
+        <input type="checkbox" id="onePersonCorporation" name="formOfOrganization" value="One Person Corporation">
+        <label for="onePersonCorporation">One Person Corporation</label><br>
+        <input type="checkbox" id="franchise" name="formOfOrganization" value="Franchise">
+        <label for="franchise">Franchise</label>
+        
+        <label for="assetSize">ASSET SIZE:</label>
+        <select id="assetSize" name="assetSize">
+          <option value="Micro">Micro - Up to Php3,000,000</option>
+          <option value="Small">Small - Php3,000,001 to Php15,000,000</option>
+          <option value="Medium">Medium - Php15,000,001 to Php100,000,000</option>
+          <option value="Large">Large - More than Php100,000,000</option>
+        </select>
+        
+        <label for="businessClassification">CLASSIFICATION OF BUSINESS:</label><br>
+        <input type="checkbox" id="manufacturing" name="businessClassification" value="Manufacturing/Producing">
+        <label for="manufacturing">Manufacturing/Producing</label><br>
+        <input type="checkbox" id="wholesaling" name="businessClassification" value="Wholesaling/Trading">
+        <label for="wholesaling">Wholesaling/Trading</label><br>
+        <input type="checkbox" id="retailing" name="businessClassification" value="Retailing/Trading">
+        <label for="retailing">Retailing/Trading</label><br>
+        <input type="checkbox" id="exporting" name="businessClassification" value="Exporting">
+        <label for="exporting">Exporting</label><br>
+        <input type="checkbox" id="importing" name="businessClassification" value="Importing">
+        <label for="importing">Importing</label><br>
+        <input type="checkbox" id="service" name="businessClassification" value="Service">
+        <label for="service">Service</label>
+        
+        <label for="secondaryBusiness">SECONDARY BUSINESS ACTIVITY:</label><br>
+        <input type="checkbox" id="secondaryManufacturing" name="secondaryBusiness" value="Manufacturing/Producing">
+        <label for="secondaryManufacturing">Manufacturing/Producing</label><br>
+        <input type="checkbox" id="secondaryWholesaling" name="secondaryBusiness" value="Wholesaling/Trading">
+        <label for="secondaryWholesaling">Wholesaling/Trading</label><br>
+        <input type="checkbox" id="secondaryRetailing" name="secondaryBusiness" value="Retailing/Trading">
+        <label for="secondaryRetailing">Retailing/Trading</label><br>
+        <input type="checkbox" id="secondaryExporting" name="secondaryBusiness" value="Exporting">
+        <label for="secondaryExporting">Exporting</label><br>
+        <input type="checkbox" id="secondaryImporting" name="secondaryBusiness" value="Importing">
+        <label for="secondaryImporting">Importing</label><br>
+        <input type="checkbox" id="secondaryService" name="secondaryBusiness" value="Service">
+        <label for="secondaryService">Service</label>
+        
+        <label for="psic">PHILIPPINE STANDARD INDUSTRIAL CLASSIFICATION (PSIC):</label><br>
+        <input type="text" id="psic" name="psic">
+        
+        <label for="priorityIndustry">PRIORITY INDUSTRY:</label>
+        <input type="text" id="priorityIndustry" name="priorityIndustry">
+        
+        <label for="ice">INDUSTRY CLUSTER ENHANCEMENT (ICE):</label>
+        <input type="text" id="ice" name="ice">
+        
+        <label for="tradeAssociation">TRADE ASSOCIATION AFFILIATION/S:</label>
+        <input type="text" id="tradeAssociation" name="tradeAssociation">
+        
+        <input type="submit" value="Submit">
+      </form>
+      
+</div>

@@ -1,8 +1,152 @@
-{% extends "base.html" %}
+{% extends 'base.html' %}
 {% load static %}
+
 
 {% block pageContent %}
     <div class="items-center max-w-4xl mx-auto px-6 my-12 space-x-0 lg:items-start lg:max-w-6xl">
-        <a href="user_logout" class="px-2 py-1 bg-turquoise font-bold rounded-lg text-white">Logout</a>
+        <!--Heading-->
+        <h1 class="text-4xl font-bold lg:text-5xl">Monitoring and Evaluation</h1>
+
+        <div class="mx-auto mt-8">
+            <div class="container-advisory flex flex-wrap justify-start gap-5">
+
+                <div class="border space-y-2 shadow">
+                  <a href="{% url 'client_contacts' %}">
+                    <img src="{% static 'img/msme-monitoring/client.png' %}" alt="">
+                  </a>
+                  <div class="text-lg text-center mt-2">
+                    <p class="font-bold">Client/MSME/Representative</p>
+                    <p class="text-center">Contact Information</p>
+                  </div>
+                  <div class="h-auto w-10 mx-auto pb-4">
+                    <a href="">
+                      <img src="" alt="">
+                    </a>
+                  </div>
+                </div>
+                
+                <div class="border space-y-2 shadow">
+                    <a href="{% url 'client_contacts' %}">
+                      <img src="{% static 'img/msme-monitoring/categories.png' %}" alt="">
+                    </a>
+                    <div class="text-lg text-center mt-2">
+                      <p class="font-bold">Client/MSME</p>
+                      <p class="text-center">Category</p>
+                    </div>
+                    <div class="h-auto w-10 mx-auto pb-4">
+                      <a href="">
+                        <img src="" alt="">
+                      </a>
+                    </div>
+                  </div> 
+
+                  <div class="border space-y-2 shadow">
+                    <a href="{% url 'client_contacts' %}">
+                      <img src="{% static 'img/msme-monitoring/client.png' %}" alt="">
+                    </a>
+                    <div class="text-lg text-center mt-2">
+                      <p class="font-bold">Client/MSME/Representative</p>
+                      <p class="text-center">Contact Information</p>
+                    </div>
+                    <div class="h-auto w-10 mx-auto pb-4">
+                      <a href="">
+                        <img src="" alt="">
+                      </a>
+                    </div>
+                  </div> 
+
+                  <div class="border space-y-2 shadow">
+                    <a href="{% url 'client_contacts' %}">
+                      <img src="{% static 'img/msme-monitoring/registered.png' %}" alt="">
+                    </a>
+                    <div class="text-lg text-center mt-2">
+                      <p class="font-bold">Business Registration</p>
+                      <p class="text-center">Contact Information</p>
+                    </div>
+                    <div class="h-auto w-10 mx-auto pb-4">
+                      <a href="">
+                        <img src="" alt="">
+                      </a>
+                    </div>
+                  </div> 
+
+                  <div class="border space-y-2 shadow">
+                    <a href="{% url 'client_contacts' %}">
+                      <img src="{% static 'img/msme-monitoring/client.png' %}" alt="">
+                    </a>
+                    <div class="text-lg text-center mt-2">
+                      <p class="font-bold">Client/MSME/Representative</p>
+                      <p class="text-center">Contact Information</p>
+                    </div>
+                    <div class="h-auto w-10 mx-auto pb-4">
+                      <a href="">
+                        <img src="" alt="">
+                      </a>
+                    </div>
+                  </div> 
+
+                  <div class="border space-y-2 shadow">
+                    <a href="{% url 'client_contacts' %}">
+                      <img src="{% static 'img/msme-monitoring/business-profile.png' %}" alt="">
+                    </a>
+                    <div class="text-lg text-center mt-2">
+                      <p class="font-bold">Business Profile</p>
+                      <p class="text-center">Contact Information</p>
+                    </div>
+                    <div class="h-auto w-10 mx-auto pb-4">
+                      <a href="">
+                        <img src="" alt="">
+                      </a>
+                    </div>
+                  </div> 
+
+                  <div class="border space-y-2 shadow">
+                    <a href="{% url 'client_contacts' %}">
+                      <img src="{% static 'img/msme-monitoring/client.png' %}" alt="">
+                    </a>
+                    <div class="text-lg text-center mt-2">
+                      <p class="font-bold">Client/MSME/Representative</p>
+                      <p class="text-center">Contact Information</p>
+                    </div>
+                    <div class="h-auto w-10 mx-auto pb-4">
+                      <a href="">
+                        <img src="" alt="">
+                      </a>
+                    </div>
+                  </div> 
+
+                  <div class="border space-y-2 shadow">
+                    <a href="{% url 'client_contacts' %}">
+                      <img src="{% static 'img/msme-monitoring/owner.png' %}" alt="">
+                    </a>
+                    <div class="text-lg text-center mt-2">
+                      <p class="font-bold">Business Owner's Information</p>
+                      <p class="text-center">Contact Information</p>
+                    </div>
+                    <div class="h-auto w-10 mx-auto pb-4">
+                      <a href="">
+                        <img src="" alt="">
+                      </a>
+                    </div>
+                  </div> 
+
+                  <div class="border space-y-2 shadow">
+                    <a href="{% url 'client_contacts' %}">
+                      <img src="{% static 'img/msme-monitoring/client.png' %}" alt="">
+                    </a>
+                    <div class="text-lg text-center mt-2">
+                      <p class="font-bold">Client/MSME/Representative</p>
+                      <p class="text-center">Contact Information</p>
+                    </div>
+                    <div class="h-auto w-10 mx-auto pb-4">
+                      <a href="">
+                        <img src="" alt="">
+                      </a>
+                    </div>
+                  </div> 
+
+            </div>
+
+        </div>
     </div>  
 {% endblock pageContent %}

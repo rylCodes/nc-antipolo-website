@@ -1,0 +1,55 @@
+<div class="items-center max-w-4xl mx-auto px-6 my-12 lg:items-start lg:max-w-6xl">
+    <form>
+        <h3>BUSINESS FINANCIAL STRUCTURE</h3>
+        
+        <label for="initialCapital">INITIAL CAPITALIZATION (in Php):</label><br>
+        <input type="text" id="initialCapital" name="initialCapital"><br>
+        
+        <label for="initialCapitalYear">Year:</label><br>
+        <input type="text" id="initialCapitalYear" name="initialCapitalYear"><br>
+        
+        <label for="capitalStructure">CAPITAL STRUCTURE</label><br>
+        <p>If Corporation/NGO, CAPITALIZATION (in PhP) Date:</p>
+        <label for="authorizedCapital">Authorized:</label><br>
+        <input type="text" id="authorizedCapital" name="authorizedCapital"><br>
+        
+        <label for="subscribedCapital">Subscribed:</label><br>
+        <input type="text" id="subscribedCapital" name="subscribedCapital"><br>
+        
+        <label for="paidUpCapital">Paid-Up:</label><br>
+        <input type="text" id="paidUpCapital" name="paidUpCapital"><br>
+        
+        <label for="assetSizeCapitalization">ASSET SIZE CAPITALIZATION Date:</label><br>
+        <input type="text" id="assetSizeCapitalization" name="assetSizeCapitalization"><br>
+        
+        <label for="assetSizeRange">ASSET SIZE RANGE:</label><br>
+        <input type="checkbox" id="assetSizeRange1" name="assetSizeRange" value="Below Php100,000">
+        <label for="assetSizeRange1">Below Php100,000</label><br>
+        <input type="checkbox" id="assetSizeRange2" name="assetSizeRange" value=">Php100,001-500,000">
+        <label for="assetSizeRange2">Php100,001-500,000</label><br>
+        <input type="checkbox" id="assetSizeRange3" name="assetSizeRange" value=">Php500,001-1.5 million">
+        <label for="assetSizeRange3">Php500,001-1.5 million</label><br>
+        <input type="checkbox" id="assetSizeRange4" name="assetSizeRange" value=">1,500,001-3 million">
+        <label for="assetSizeRange4">>1,500,001-3 million</label><br>
+        <input type="checkbox" id="assetSizeRange5" name="assetSizeRange" value=">Php3,000,001-5 million">
+        <label for="assetSizeRange5">Php3,000,001-5 million</label><br>
+        <input type="checkbox" id="assetSizeRange6" name="assetSizeRange" value=">Php5,000,001-10 million">
+        <label for="assetSizeRange6">Php5,000,001-10 million</label><br>
+        <input type="checkbox" id="assetSizeRange7" name="assetSizeRange" value=">Php10,000,000-15 million">
+        <label for="assetSizeRange7">Php10,000,000-15 million</label><br>
+        <input type="checkbox" id="assetSizeRange8" name="assetSizeRange" value="Above Php15 million to P100 million">
+        <label for="assetSizeRange8">Above Php15 million to P100 million</label><br>
+        
+        <label for="salesHistoryDate">SALES HISTORY Date:</label><br>
+        <input type="text" id="salesHistoryDate" name="salesHistoryDate"><br>
+        
+        <label for="domesticSales">Domestic Sales (in PhP):</label><br>
+        <input type="text" id="domesticSales" name="domesticSales"><br>
+        
+        <label for="exportSales">Export Sales (in US$):</label><br>
+        <input type="text" id="exportSales" name="exportSales"><br>
+        
+        <input type="submit" value="Submit">
+      </form>
+      
+</div>

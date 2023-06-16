@@ -12,6 +12,7 @@ def signup(request):
     if request.method == 'POST':
         first_name = request.POST['first_name']
         last_name = request.POST['last_name']
+        username = request.POST['email']
         email = request.POST['email']
         password = request.POST['password']
         password2 = request.POST['password2']
@@ -21,7 +22,7 @@ def signup(request):
                 messages.error(request, 'Email is already in use')
                 return redirect('signup')
             else:
-                new_user = User.objects.create_user(username=email, first_name=first_name, last_name=last_name, email=email, password=password)
+                new_user = User.objects.create_user(username=username, first_name=first_name, last_name=last_name, email=email, password=password)
                 new_user.save()
                 messages.success(request, 'Your account has been registered successfully. You can log-in now')
                 return redirect('user_login')
@@ -39,9 +40,9 @@ def signup(request):
 def user_login(request):
     if request.method == 'POST':
         logout(request)
-        email = request.POST['email']
+        username = request.POST['username']
         password = request.POST['password']
-        user = authenticate(username=email, password=password)
+        user = authenticate(username=username, password=password)
         if user is not None:
             login(request, user)
             return redirect('msme_profiling')
@@ -55,15 +56,6 @@ def user_login(request):
 def user_logout(request):
     logout(request)
     return redirect('user_login')
-
-
-# MSME Profile Page.
-@login_required
-def msme_profiling(request):
-    context = {
-        'page_title': 'MSME Profiling'
-    }
-    return render(request, 'msme_profiling.html', context)
 
 
 # Home Page.
@@ -165,3 +157,19 @@ def expert_mentor(request, id_name):
         'page_title': 'Expert Mentors'
     }
     return render(request, 'expert_mentor.html', content)
+
+
+
+# MSME Profile Page.
+@login_required
+def msme_profiling(request):
+    context = {
+        'page_title': 'MSME Profiling'
+    }
+    return render(request, 'msme_profiling.html', context)
+
+def client_contacts(request):
+    context = {
+        'page_title': 'Client Contacts'
+    }
+    return render(request, 'msme_profile/client_contacts.html', context)

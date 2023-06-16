@@ -18,12 +18,12 @@
         </p>
         {% endfor %}
         <!--User Credentials-->
-        <form id="login-form" class="flex flex-col" action="user_login" method="POST">
+        <form id="login-form" class="flex flex-col" action="" method="POST">
             {% csrf_token %}
-            <input class="mt-10" type="email" name="email" required placeholder="Email Address">    
+            <input class="mt-10" type="text" name="username" required placeholder="Email address">    
             <input id="password" class="mt-10" type="password" name="password" required placeholder="Password">
             <a href="" class="text-right mt-2 text-skyBlue">Forgot your password?</a>
-            <button class="py-2 px-1 text-white font-bold bg-turquoise h-auto w-72 mt-10 mx-auto" type="submit">LOGIN</button>
+            <button class="py-2 px-1 text-white font-bold bg-turquoise h-auto w-72 mt-10 mx-auto rounded" type="submit">LOGIN</button>
         </form>
         <div>
             <!--Continue with Google or Facebook-->

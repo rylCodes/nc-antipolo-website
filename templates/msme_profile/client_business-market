@@ -1,0 +1,101 @@
+<div class="items-center max-w-4xl mx-auto px-6 my-12 lg:items-start lg:max-w-6xl">
+    <form>
+        <h3>MARKET ACCESS</h3>
+        
+        <h4>DOMESTIC MARKET</h4>
+        <table>
+          <tr>
+            <th>Product/Service</th>
+            <th>Region</th>
+            <th>Province</th>
+          </tr>
+          <tr>
+            <td><input type="text" name="domesticProduct1"></td>
+            <td><input type="text" name="domesticRegion1"></td>
+            <td><input type="text" name="domesticProvince1"></td>
+          </tr>
+          <!-- Add more rows for additional products/services -->
+        </table>
+        
+        <h4>EXPORT MARKET</h4>
+        <p>Date Export Started</p>
+        <input type="text" name="exportDateStarted">
+        
+        <table>
+          <tr>
+            <th>Product/Service</th>
+            <th>Country</th>
+            <th>Trade Bloc</th>
+          </tr>
+          <tr>
+            <td><input type="text" name="exportProduct1"></td>
+            <td><input type="text" name="exportCountry1"></td>
+            <td><input type="text" name="exportTradeBloc1"></td>
+          </tr>
+          <!-- Add more rows for additional products/services -->
+        </table>
+        
+        <h4>IMPORT MARKET</h4>
+        <p>Date Import Started</p>
+        <input type="text" name="importDateStarted">
+        
+        <table>
+          <tr>
+            <th>Product/Commodity</th>
+            <th>Country</th>
+          </tr>
+          <tr>
+            <td><input type="text" name="importProduct1"></td>
+            <td><input type="text" name="importCountry1"></td>
+          </tr>
+          <!-- Add more rows for additional products/commodities -->
+        </table>
+        
+        <h4>PRODUCT/SERVICES LINE</h4>
+        <table>
+          <tr>
+            <th>Product/Service</th>
+            <th>Product/Service</th>
+            <th>Product/Service</th>
+            <th>Product/Service</th>
+            <th>Product/Service Line Description</th>
+            <th>Major Raw Material/s</th>
+            <th>Annual Production Capacity</th>
+            <th>Year</th>
+            <th>Value/Volume</th>
+            <th>Unit of Measure</th>
+          </tr>
+          <tr>
+            <td><input type="text" name="productService1"></td>
+            <td><input type="text" name="productService2"></td>
+            <td><input type="text" name="productService3"></td>
+            <td><input type="text" name="productService4"></td>
+            <td><input type="text" name="productServiceDescription"></td>
+            <td><input type="text" name="rawMaterial"></td>
+            <td><input type="text" name="productionCapacity"></td>
+            <td><input type="text" name="productionYear"></td>
+            <td><input type="text" name="productionValue"></td>
+            <td><input type="text" name="productionUnit"></td>
+          </tr>
+          <!-- Add more rows for additional product/service lines -->
+        </table>
+        
+        <h4>PRODUCT/SERVICE CERTIFICATIONS</h4>
+        <table>
+          <tr>
+            <th>Certification Type</th>
+            <th>Certifying Body</th>
+            <th>Expiry Date</th>
+          </tr>
+          <tr>
+            <td><input type="text" name="certificationType1"></td>
+            <td><input type="text" name="certifyingBody1"></td>
+            <td><input type="text" name="certificationExpiry1"></td>
+          </tr>
+          <!-- Add more rows for additional certifications -->
+        </table>
+        
+        <input type="submit" value="Submit">
+      </form>
+      
+</div>

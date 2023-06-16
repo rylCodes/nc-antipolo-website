@@ -1,0 +1,54 @@
+<div class="items-center max-w-4xl mx-auto px-6 my-12 lg:items-start lg:max-w-6xl">
+    <form>
+        <h3>EMPLOYMENT STATISTICS</h3>
+        
+        <p>Date:</p>
+        <input type="text" name="employmentDate">
+        
+        <table>
+          <tr>
+            <th></th>
+            <th>Male</th>
+            <th>Female</th>
+          </tr>
+          <tr>
+            <td>Full-Time Employees</td>
+            <td><input type="number" name="fullTimeMale"></td>
+            <td><input type="number" name="fullTimeFemale"></td>
+          </tr>
+          <tr>
+            <td>Part-Time Employees</td>
+            <td><input type="number" name="partTimeMale"></td>
+            <td><input type="number" name="partTimeFemale"></td>
+          </tr>
+          <tr>
+            <td>Abled</td>
+            <td><input type="number" name="abledMale"></td>
+            <td><input type="number" name="abledFemale"></td>
+          </tr>
+          <tr>
+            <td>Differently-Abled</td>
+            <td><input type="number" name="differentlyAbledMale"></td>
+            <td><input type="number" name="differentlyAbledFemale"></td>
+          </tr>
+          <tr>
+            <td>Indigenous People</td>
+            <td><input type="number" name="indigenousMale"></td>
+            <td><input type="number" name="indigenousFemale"></td>
+          </tr>
+          <tr>
+            <td>Senior Citizen</td>
+            <td><input type="number" name="seniorCitizenMale"></td>
+            <td><input type="number" name="seniorCitizenFemale"></td>
+          </tr>
+        </table>
+        
+        <p>Total No. of Full-Time Employees:</p>
+        <input type="number" name="totalFullTimeEmployees">
+        
+        <p>Total No. of Part-Time Employees:</p>
+        <input type="number" name="totalPartTimeEmployees">
+        
+        <input type="submit" value="Submit">
+      </form>      
+</div>
