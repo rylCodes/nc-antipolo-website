@@ -1,23 +1,48 @@
-/* Advisory.html flex container */
+/* Advisory container */
 
 .container-advisory > div {
-    flex: 0 0 calc(25% - .9375rem); /* Adjust this value to set the desired gap */
+    flex: 0 0 calc(25% - .9375rem);
   }
 
   @media (max-width: 1200px) {
     .container-advisory > div {
-      flex: 0 0 calc(33.33% - .8334rem); /* Adjust this value to set the desired gap */
+      flex: 0 0 calc(33.33% - .8334rem);
     }
   }
 
   @media (max-width: 768px) {
     .container-advisory > div {
-      flex: 0 0 calc(50% - .625rem); /* Adjust this value to set the desired gap */
+      flex: 0 0 calc(50% - .625rem);
     }
   }
 
   @media (max-width: 576px) {
     .container-advisory > div {
+      flex: 0 0 100%;
+    }
+  }
+
+
+/* MSME Profile container */ 
+
+  .container-msme_profile > div {
+    flex: 0 0 calc(20% - 1rem);
+  }
+
+  @media (max-width: 1200px) {
+    .container-msme_profile > div {
+      flex: 0 0 calc(33.33% - .8334rem);
+    }
+  }
+
+  @media (max-width: 768px) {
+    .container-msme_profile > div {
+      flex: 0 0 calc(50% - .625rem);
+    }
+  }
+
+  @media (max-width: 576px) {
+    .container-msme_profile > div {
       flex: 0 0 100%;
     }
   }

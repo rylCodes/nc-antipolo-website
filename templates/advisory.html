@@ -30,21 +30,21 @@
             </div>           
               
             <div class="mx-auto mt-8">
-                <div class="container-advisory flex flex-wrap justify-start gap-5">
+                <div class="container-advisory flex flex-wrap items-start gap-5">
                     {% for mentor in mentors %}
                     <div class="border space-y-2 shadow">
-                      <a href="/expert_mentor/{{mentor.id_name}}">
-                        <img src="{{mentor.image.url}}" alt="email-icon">
-                      </a>
-                      <div class="text-lg text-center mt-2">
-                        <p class="font-bold">{{ mentor.name }}</p>
-                        <p class="text-center">{{ mentor.position }}</p>
-                      </div>
-                      <div class="h-auto w-10 mx-auto pb-4">
-                        <a href="mailto:{{mentor.email}}">
-                          <img src="{% static 'img/contacts/email-blue.png' %}" alt="email-icon">
+                        <a href="/expert_mentor/{{mentor.id_name}}">
+                            <img src="{{mentor.image.url}}" alt="mentor-image">
                         </a>
-                      </div>
+                        <div class="text-lg text-center mt-2">
+                            <p class="font-bold break-words">{{ mentor.name }}</p>
+                            <p class="text-center break-words">{{ mentor.position }}</p>
+                        </div>
+                        <div class="h-auto w-10 mx-auto pb-4">
+                            <a href="mailto:{{mentor.email}}">
+                                <img src="{% static 'img/contacts/email-blue.png' %}" alt="email-icon">
+                            </a>
+                        </div>
                     </div> 
                     {% empty %}
                     <p>No mentor/s found.</p>

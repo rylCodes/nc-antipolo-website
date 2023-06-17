@@ -45,7 +45,7 @@ def user_login(request):
         user = authenticate(username=username, password=password)
         if user is not None:
             login(request, user)
-            return redirect('msme_profiling')
+            return redirect('msme_profile')
         else:
             messages.error(request, 'Invalid email or password')
             return redirect('user_login')
@@ -162,11 +162,11 @@ def expert_mentor(request, id_name):
 
 # MSME Profile Page.
 @login_required
-def msme_profiling(request):
+def msme_profile(request):
     context = {
-        'page_title': 'MSME Profiling'
+        'page_title': 'MSME Profile'
     }
-    return render(request, 'msme_profiling.html', context)
+    return render(request, 'msme_profile.html', context)
 
 def client_contacts(request):
     context = {

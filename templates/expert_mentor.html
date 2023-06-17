@@ -10,7 +10,7 @@
             <div class="flex flex-col justify-between gap-4 lg:flex-row">
                 <!--Left Items-->
                 <div class="lg:w-2/5">
-                    <div class="flex flex-col text-center space-y-2 bg-white shadow ">
+                    <div class="flex flex-col items-center text-center space-y-2 bg-white shadow ">
                         <div class="">
                             <img src="{{mentor.image.url}}" alt="">
                         </div>
@@ -32,19 +32,19 @@
                 <!--Right Items-->
                 <div class="flex flex-col text-lg items-start px-4 space-y-6 lg:w-3/5">
                     <div class="space-y-2">
-                        <h2 class="text-4xl font-bold text-myNavy">{{mentor.name}}</h2>
-                        <p class="text-2xl">{{mentor.position}}</p>
-                        <p class="text-2xl">{{mentor.company}}</p>
+                        <h2 class="text-3xl font-bold text-myNavy lg:text-4xl">{{mentor.name}}</h2>
+                        <p class="text-xl lg:2xl">{{mentor.position}}</p>
+                        <p class="text-xl lg:2xl">{{mentor.company}}</p>
                     </div>
                     <p class="text-xl"><span class="font-bold">Specialization:</span> {{mentor.expertise}}</p>
                     {% if mentor.biography.all %}
                         {% for biography in mentor.biography.all %}
-                        <p class="text-justify text-lg">{{biography.description}}</p>
+                        <p class="text-justify text-base lg:text-lg">{{biography.description}}</p>
                         {% endfor %}
                     {% else %}
                         <div class="space-y-1">
                             <h3 class="text-xl font-bold">Work Experience:</h3>
-                            <ul class="list-disc pl-6">
+                            <ul class="list-disc pl-6 text-base lg:text-lg">
                             {% for experience in mentor.experiences.all %}
                             <li class="">{{experience.role}} at {{experience.company}}</li> 
                             {% endfor %}
@@ -52,7 +52,7 @@
                         </div>
                         <div class="space-y-1">
                             <h3 class="text-xl font-bold">Education Background:</h3>
-                            <ul class="list-disc pl-6">
+                            <ul class="list-disc pl-6 text-base lg:text-lg">
                             {% for education in mentor.educations.all %}
                             <li class="">{{education.degree}}, {{education.institution}}</li> 
                             {% endfor %}
@@ -66,21 +66,21 @@
             <div class="space-y-4 mt-12">
                 <h2 class="font-bold text-3xl">Similar Experts</h2>
                 <div class="mx-auto mt-8">
-                    <div class="container-advisory flex flex-wrap justify-start gap-5">
+                    <div class="container-advisory flex flex-wrap items-start gap-5">
                         {% for related_mentor in related_mentors %}
                         <div class="border shadow">
-                          <a href="/expert_mentor/{{related_mentor.id_name}}">
-                            <img src="{{related_mentor.image.url}}" alt="">
-                          </a>
-                          <div class="text-lg text-center mt-2">
-                            <p class="font-bold">{{ related_mentor.name }}</p>
-                            <p class="text-center">{{ related_mentor.position }}</p>
-                          </div>
-                          <div class="h-auto w-10 mx-auto mb-6">
-                            <a href="mailto:{{related_mentor.email}}">
-                              <img src="{% static 'img/contacts/email-mentor.png' %}" alt="">
+                            <a href="/expert_mentor/{{related_mentor.id_name}}">
+                                <img src="{{related_mentor.image.url}}" alt="">
                             </a>
-                          </div>
+                            <div class="text-lg text-center mt-2">
+                                <p class="font-bold break-words">{{ related_mentor.name }}</p>
+                                <p class="text-center break-words">{{ related_mentor.position }}</p>
+                            </div>
+                            <div class="h-auto w-10 mx-auto mb-6">
+                                <a href="mailto:{{related_mentor.email}}">
+                                    <img src="{% static 'img/contacts/email-mentor.png' %}" alt="">
+                                </a>
+                            </div>
                         </div>
                         {% empty %}
                         <p>No similar expert/s.</p> 
