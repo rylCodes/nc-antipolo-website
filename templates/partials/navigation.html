@@ -4,9 +4,9 @@
             <div class="flex justify-start items-center space-x-4 md:space-x-0">
                 <!--Menu Icon-->
                 <div id="menuButton" onclick="toggleAltNavigation()" class="group cursor-pointer flex flex-col justify-center items-center space-y-1 md:hidden">
-                    <span class="h-1 w-6 rounded bg-myNavy group-hover:bg-paleBlue"></span>
-                    <span class="h-1 w-6 rounded bg-myNavy group-hover:bg-paleBlue"></span>
-                    <span class="h-1 w-6 rounded bg-myNavy group-hover:bg-paleBlue"></span>
+                    <span class="h-0.5 w-5 rounded bg-myNavy group-hover:bg-paleBlue"></span>
+                    <span class="h-0.5 w-5 rounded bg-myNavy group-hover:bg-paleBlue"></span>
+                    <span class="h-0.5 w-5 rounded bg-myNavy group-hover:bg-paleBlue"></span>
                 </div>
                 <!--Logo-->
                 <a href="{% url 'home' %}">
@@ -14,7 +14,7 @@
                 </a>
                 <!--Main Navigation-->
                 <div id="mainNavigation" class="hidden min-w-fit md:flex">
-                    <a class="{% if request.path == '/' %}border-b-4 border-turquoise{% endif %} px-3 py-2 hover:border-b-4 hover:border-turquoise"
+                    <a class="{% if request.path == '/' %}border-b-4 border-turquoise{% endif %} px-3 py-2 hover:border-b-4 hover:border-turquoise ml-2"
                         href="{% url 'home' %}">Home</a>
                     <a class="{% if request.path == '/about/' %}border-b-4 border-turquoise{% endif %} px-3 py-2 hover:border-b-4 hover:border-turquoise"
                         href="{% url 'about' %}">About</a>
@@ -48,7 +48,7 @@
             </a>
             {% endif %}
             <!--Alt Navigation-->
-            <div id="altNavigation" class="hidden absolute divide-y top-16 left-0 h-auto w-48 bg-turquoise shadow flex-col justify-center rounded-lg text-lg font-bold text-white text-center md:hidden">
+            <div id="altNavigation" class="hidden absolute divide-y top-16 left-0 h-auto w-56 bg-turquoise shadow flex-col justify-center rounded-lg text-lg font-bold text-white text-center md:hidden">
                 <a class="{% if request.path == '/' %}rounded-md bg-skyBlue{% endif %} px-2 py-1 hover:rounded-md hover:bg-skyBlue min-w-full mx-auto"
                     href="{% url 'home' %}">Home</a>
                 <a class="{% if request.path == '/about/' %}rounded-md bg-skyBlue{% endif %} px-2 py-1 hover:rounded-md hover:bg-skyBlue min-w-full mx-auto" 
@@ -57,7 +57,7 @@
                     href="{% url 'assistance'%}">Assistance</a>
                 <a class="{% if request.path == '/resources/' %}rounded-md bg-skyBlue{% endif %} px-2 py-1 hover:rounded-md hover:bg-skyBlue min-w-full mx-auto"
                     href="{% url 'resources' %}">Resources</a>
-                <a class="{% if request.path == '/about/' %}rounded-md bg-skyBlue{% endif %} px-2 py-1 hover:rounded-md hover:bg-skyBlue min-w-full mx-auto"
+                <a class="{% if request.path == '/faqs/' %}rounded-md bg-skyBlue{% endif %} px-2 py-1 hover:rounded-md hover:bg-skyBlue min-w-full mx-auto"
                     href="{% url 'faqs' %}">FAQs</a>
                 <a class="{% if request.path == '/contact/' %}rounded-md bg-skyBlue{% endif %} px-2 py-1 hover:rounded-md hover:bg-skyBlue min-w-full mx-auto"
                     href="{% url 'contact_us' %}">Contact Us</a>

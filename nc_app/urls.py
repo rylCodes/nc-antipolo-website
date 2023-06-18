@@ -16,6 +16,14 @@ urlpatterns = [
     path('business_advisory/', views.advisory, name='advisory'),
     path('expert_mentor/<str:id_name>', views.expert_mentor, name='expert_mentor'),
 
-    path('client_contacts/', views.client_contacts, name='client_contacts'),
+    path('contact_person_information/', views.contact_person_information, name='contact_person_information'),
+    path('business_information/', views.business_information, name='business_information'),
+    path('business_profile/', views.business_profile, name='business_profile'),
+    path('business_tracker/', views.business_tracker, name='business_tracker'),
+    path('msme_category/', views.msme_category, name='msme_category'),
+    path('owner_information/', views.owner_information, name='owner_information'),
+    path('financial_structure/', views.financial_structure, name='financial_structure'),
+    path('market_access/', views.market_access, name='market_access'),
+    path('employment_statistics/', views.employment_statistics, name='employment_statistics'),
 
 ]

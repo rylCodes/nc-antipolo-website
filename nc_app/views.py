@@ -168,8 +168,56 @@ def msme_profile(request):
     }
     return render(request, 'msme_profile.html', context)
 
-def client_contacts(request):
+def contact_person_information(request):
     context = {
-        'page_title': 'Client Contacts'
+        'page_title': 'Contact Person Information'
     }
-    return render(request, 'msme_profile/client_contacts.html', context)
+    return render(request, 'msme_profile/contact_person_information.html', context)
+
+def business_information(request):
+    context = {
+        'page_title': 'Business Registration / Contact Information'
+    }
+    return render(request, 'msme_profile/business_information.html', context)
+
+def business_profile(request):
+    context = {
+        'page_title': 'Business Profile'
+    }
+    return render(request, 'msme_profile/business_profile.html', context)
+
+def business_tracker(request):
+    context = {
+        'page_title': 'Business Tracker'
+    }
+    return render(request, 'msme_profile/business_tracker.html', context)
+
+def msme_category(request):
+    context = {
+        'page_title': 'MSME Category'
+    }
+    return render(request, 'msme_profile/msme_category.html', context)
+
+def owner_information(request):
+    context = {
+        'page_title': 'Owner Information'
+    }
+    return render(request, 'msme_profile/owner_information.html', context)
+
+def financial_structure(request):
+    context = {
+        'page_title': 'Financial Structure'
+    }
+    return render(request, 'msme_profile/financial_structure.html', context)
+
+def market_access(request):
+    context = {
+        'page_title': 'Market Access'
+    }
+    return render(request, 'msme_profile/market_access.html', context)
+
+def employment_statistics(request):
+    context = {
+        'page_title': 'Employment Statistics'
+    }
+    return render(request, 'msme_profile/employment_statistics.html', context)

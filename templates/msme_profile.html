@@ -4,113 +4,114 @@
 
 {% block pageContent %}
     <div class="items-center max-w-4xl mx-auto px-6 my-12 space-x-0 lg:max-w-6xl">
-        <!--Heading-->
-        <h1 class="text-4xl font-bold lg:text-5xl">Monitoring and Evaluation</h1>
+        <h1 class="text-4xl font-bold lg:text-5xl text-myNavy">Assistance - 
+            <span class="text-turquoise">Monitoring and Evaluation</span>
+        </h1>
         <div class="container-msme_profile flex flex-wrap items-start gap-4 mx-auto mt-12">
-            <div class="rounded shadow h-56">
-                <a href="{% url 'client_contacts' %}">
-                    <div class="flex flex-col items-center space-y-4">
+            <div class="rounded shadow">
+                <a href="{% url 'contact_person_information' %}">
+                    <div class="flex flex-col justify-around items-center h-56">
                         <div class="py-4 px-4 bg-myNavy rounded-t min-w-full">
                             <p class="font-bold text-white text-lg text-center break-words">Client / Contact Person Information</p>
                         </div>
-                        <div class="h-auto w-24 pb-4">
-                            <img src="{% static 'img/msme-monitoring/client.png' %}" alt="">
+                        <div class="my-auto items-center">
+                            <img class="h-auto w-20" src="{% static 'img/msme-profile/client.png' %}" alt="">
                         </div>
                     </div>
                 </a>
             </div>
-            <div class="rounded shadow h-56">
-                <a href="{% url 'client_contacts' %}">
-                    <div class="flex flex-col items-center space-y-4">
+            <div class="rounded shadow">
+                <a href="{% url 'business_information' %}">
+                    <div class="flex flex-col justify-around items-center h-56">
                         <div class="py-4 px-4 bg-myNavy rounded-t min-w-full">
-                            <p class="font-bold text-white text-lg text-center break-words">Business Contact Information</p>
+                            <p class="font-bold text-white text-lg text-center break-words">Business Registration / Contact Information</p>
                         </div>
-                        <div class="h-auto w-24 pb-4">
-                            <img src="{% static 'img/msme-monitoring/client.png' %}" alt="">
-                        </div>
-                    </div>
-                </a>
-            </div>
-            <div class="rounded shadow h-56">
-                <a href="{% url 'client_contacts' %}">
-                    <div class="flex flex-col items-center space-y-4">
-                        <div class="py-4 px-4 bg-myNavy rounded-t min-w-full">
-                            <p class="font-bold text-white text-lg text-center break-words">Business Registration / Certification</p>
-                        </div>
-                        <div class="h-auto w-24 pb-4">
-                            <img src="{% static 'img/msme-monitoring/client.png' %}" alt="">
+                        <div class="my-auto items-center">
+                            <img class="h-auto w-20" src="{% static 'img/msme-profile/registered.png' %}" alt="">
                         </div>
                     </div>
                 </a>
             </div>
-            <div class="rounded shadow h-56">
-                <a href="{% url 'client_contacts' %}">
-                    <div class="flex flex-col items-center space-y-4">
-                        <div class="py-4 px-4 bg-myNavy rounded-t min-w-full">
-                            <p class="font-bold text-white text-lg text-center break-words">Owner / Chairperson /Persident's Profile</p>
-                        </div>
-                        <div class="h-auto w-24 pb-4">
-                            <img src="{% static 'img/msme-monitoring/client.png' %}" alt="">
-                        </div>
-                    </div>
-                </a>
-            </div>
-            <div class="rounded shadow h-56">
-                <a href="{% url 'client_contacts' %}">
-                    <div class="flex flex-col items-center space-y-4">
+            <div class="rounded shadow">
+                <a href="{% url 'business_profile' %}">
+                    <div class="flex flex-col justify-around items-center h-56">
                         <div class="py-4 px-4 bg-myNavy rounded-t min-w-full">
                             <p class="font-bold text-white text-lg text-center break-words">Business Profile</p>
                         </div>
-                        <div class="h-auto w-24 pb-4">
-                            <img src="{% static 'img/msme-monitoring/client.png' %}" alt="">
+                        <div class="my-auto items-center">
+                            <img class="h-auto w-20" src="{% static 'img/msme-profile/business-profile.png' %}" alt="">
                         </div>
                     </div>
                 </a>
             </div>
-            <div class="rounded shadow h-56">
-                <a href="{% url 'client_contacts' %}">
-                    <div class="flex flex-col items-center space-y-4">
+            <div class="rounded shadow">
+                <a href="{% url 'business_tracker' %}">
+                    <div class="flex flex-col justify-around items-center h-56">
+                        <div class="py-4 px-4 bg-myNavy rounded-t min-w-full">
+                            <p class="font-bold text-white text-lg text-center break-words">Business Tracker</p>
+                        </div>
+                        <div class="my-auto items-center">
+                            <img class="h-auto w-20" src="{% static 'img/msme-profile/analysis.png' %}" alt="">
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div class="rounded shadow">
+                <a href="{% url 'msme_category' %}">
+                    <div class="flex flex-col justify-around items-center h-56">
+                        <div class="py-4 px-4 bg-myNavy rounded-t min-w-full">
+                            <p class="font-bold text-white text-lg text-center break-words">MSME Category</p>
+                        </div>
+                        <div class="my-auto items-center">
+                            <img class="h-auto w-20" src="{% static 'img/msme-profile/categories.png' %}" alt="">
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div class="rounded shadow">
+                <a href="{% url 'owner_information' %}">
+                    <div class="flex flex-col justify-around items-center h-56">
+                        <div class="py-4 px-4 bg-myNavy rounded-t min-w-full">
+                            <p class="font-bold text-white text-lg text-center break-words">Owner / Chairperson /Persident's Profile</p>
+                        </div>
+                        <div class="my-auto items-center">
+                            <img class="h-auto w-20" src="{% static 'img/msme-profile/owner.png' %}" alt="">
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div class="rounded shadow">
+                <a href="{% url 'financial_structure' %}">
+                    <div class="flex flex-col justify-around items-center h-56">
                         <div class="py-4 px-4 bg-myNavy rounded-t min-w-full">
                             <p class="font-bold text-white text-lg text-center break-words">Business Financial Structure</p>
                         </div>
-                        <div class="h-auto w-24 pb-4">
-                            <img src="{% static 'img/msme-monitoring/client.png' %}" alt="">
+                        <div class="my-auto items-center">
+                            <img class="h-auto w-20" src="{% static 'img/msme-profile/budget.png' %}" alt="">
                         </div>
                     </div>
                 </a>
             </div>
-            <div class="rounded shadow h-56">
-                <a href="{% url 'client_contacts' %}">
-                    <div class="flex flex-col items-center space-y-4">
+            <div class="rounded shadow">
+                <a href="{% url 'market_access' %}">
+                    <div class="flex flex-col justify-around items-center h-56">
                         <div class="py-4 px-4 bg-myNavy rounded-t min-w-full">
                             <p class="font-bold text-white text-lg text-center break-words">Market Access</p>
                         </div>
-                        <div class="h-auto w-24 pb-4">
-                            <img src="{% static 'img/msme-monitoring/client.png' %}" alt="">
+                        <div class="my-auto items-center">
+                            <img class="h-auto w-20" src="{% static 'img/msme-profile/market.png' %}" alt="">
                         </div>
                     </div>
                 </a>
             </div>
-            <div class="rounded shadow h-56">
-                <a href="{% url 'client_contacts' %}">
-                    <div class="flex flex-col items-center space-y-4">
-                        <div class="py-4 px-4 bg-myNavy rounded-t min-w-full">
-                            <p class="font-bold text-white text-lg text-center break-words">Product / Service Lines</p>
-                        </div>
-                        <div class="h-auto w-24 pb-4">
-                            <img src="{% static 'img/msme-monitoring/client.png' %}" alt="">
-                        </div>
-                    </div>
-                </a>
-            </div>
-            <div class="rounded shadow h-56">
-                <a href="{% url 'client_contacts' %}">
-                    <div class="flex flex-col items-center space-y-4">
+            <div class="rounded shadow">
+                <a href="{% url 'employment_statistics' %}">
+                    <div class="flex flex-col justify-around items-center h-56">
                         <div class="py-4 px-4 bg-myNavy rounded-t min-w-full">
                             <p class="font-bold text-white text-lg text-center break-words">Employment Statistics</p>
                         </div>
-                        <div class="h-auto w-24 pb-4">
-                            <img src="{% static 'img/msme-monitoring/client.png' %}" alt="">
+                        <div class="my-auto items-center">
+                            <img class="h-auto w-20" src="{% static 'img/msme-profile/employee.png' %}" alt="">
                         </div>
                     </div>
                 </a>

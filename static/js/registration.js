@@ -11,6 +11,7 @@ const socialAgencyRegister = document.getElementById("socialAgencyRegister");
 businessNameSelect.addEventListener("click", function() {
   if (businessNameRegister.style.display === 'none') {
     businessNameRegister.style.display = 'block';
+    businessNameSelect.classList.add('bg-gray-200');
     birRegister.style.display = 'none';
     lguRegister.style.display = 'none';
     socialAgencyRegister.style.display = 'none';
@@ -22,6 +23,7 @@ businessNameSelect.addEventListener("click", function() {
 birSelect.addEventListener("click", function() {
   if (birRegister.style.display === 'none') {
     birRegister.style.display = 'block';
+    birSelect.classList.add('bg-gray-200');
     businessNameRegister.style.display = 'none';
     lguRegister.style.display = 'none';
     socialAgencyRegister.style.display = 'none';
