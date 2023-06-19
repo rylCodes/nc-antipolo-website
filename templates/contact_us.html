@@ -15,21 +15,22 @@
     <div class="container flex flex-col justify-between items-center mx-auto mt-8 space-y-8 space-x-0 md:flex-row md:space-x-12 md:space-y-0 md:items-start">
         <div class="max-w-lg px-4 py-2 md:w-1/2">
             <p class="text-2xl font-bold text-myNavy">
-                Please don't hesitate to leave us a message. We value your feedback.</p>
+                Please don't hesitate to leave us a message. We value your feedback.
+            </p>
             <form action="" method="POST" class="mt-6">
                 {% csrf_token %}
                 <p class="mt-2 text-lg font-bold">Full Name:</p>
-                <input class="rounded w-full focus:outline-none focus:ring-1 focus:ring-skyBlue" type="text" name="fullname" id="fullname" required placeholder="Juan Dela Cruz">
+                <input class="rounded w-full focus:outline-none focus:ring-1 focus:ring-turquoise" type="text" name="fullname" id="fullname" required placeholder="Juan Dela Cruz">
                 <p class="mt-2 text-lg font-bold">Business Name:</p>
-                <input class="rounded w-full focus:outline-none focus:ring-1 focus:ring-skyBlue" type="text" name="business_name" id="" placeholder="JDC Sari-Sari Store">
+                <input class="rounded w-full focus:outline-none focus:ring-1 focus:ring-turquoise" type="text" name="business_name" id="" placeholder="JDC Sari-Sari Store">
                 <p class="mt-2 text-lg font-bold">Address:</p>
-                <input class="rounded w-full focus:outline-none focus:ring-1 focus:ring-skyBlue" type="text" name="address" id="" placeholder="Brgy. Dela Paz, Antipolo City">
+                <input class="rounded w-full focus:outline-none focus:ring-1 focus:ring-turquoise" type="text" name="address" id="" placeholder="Brgy. Dela Paz, Antipolo City">
                 <p class="mt-2 text-lg font-bold">Email:</p>
-                <input class="rounded w-full focus:outline-none focus:ring-1 focus:ring-skyBlue" type="email" name="email" id="email" placeholder="juan.delacruz@gmail.com" required>
+                <input class="rounded w-full focus:outline-none focus:ring-1 focus:ring-turquoise" type="email" name="email" id="email" placeholder="juan.delacruz@gmail.com" required>
                 <p class="mt-2 text-lg font-bold">Contact number:</p>
-                <input class="rounded w-full focus:outline-none focus:ring-1 focus:ring-skyBlue" type="text" name="contact_number" id="contact" pattern="\d{11}" placeholder="09123456789" required>
+                <input class="rounded w-full focus:outline-none focus:ring-1 focus:ring-turquoise" type="text" name="contact_number" id="contact" pattern="\d{11}" placeholder="09123456789" required>
                 <p class="text-lg font-bold mt-2">Your comment/suggestion:</p>
-                <textarea class="rounded h-36 w-full focus:outline-none focus:ring-1 focus:ring-skyBlue" type="text" name="comment" id="comment" required placeholder="I appreciate Negosyo Center's dedication and would suggest expanding their online resources for easier access....."></textarea><br>
+                <textarea class="rounded h-36 w-full focus:outline-none focus:ring-1 focus:ring-turquoise" type="text" name="comment" id="comment" required placeholder="I appreciate Negosyo Center's dedication and would suggest expanding their online resources for easier access....."></textarea><br>
                 <button class="font-bold text-sm rounded py-2 px-4 mt-2 bg-turquoise text-white hover:bg-skyBlue" type="submit">
                     SUBMIT</button>
             </form>

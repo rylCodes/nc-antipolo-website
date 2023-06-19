@@ -1,117 +1,170 @@
-<div class="items-center max-w-4xl mx-auto px-6 my-12 lg:items-start lg:max-w-6xl">
-<form>
-    <h2>CLIENT IDs on Record</h2>
-    <label for="msmeCpmsId">MSME CPMS ID No.:</label>
-    <input type="text" id="msmeCpmsId" name="msmeCpmsId">
-  
-    <label for="oldCpmsId">Old CPMS ID No.:</label>
-    <input type="text" id="oldCpmsId" name="oldCpmsId">
-  
-    <label for="philsysNo">Philsys No.:</label>
-    <input type="text" id="philsysNo" name="philsysNo">
-  
-    <label for="tinNo">TIN No.:</label>
-    <input type="text" id="tinNo" name="tinNo">
-  
-    <label for="dtiKonekId">DTI Konek ID No.:</label>
-    <input type="text" id="dtiKonekId" name="dtiKonekId">
-  
-    <h2>CLIENT/MSME/REPRESENTATIVE'S CONTACT INFORMATION</h2>
-    <h3>PERSONAL INFORMATION</h3>
-    <label for="prefix">PREFIX</label>
-    <input type="text" id="prefix" name="prefix">
-  
-    <label for="firstName">FIRST NAME</label>
-    <input type="text" id="firstName" name="firstName">
-  
-    <label for="middleName">MIDDLE NAME</label>
-    <input type="text" id="middleName" name="middleName">
-  
-    <label for="lastName">LAST NAME</label>
-    <input type="text" id="lastName" name="lastName">
-  
-    <label for="suffix">SUFFIX</label>
-    <input type="text" id="suffix" name="suffix">
-  
-    <label for="sex">SEX</label><br>
-    <input type="radio" id="male" name="sex" value="Male">
-    <label for="male">Male</label><br>
-    <input type="radio" id="female" name="sex" value="Female">
-    <label for="female">Female</label><br>
-  
-    <label for="civilStatus">CIVIL STATUS</label><br>
-    <input type="radio" id="single" name="civilStatus" value="Single">
-    <label for="single">Single</label><br>
-    <input type="radio" id="widowed" name="civilStatus" value="Widowed">
-    <label for="widowed">Widowed</label><br>
-    <input type="radio" id="married" name="civilStatus" value="Married">
-    <label for="married">Married</label><br>
-    <input type="radio" id="legallySeparated" name="civilStatus" value="Legally Separated">
-    <label for="legallySeparated">Legally Separated</label><br>
-  
-    <label for="socialClassification">SOCIAL CLASSIFICATION</label><br>
-    <input type="radio" id="abled" name="socialClassification" value="Abled">
-    <label for="abled">Abled</label><br>
-    <input type="radio" id="indigenous" name="socialClassification" value="Indigenous Person">
-    <label for="indigenous">Indigenous Person</label><br>
-    <input type="radio" id="seniorCitizen" name="socialClassification" value="Senior Citizen">
-    <label for="seniorCitizen">Senior Citizen</label><br>
-    <input type="radio" id="pwd" name="socialClassification" value="Differently-Abled (PWD)">
-    <label for="pwd">Differently-Abled (PWD)</label><br>
-  
-    <label for="designation">DESIGNATION</label><br>
-    <input type="radio" id="owner" name="designation" value="Owner">
-    <label for="owner">Owner</label><br>
-    <input type="radio" id="representative" name="designation" value="Representative">
-    <label for="representative">Representative</label><br>
-  
-    <label for="birthdate">BIRTHDATE</label><br>
-    <select id="month" name="month">
-      <option value="">Month</option>
-      <!-- Add options for months here -->
-    </select>
-    <input type="number" id="day" name="day" min="1" max="31" placeholder="Day">
-    <input type="number" id="year" name="year" min="1900" max="2100" placeholder="Year">
-  
-    <h3>ADDRESS</h3>
-    <label for="houseNo">House/Building No./Room & Floor No./Building Name</label>
-    <input type="text" id="houseNo" name="houseNo">
-  
-    <label for="street">Street Name</label>
-    <input type="text" id="street" name="street">
-  
-    <label for="barangay">Barangay</label>
-    <input type="text" id="barangay" name="barangay">
-  
-    <label for="district">District</label>
-    <input type="text" id="district" name="district">
-  
-    <label for="city">City/Municipality</label>
-    <input type="text" id="city" name="city">
-  
-    <label for="province">Province</label>
-    <input type="text" id="province" name="province">
-  
-    <label for="region">Region</label>
-    <input type="text" id="region" name="region">
-  
-    <label for="zipCode">Zip Code</label>
-    <input type="text" id="zipCode" name="zipCode">
-  
-    <h3>CONTACT DETAILS</h3>
-    <label for="landline">Landline Number</label>
-    <input type="text" id="landline" name="landline">
-  
-    <label for="fax">Fax Number</label>
-    <input type="text" id="fax" name="fax">
-  
-    <label for="email">Email Address</label>
-    <input type="email" id="email" name="email">
-  
-    <label for="mobile">Mobile Number</label>
-    <input type="text" id="mobile" name="mobile">
-  
-    <input type="submit" value="Submit">
-  </form>
+{% extends 'base.html' %}
+{% load static %}
+
+{% block pageContent %}
+<div class="max-w-6xl mx-auto px-6 my-12 text-base text-start">
+    <form action="" method="POST">
+        {% csrf_token %}
+        <!--CLIENT IDs on Record-->
+        <div class="">
+            <h2 class="bg-myNavy text-white font-bold px-4 py-2 text-xl lg:text-2xl">CLIENT IDs on Record</h2>
+            <div class="flex justify-between border border-myNavy divide-x divide-myNavy">
+                <div class="flex flex-col justify-start items-center w-1/2 px-2 lg:flex-row">
+                    <div><label class="" for="msmeCpmsId">MSME CPMS ID No.:</label></div>
+                    <div class="bg-red-500">
+                        <input class="w-full border-none focus:ring-0" type="text" id="msmeCpmsId" name="msmeCpmsId">
+                    </div>
+                </div>
+                <div class="flex flex-col justify-start items-center w-1/2 px-2 lg:flex-row">
+                    <label class="" for="oldCpmsId">Old CPMS ID No.:</label>
+                    <input class="w-full border-none focus:ring-0 lg:w-auto" type="text" id="oldCpmsId" name="oldCpmsId">
+                </div>
+            </div>
+            <div class="flex justify-between border border-t-0 border-myNavy divide-x divide-myNavy">
+                <div class="flex flex-col justify-between items-center px-2 lg:flex-row">
+                    <label class="" for="philsysNo">Philsys No.:</label>
+                    <input class="w-full border-none focus:ring-0 lg:w-auto" type="text" id="philsysNo" name="philsysNo">
+                </div>
+                <div class="flex flex-col justify-between items-center px-2 lg:flex-row">
+                    <label class="" for="tinNo">TIN No.:</label>
+                    <input class="w-full border-none focus:ring-0 lg:w-auto" type="text" id="tinNo" name="tinNo">
+                </div>
+                <div class="flex flex-col justify-between items-center px-2 lg:flex-row">
+                    <label class="" for="dtiKonekId">DTI Konek ID No.:</label>
+                    <input class="w-full border-none focus:ring-0 lg:w-auto" type="text" id="dtiKonekId" name="dtiKonekId">
+                </div>
+            </div>
+        </div>
+          
+        
+        <!--CLIENT/MSME/REPRESENTATIVE'S CONTACT INFORMATION-->
+        <div>
+            <h2 class="bg-myNavy text-white font-bold px-4 py-2 text-xl lg:text-2xl mt-12">CLIENT/MSME/REPRESENTATIVE'S CONTACT INFORMATION</h2>
+            <!--PERSONAL INFORMATION-->
+            <div class="">
+                <h3 class="px-4 py-2 font-bold text-base lg:text-lg border border-myNavy">PERSONAL INFORMATION</h3>
+                <div class="flex border border-t-0 border-myNavy divide-x divide-myNavy">
+                    <div>
+                        <label for="prefix">PREFIX</label>
+                        <input class="w-full border-none focus:ring-0 lg:w-auto" type="text" id="prefix" name="prefix">
+                    </div>
+                  
+                    <div>
+                        <label for="firstName">FIRST NAME</label>
+                        <input class="w-full border-none focus:ring-0 lg:w-auto" type="text" id="firstName" name="firstName">
+                    </div>
+                  
+                    <div>
+                        <label for="middleName">MIDDLE NAME</label>
+                        <input class="w-full border-none focus:ring-0 lg:w-auto" type="text" id="middleName" name="middleName">
+                    </div>
+                  
+                    <div>
+                        <label for="lastName">LAST NAME</label>
+                        <input class="w-full border-none focus:ring-0 lg:w-auto" type="text" id="lastName" name="lastName">
+                    </div>
+                  
+                    <div>
+                        <label for="suffix">SUFFIX</label>
+                        <input class="w-full border-none focus:ring-0 lg:w-auto" type="text" id="suffix" name="suffix">
+                    </div>
+                </div>
+            </div>
+              
+            <div class="flex justify-between border border-t-0 border-myNavy divide-x divide-myNavy">
+                <div>
+                    <label for="sex">SEX</label><br>
+                    <input type="radio" id="male" name="sex" value="Male">
+                    <label for="male">Male</label><br>
+                    <input type="radio" id="female" name="sex" value="Female">
+                    <label for="female">Female</label><br>
+                </div>s
+              
+                <div>
+                    <label for="civilStatus">CIVIL STATUS</label><br>
+                    <input type="radio" id="single" name="civilStatus" value="Single">
+                    <label for="single">Single</label><br>
+                    <input type="radio" id="widowed" name="civilStatus" value="Widowed">
+                    <label for="widowed">Widowed</label><br>
+                    <input type="radio" id="married" name="civilStatus" value="Married">
+                    <label for="married">Married</label><br>
+                    <input type="radio" id="legallySeparated" name="civilStatus" value="Legally Separated">
+                    <label for="legallySeparated">Legally Separated</label><br>
+                </div>
+              
+                <div>
+                    <label for="socialClassification">SOCIAL CLASSIFICATION</label><br>
+                    <input type="radio" id="abled" name="socialClassification" value="Abled">
+                    <label for="abled">Abled</label><br>
+                    <input type="radio" id="indigenous" name="socialClassification" value="Indigenous Person">
+                    <label for="indigenous">Indigenous Person</label><br>
+                    <input type="radio" id="seniorCitizen" name="socialClassification" value="Senior Citizen">
+                    <label for="seniorCitizen">Senior Citizen</label><br>
+                    <input type="radio" id="pwd" name="socialClassification" value="Differently-Abled (PWD)">
+                    <label for="pwd">Differently-Abled (PWD)</label><br>
+                </div>
+            </div>
+              
+                <label for="designation">DESIGNATION</label><br>
+                <input type="radio" id="owner" name="designation" value="Owner">
+                <label for="owner">Owner</label><br>
+                <input type="radio" id="representative" name="designation" value="Representative">
+                <label for="representative">Representative</label><br>
+              
+                <label for="birthdate">BIRTHDATE</label><br>
+                <select id="month" name="month">
+                    <option value="">Month</option>
+                    <!-- Add options for months here -->
+                </select>
+                <input type="number" id="day" name="day" min="1" max="31" placeholder="Day">
+                <input type="number" id="year" name="year" min="1900" max="2100" placeholder="Year">
+            <!--ADDRESS-->
+            <div>
+                <h3 class="border border-myNavy px-4 py-2 font-bold text-base lg:text-lg">ADDRESS</h3>
+                <label for="houseNo">House/Building No./Room & Floor No./Building Name</label>
+                <input type="text" id="houseNo" name="houseNo">
+              
+                <label for="street">Street Name</label>
+                <input type="text" id="street" name="street">
+              
+                <label for="barangay">Barangay</label>
+                <input type="text" id="barangay" name="barangay">
+              
+                <label for="district">District</label>
+                <input type="text" id="district" name="district">
+              
+                <label for="city">City/Municipality</label>
+                <input type="text" id="city" name="city">
+              
+                <label for="province">Province</label>
+                <input type="text" id="province" name="province">
+              
+                <label for="region">Region</label>
+                <input type="text" id="region" name="region">
+              
+                <label for="zipCode">Zip Code</label>
+                <input type="text" id="zipCode" name="zipCode">
+            </div>
+            <!--CONTACT DETAILS-->
+            <div>
+                <h3 class="border border-myNavy px-4 py-2 font-bold text-base lg:text-lg">CONTACT DETAILS</h3>
+                <label for="landline">Landline Number</label>
+                <input type="text" id="landline" name="landline">
+              
+                <label for="fax">Fax Number</label>
+                <input type="text" id="fax" name="fax">
+              
+                <label for="email">Email Address</label>
+                <input type="email" id="email" name="email">
+              
+                <label for="mobile">Mobile Number</label>
+                <input type="text" id="mobile" name="mobile">
+              
+                <input type="submit" value="Submit">
+            </div>
+            
+        </div>
+        
+    </form>
 </div>
-  
+{% endblock pageContent %}
