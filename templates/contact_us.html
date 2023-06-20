@@ -20,17 +20,17 @@
             <form action="" method="POST" class="mt-6">
                 {% csrf_token %}
                 <p class="mt-2 text-lg font-bold">Full Name:</p>
-                <input class="rounded w-full focus:outline-none focus:ring-1 focus:ring-turquoise" type="text" name="fullname" id="fullname" required placeholder="Juan Dela Cruz">
+                <input class="rounded w-full border-gray-800 focus:outline-none focus:ring-0 focus:border-turquoise" type="text" name="fullname" id="fullname" required placeholder="Juan Dela Cruz">
                 <p class="mt-2 text-lg font-bold">Business Name:</p>
-                <input class="rounded w-full focus:outline-none focus:ring-1 focus:ring-turquoise" type="text" name="business_name" id="" placeholder="JDC Sari-Sari Store">
+                <input class="rounded w-full border-gray-800 focus:outline-none focus:ring-0 focus:border-turquoise" type="text" name="business_name" id="" placeholder="JDC Sari-Sari Store">
                 <p class="mt-2 text-lg font-bold">Address:</p>
-                <input class="rounded w-full focus:outline-none focus:ring-1 focus:ring-turquoise" type="text" name="address" id="" placeholder="Brgy. Dela Paz, Antipolo City">
+                <input class="rounded w-full border-gray-800 focus:outline-none focus:ring-0 focus:border-turquoise" type="text" name="address" id="" placeholder="Brgy. Dela Paz, Antipolo City">
                 <p class="mt-2 text-lg font-bold">Email:</p>
-                <input class="rounded w-full focus:outline-none focus:ring-1 focus:ring-turquoise" type="email" name="email" id="email" placeholder="juan.delacruz@gmail.com" required>
+                <input class="rounded w-full border-gray-800 focus:outline-none focus:ring-0 focus:border-turquoise" type="email" name="email" id="email" placeholder="juan.delacruz@gmail.com" required>
                 <p class="mt-2 text-lg font-bold">Contact number:</p>
-                <input class="rounded w-full focus:outline-none focus:ring-1 focus:ring-turquoise" type="text" name="contact_number" id="contact" pattern="\d{11}" placeholder="09123456789" required>
+                <input class="rounded w-full border-gray-800 focus:outline-none focus:ring-0 focus:border-turquoise" type="text" name="contact_number" id="contact" pattern="\d{11}" placeholder="09123456789" required>
                 <p class="text-lg font-bold mt-2">Your comment/suggestion:</p>
-                <textarea class="rounded h-36 w-full focus:outline-none focus:ring-1 focus:ring-turquoise" type="text" name="comment" id="comment" required placeholder="I appreciate Negosyo Center's dedication and would suggest expanding their online resources for easier access....."></textarea><br>
+                <textarea class="rounded h-36 w-full focus:outline-none focus:ring-0 focus:border-turquoise" type="text" name="comment" id="comment" required placeholder="I appreciate Negosyo Center's dedication and would suggest expanding their online resources for easier access....."></textarea><br>
                 <button class="font-bold text-sm rounded py-2 px-4 mt-2 bg-turquoise text-white hover:bg-skyBlue" type="submit">
                     SUBMIT</button>
             </form>
@@ -39,7 +39,7 @@
         <div class="max-w-xl mt-8 px-4 py-2 md:w-1/2 md:mt-0">
             <p class="text-2xl font-bold text-myNavy">
                 Contact us directly or via social media. Your engagement is appreciated!</p>
-            <div class="rounded-lg mt-8 border-2 px-2 border-myNavy">
+            <div class="rounded-lg mt-8 border px-2 border-gray-800">
                 <p class="font-bold px-2 mt-2 text-xl">Negosyo Center - Antipolo City</p>
                 <p class="flex items-center text-lg px-4 space-x-3 mt-4">                
                     <img class="h-auto w-5 mr-3" src="{% static 'img/contacts/telephone.png' %}" alt="">
@@ -71,7 +71,7 @@
             </div>
             <i class="far fa-envelope"></i>
 
-            <div class="rounded-lg mt-8 border-2 px-2 border-myNavy">
+            <div class="rounded-lg mt-8 border px-2 border-gray-800">
                 <p class="font-bold px-2 mt-2 text-xl">Visit our office at:</p>
                 <p class="px-2 mt-2 text-lg">3/F CMA Bldg., Olalia Road, Brgy. Dela Paz, Antipolo City, Rizal</p>
                 <p class="mt-4 text-gray-500 text-center">Weekdays: 8:00 am - 5:00 pm, excluding holidays.</p>
