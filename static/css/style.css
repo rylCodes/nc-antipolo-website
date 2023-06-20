@@ -46,3 +46,24 @@
       flex: 0 0 100%;
     }
   }
+
+
+
+/* Navigation Menu Button */
+
+.active {
+  transform: rotate(90deg);
+  transform: translateY(0px);
+}
+
+.active .line-top {
+  transform: rotate(45deg) translateY(6px) translate(6px);
+}
+
+.active .line-mid {
+  display: none;
+}
+
+.active .line-btm {
+  transform: rotate(-45deg) translateY(6px) translate(-6px);
+}

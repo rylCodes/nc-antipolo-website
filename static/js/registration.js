@@ -13,10 +13,14 @@ businessNameSelect.addEventListener("click", function() {
     businessNameRegister.style.display = 'block';
     businessNameSelect.classList.add('bg-gray-200');
     birRegister.style.display = 'none';
+    birSelect.classList.remove('bg-gray-200');
     lguRegister.style.display = 'none';
+    lguSelect.classList.remove('bg-gray-200');
     socialAgencyRegister.style.display = 'none';
+    socialAgencySelect.classList.remove('bg-gray-200');
   } else {
     businessNameRegister.style.display = 'none';
+    businessNameSelect.classList.remove('bg-gray-200');
   }
 })
 
@@ -25,32 +29,46 @@ birSelect.addEventListener("click", function() {
     birRegister.style.display = 'block';
     birSelect.classList.add('bg-gray-200');
     businessNameRegister.style.display = 'none';
+    businessNameSelect.classList.remove('bg-gray-200');
     lguRegister.style.display = 'none';
+    lguSelect.classList.remove('bg-gray-200');
     socialAgencyRegister.style.display = 'none';
+    socialAgencySelect.classList.remove('bg-gray-200');
   } else {
     birRegister.style.display = 'none';
+    birSelect.classList.remove('bg-gray-200');
   }
 })
 
 lguSelect.addEventListener("click", function() {
   if (lguRegister.style.display === 'none') {
     lguRegister.style.display = 'block';
+    lguSelect.classList.add('bg-gray-200');
     birRegister.style.display = 'none';
+    birSelect.classList.remove('bg-gray-200');
     businessNameRegister.style.display = 'none';
+    businessNameSelect.classList.remove('bg-gray-200');
     socialAgencyRegister.style.display = 'none';
+    socialAgencySelect.classList.remove('bg-gray-200');
   } else {
     lguRegister.style.display = 'none';
+    lguSelect.classList.remove('bg-gray-200');
   }
 })
 
 socialAgencySelect.addEventListener("click", function() {
   if (socialAgencyRegister.style.display === 'none') {
     socialAgencyRegister.style.display = 'block';
+    socialAgencySelect.classList.add('bg-gray-200');
     birRegister.style.display = 'none';
+    birSelect.classList.remove('bg-gray-200');
     lguRegister.style.display = 'none';
+    lguSelect.classList.remove('bg-gray-200');
     businessNameRegister.style.display = 'none';
+    businessNameSelect.classList.remove('bg-gray-200');
   } else {
     socialAgencyRegister.style.display = 'none';
+    socialAgencySelect.classList.remove('bg-gray-200');
   }
 })
 
