@@ -6,206 +6,350 @@
     <form action="" method="POST">
         {% csrf_token %}
         <!--CLIENT IDs on Record-->
-        <div class="">
-            <h2 class="bg-myNavy text-white font-bold px-4 py-2 text-xl lg:text-2xl">CLIENT IDs on Record</h2>
-            <div class="flex justify-between border border-myNavy divide-x divide-myNavy">
-                <div class="flex flex-col w-full px-2 py-1 lg:w-1/2">
-                    <label class="text-paleBlue font-bold text-sm" for="msmeCpmsId">MSME CPMS ID No.</label>
-                    <input class="w-full border-none focus:ring-0" type="text" id="msmeCpmsId" name="msmeCpmsId">
-                </div>
-                <div class="flex flex-col w-full px-2 py-1 lg:w-1/2">
-                    <label class="text-paleBlue font-bold text-sm" for="oldCpmsId">Old CPMS ID No.</label>
-                    <input class="w-full border-none focus:ring-0" type="text" id="oldCpmsId" name="oldCpmsId">
-                </div>
+        <h2 class="bg-myNavy text-white font-bold px-4 py-2 text-xl lg:text-2xl">CLIENT IDs on Record</h2>
+        <div class="flex justify-between border border-myNavy divide-x divide-myNavy">
+            <div class="flex flex-col w-full px-2 py-2 lg:w-1/2">
+                <label class="text-paleBlue font-bold text-sm" for="msmeCpmsId">MSME CPMS ID No.</label>
+                <input class="w-full border-none focus:ring-0" type="text" id="msmeCpmsId" name="msmeCpmsId">
             </div>
-            <div class="flex flex-col border border-t-0 border-myNavy divide-x-0 divide-y lg:divide-x lg:divide-y-0 divide-myNavy lg:flex-row">
-                <div class="flex flex-col w-full px-2 py-1 lg:w-1/3">
-                    <label class="text-paleBlue font-bold text-sm" for="philsysNo">Philsys No.</label>
-                    <input class="w-full border-none focus:ring-0" type="text" id="tinNo" name="tinNo">
-                </div>
-                <div class="flex flex-col w-full px-2 py-1 lg:w-1/3">
-                    <label class="text-paleBlue font-bold text-sm" for="dtiKonekId">DTI Konek ID No.</label>
-                    <input class="w-full border-none focus:ring-0" type="text" id="dtiKonekId" name="dtiKonekId">
-                </div>
-                <div class="flex flex-col w-full px-2 py-1 lg:w-1/3">
-                    <label class="text-paleBlue font-bold text-sm" for="tinNo">TIN No.</label>
-                    <input class="w-full border-none focus:ring-0" type="text" id="tinNo" name="tinNo">
-                </div>
+            <div class="flex flex-col w-full px-2 py-2 lg:w-1/2">
+                <label class="text-paleBlue font-bold text-sm" for="oldCpmsId">Old CPMS ID No.</label>
+                <input class="w-full border-none focus:ring-0" type="text" id="oldCpmsId" name="oldCpmsId">
             </div>
         </div>
-          
+        <div class="flex flex-col border border-t-0 border-myNavy divide-x-0 divide-y lg:divide-x lg:divide-y-0 divide-myNavy lg:flex-row">
+            <div class="flex flex-col w-full px-2 py-2 lg:w-1/3">
+                <label class="text-paleBlue font-bold text-sm" for="philsysNo">Philsys No.</label>
+                <input placeholder="Enter Philsys No." class="w-full border-none focus:ring-0" type="text" id="tinNo" name="tinNo">
+            </div>
+            <div class="flex flex-col w-full px-2 py-2 lg:w-1/3">
+                <label class="text-paleBlue font-bold text-sm" for="dtiKonekId">DTI Konek ID No.</label>
+                <input placeholder="Enter DTI Konek ID No." class="w-full border-none focus:ring-0" type="text" id="dtiKonekId" name="dtiKonekId">
+            </div>
+            <div class="flex flex-col w-full px-2 py-2 lg:w-1/3">
+                <label class="text-paleBlue font-bold text-sm" for="tinNo">TIN No.</label>
+                <input placeholder="Enter TIN No." class="w-full border-none focus:ring-0" type="text" id="tinNo" name="tinNo">
+            </div>
+        </div>  
         
         <!--CLIENT/MSME/REPRESENTATIVE'S CONTACT INFORMATION-->
-        <div>
-            <h2 class="bg-myNavy text-white font-bold px-4 py-2 text-xl lg:text-2xl mt-12">CLIENT/MSME/REPRESENTATIVE'S CONTACT INFORMATION</h2>
-            <!--PERSONAL INFORMATION-->
-            <div class="">
-                <h3 class="px-2 py-1 font-bold text-base lg:text-lg border border-myNavy">PERSONAL INFORMATION</h3>
-                <div class="flex flex-col border border-t-0 border-myNavy divide-x-0 divide-y lg:divide-x lg:divide-y-0 divide-myNavy lg:flex-row">
-                    <div class="flex flex-col w-full px-2 lg:w-1/5">
-                        <label class="text-paleBlue font-bold text-sm" for="prefix">PREFIX</label>
-                        <input class="w-full border-none focus:ring-0 lg:w-auto" type="text" id="prefix" name="prefix">
-                    </div>
-                    <div class="flex flex-col w-full px-2 lg:w-1/5">
-                        <label class="text-paleBlue font-bold text-sm" for="firstName">FIRST NAME</label>
-                        <input class="w-full border-none focus:ring-0 lg:w-auto" type="text" id="firstName" name="firstName">
-                    </div>
-                    <div class="flex flex-col w-full px-2 lg:w-1/5">
-                        <label class="text-paleBlue font-bold text-sm" for="middleName">MIDDLE NAME</label>
-                        <input class="w-full border-none focus:ring-0 lg:w-auto" type="text" id="middleName" name="middleName">
-                    </div>                  
-                    <div class="flex flex-col w-full px-2 lg:w-1/5">
-                        <label class="text-paleBlue font-bold text-sm" for="lastName">LAST NAME</label>
-                        <input class="w-full border-none focus:ring-0 lg:w-auto" type="text" id="lastName" name="lastName">
-                    </div>                 
-                    <div class="flex flex-col w-full px-2 lg:w-1/5">
-                        <label class="text-paleBlue font-bold text-sm" for="suffix">SUFFIX</label>
-                        <input class="w-full border-none focus:ring-0 lg:w-auto" type="text" id="suffix" name="suffix">
-                    </div>
+        <h2 class="bg-myNavy text-white font-bold px-4 py-2 text-xl lg:text-2xl mt-12">CLIENT/MSME/REPRESENTATIVE'S CONTACT INFORMATION</h2>
+        <!--PERSONAL INFORMATION-->
+        <h3 class="px-2 py-1 font-bold text-base lg:text-lg border border-myNavy">PERSONAL INFORMATION</h3>
+        <div class="flex flex-col border border-t-0 border-myNavy divide-x-0 divide-y lg:divide-x lg:divide-y-0 divide-myNavy lg:flex-row">
+            <div class="flex flex-col w-full px-2 py-2 lg:w-1/4">
+                <label class="text-paleBlue font-bold text-sm" for="firstName">FIRST NAME</label>
+                <input placeholder="Enter First Name" class="w-full border-none focus:ring-0 lg:w-auto" type="text" id="firstName" name="firstName">
+            </div>
+            <div class="flex flex-col w-full px-2 py-2 lg:w-1/4">
+                <label class="text-paleBlue font-bold text-sm" for="middleName">MIDDLE NAME</label>
+                <input placeholder="Enter Middle Name" class="w-full border-none focus:ring-0 lg:w-auto" type="text" id="middleName" name="middleName">
+            </div>                  
+            <div class="flex flex-col w-full px-2 py-2 lg:w-1/4">
+                <label class="text-paleBlue font-bold text-sm" for="lastName">LAST NAME</label>
+                <input placeholder="Enter Last Name" class="w-full border-none focus:ring-0 lg:w-auto" type="text" id="lastName" name="lastName">
+            </div>                 
+            <div class="flex flex-col w-full px-2 py-2 lg:w-1/4">
+                <label class="text-paleBlue font-bold text-sm" for="suffix">SUFFIX</label>
+                <input placeholder="Enter Suffix" class="w-full border-none focus:ring-0 lg:w-auto" type="text" id="suffix" name="suffix">
+            </div>
+        </div>                            
+        <div class="flex flex-col border border-t-0 border-myNavy divide-x-0 divide-y lg:divide-x lg:divide-y-0 divide-myNavy lg:flex-row">
+            <div class="flex flex-col w-full px-2 py-2 lg:w-1/3">
+                <label class="text-paleBlue font-bold text-sm" for="sex">SEX</label>
+                <div class="flex items-center space-x-2 mt-1">
+                    <input type="radio" id="male" name="sex" value="Male">
+                    <label class="" for="male">Male</label>
                 </div>
-            </div>             
-            <div class="flex flex-col border border-t-0 border-myNavy divide-x-0 divide-y lg:divide-x lg:divide-y-0 divide-myNavy lg:flex-row">
-                <div class="flex flex-col w-full px-2 py-1 lg:w-1/3">
-                    <label class="text-paleBlue font-bold text-sm" for="sex">SEX</label>
-                    <div class="flex items-center space-x-2 mt-1">
-                        <input type="radio" id="male" name="sex" value="Male">
-                        <label class="" for="male">Male</label>
-                    </div>
-                    <div class="flex items-center space-x-2">
-                        <input type="radio" id="female" name="sex" value="Female">
-                        <label class="" for="female">Female</label>
-                    </div>
-                </div>              
-                <div class="flex flex-col w-full px-2 py-1 lg:w-1/3">
-                    <label class="text-paleBlue font-bold text-sm" for="civilStatus">CIVIL STATUS</label>
-                    <div class="flex items-center space-x-2 mt-1">
-                        <input type="radio" id="single" name="civilStatus" value="Single">
-                        <label class="" for="single">Single</label>
-                    </div>
-                    <div class="flex items-center space-x-2">
-                        <input type="radio" id="widowed" name="civilStatus" value="Widowed">
-                        <label class="" for="widowed">Widowed</label>
-                    </div>
-                    <div class="flex items-center space-x-2">
-                        <input type="radio" id="married" name="civilStatus" value="Married">
-                        <label class="" for="married">Married</label>
-                    </div>
-                    <div class="flex items-center space-x-2">
-                        <input type="radio" id="legallySeparated" name="civilStatus" value="Legally Separated">
-                        <label class="" for="legallySeparated">Legally Separated</label>
-                    </div>
-                </div>             
-                <div class="flex flex-col w-full px-2 py-1 lg:w-1/3">
-                    <label class="text-paleBlue font-bold text-sm" for="socialClassification">SOCIAL CLASSIFICATION</label>
-                    <div class="flex items-center space-x-2 mt-1">
-                        <input type="radio" id="abled" name="socialClassification" value="Abled">
-                        <label class="" for="abled">Abled</label>
-                    </div>
-                    <div class="flex items-center space-x-2">
-                        <input type="radio" id="indigenous" name="socialClassification" value="Indigenous Person">
-                        <label class="" for="indigenous">Indigenous Person</label>
-                    </div>
-                    <div class="flex items-center space-x-2">
-                        <input type="radio" id="seniorCitizen" name="socialClassification" value="Senior Citizen">
-                        <label class="" for="seniorCitizen">Senior Citizen</label>
-                    </div>
-                    <div class="flex items-center space-x-2">
-                        <input type="radio" id="pwd" name="socialClassification" value="Differently-Abled (PWD)">
-                        <label class="" for="pwd">Differently-Abled (PWD)</label>
-                    </div>
+                <div class="flex items-center space-x-2">
+                    <input type="radio" id="female" name="sex" value="Female">
+                    <label class="" for="female">Female</label>
                 </div>
             </div>              
-            <div class="flex flex-col border border-t-0 border-myNavy divide-x-0 divide-y lg:divide-x lg:divide-y-0 divide-myNavy lg:flex-row">
-                <div class="flex flex-col w-full px-2 py-1 lg:w-1/2">
-                    <label class="text-paleBlue font-bold text-sm" for="designation">DESIGNATION</label>
-                    <div class="flex items-center space-x-2 mt-1">
-                        <input type="radio" id="owner" name="designation" value="Owner">
-                        <label class="" for="owner">Owner</label>
-                    </div>
-                    <div class="flex items-center space-x-2">
-                        <input type="radio" id="representative" name="designation" value="Representative">
-                        <label class="" for="representative">Representative</label>
-                    </div>
+            <div class="flex flex-col w-full px-2 py-2 lg:w-1/3">
+                <label class="text-paleBlue font-bold text-sm" for="civilStatus">CIVIL STATUS</label>
+                <div class="flex items-center space-x-2 mt-1">
+                    <input type="radio" id="single" name="civilStatus" value="Single">
+                    <label class="" for="single">Single</label>
                 </div>
-                <div class="flex flex-col w-full px-2 py-1 lg:w-1/2">
-                    <label class="text-paleBlue font-bold text-sm" for="birthdate">BIRTHDATE</label>
-                    <div class="mt-1">
-                        <input class="w-8/12 focus:outline-none focus:ring-0 focus:border-turquoise" type="date" id="birthDate" name="birthDate">
-                    </div>
+                <div class="flex items-center space-x-2">
+                    <input type="radio" id="widowed" name="civilStatus" value="Widowed">
+                    <label class="" for="widowed">Widowed</label>
+                </div>
+                <div class="flex items-center space-x-2">
+                    <input type="radio" id="married" name="civilStatus" value="Married">
+                    <label class="" for="married">Married</label>
+                </div>
+                <div class="flex items-center space-x-2">
+                    <input type="radio" id="legallySeparated" name="civilStatus" value="Legally Separated">
+                    <label class="" for="legallySeparated">Legally Separated</label>
+                </div>
+            </div>             
+            <div class="flex flex-col w-full px-2 py-2 lg:w-1/3">
+                <label class="text-paleBlue font-bold text-sm" for="socialClassification">SOCIAL CLASSIFICATION</label>
+                <div class="flex items-center space-x-2 mt-1">
+                    <input type="radio" id="abled" name="socialClassification" value="Abled">
+                    <label class="" for="abled">Abled</label>
+                </div>
+                <div class="flex items-center space-x-2">
+                    <input type="radio" id="indigenous" name="socialClassification" value="Indigenous Person">
+                    <label class="" for="indigenous">Indigenous Person</label>
+                </div>
+                <div class="flex items-center space-x-2">
+                    <input type="radio" id="seniorCitizen" name="socialClassification" value="Senior Citizen">
+                    <label class="" for="seniorCitizen">Senior Citizen</label>
+                </div>
+                <div class="flex items-center space-x-2">
+                    <input type="radio" id="pwd" name="socialClassification" value="Differently-Abled (PWD)">
+                    <label class="" for="pwd">Differently-Abled (PWD)</label>
                 </div>
             </div>
+        </div>              
+        <div class="flex flex-col border border-t-0 border-myNavy divide-x-0 divide-y lg:divide-x lg:divide-y-0 divide-myNavy lg:flex-row">
+            <div class="flex flex-col w-full px-2 py-2 lg:w-1/2">
+                <label class="text-paleBlue font-bold text-sm" for="designation">DESIGNATION</label>
+                <div class="flex items-center space-x-2 mt-1">
+                    <input type="radio" id="owner" name="designation" value="Owner">
+                    <label class="" for="owner">Owner</label>
+                </div>
+                <div class="flex items-center space-x-2">
+                    <input type="radio" id="representative" name="designation" value="Representative">
+                    <label class="" for="representative">Representative</label>
+                </div>
+            </div>
+            <div class="flex flex-col w-full px-2 py-2 lg:w-1/2">
+                <label class="text-paleBlue font-bold text-sm" for="birthdate">BIRTHDATE</label>
+                <input placeholder="Enter" class="w-8/12 focus:outline-none focus:ring-0 focus:border-turquoise mt-2" type="date" id="birthDate" name="birthDate">
+            </div>
+        </div>
               
-            <!--ADDRESS-->
-            <h3 class="bg-paleBlue mt-4 px-2 py-1 border border-myNavy divide-x-0 divide-y lg:divide-x lg:divide-y-0 divide-myNavy text-white font-bold text-sm">
-                ADDRESS
-            </h3>
-            <div class="flex flex-col border border-t-0 border-myNavy divide-x-0 divide-y lg:divide-x lg:divide-y-0 divide-myNavy lg:flex-row">
-                <div class="flex flex-col w-full px-2 py-1 lg:w-1/2">
-                    <label class="text-paleBlue font-bold text-sm" for="houseNo">House/Building No./Room & Floor No./Building Name</label>
-                    <input class="w-full border-none focus:ring-0" type="text" id="houseNo" name="houseNo">
-                </div>              
-                <div class="flex flex-col w-full px-2 py-1 lg:w-1/2">
-                    <label class="text-paleBlue font-bold text-sm" for="street">Street Name</label>
-                    <input class="w-full border-none focus:ring-0" type="text" id="street" name="street">
-                </div>              
+        <!--ADDRESS-->
+        <h3 class="bg-paleBlue px-2 py-1 border border-t-0 border-myNavy divide-x-0 divide-y lg:divide-x lg:divide-y-0 divide-myNavy text-white font-bold text-sm">
+            ADDRESS
+        </h3>
+        <div class="flex flex-col border border-t-0 border-myNavy divide-x-0 divide-y lg:divide-x lg:divide-y-0 divide-myNavy lg:flex-row">
+            <div class="flex flex-col w-full px-2 py-2 lg:w-1/2">
+                <label class="text-paleBlue font-bold text-sm" for="houseNo">House/Building No./Room & Floor No./Building Name</label>
+                <input placeholder="Enter House/Building No./Room & Floor No./Building Name" class="w-full border-none focus:ring-0" type="text" id="houseNo" name="houseNo">
             </div>
-            <div class="flex flex-col border border-t-0 border-myNavy divide-x-0 divide-y lg:divide-x lg:divide-y-0 divide-myNavy lg:flex-row">
-                <div class="flex flex-col w-full px-2 py-1 lg:w-1/3">
-                    <label class="text-paleBlue font-bold text-sm" for="barangay">Barangay</label>
-                    <input class="w-full border-none focus:ring-0" type="text" id="barangay" name="barangay">
-                </div>              
-                <div class="flex flex-col w-full px-2 py-1 lg:w-1/3">
-                    <label class="text-paleBlue font-bold text-sm" for="district">District</label>
-                    <input class="w-full border-none focus:ring-0" type="text" id="district" name="district">
-                </div>
-                <div class="flex flex-col w-full px-2 py-1 lg:w-1/3">
-                    <label class="text-paleBlue font-bold text-sm" for="city">City/Municipality</label>
-                    <input class="w-full border-none focus:ring-0" type="text" id="city" name="city">
-                </div>
+            <div class="flex flex-col w-full px-2 py-2 lg:w-1/2">
+                <label class="text-paleBlue font-bold text-sm" for="houseNo">Street Name</label>
+                <input placeholder="Enter Street Name" class="w-full border-none focus:ring-0" type="text" id="houseNo" name="houseNo">
+            </div>                            
+        </div>
+        <div class="flex flex-col border border-t-0 border-myNavy divide-x-0 divide-y lg:divide-x lg:divide-y-0 divide-myNavy lg:flex-row">
+            <div class="flex flex-col w-full px-2 py-2 lg:w-1/3">
+                <label class="text-paleBlue font-bold text-sm" for="barangay">Barangay</label>
+                <input placeholder="Enter Barangay" class="w-full border-none focus:ring-0" type="text" id="barangay" name="barangay">
+            </div>              
+            <div class="flex flex-col w-full px-2 py-2 lg:w-1/3">
+                <label class="text-paleBlue font-bold text-sm" for="district">District</label>
+                <input placeholder="Enter District" class="w-full border-none focus:ring-0" type="text" id="district" name="district">
             </div>
-            <div class="flex flex-col border border-t-0 border-myNavy divide-x-0 divide-y lg:divide-x lg:divide-y-0 divide-myNavy lg:flex-row">
-                <div class="flex flex-col w-full px-2 py-1 lg:w-1/3">
-                    <label class="text-paleBlue font-bold text-sm" for="province">Province</label>
-                    <input class="w-full border-none focus:ring-0" type="text" id="province" name="province">
-                </div>              
-                <div class="flex flex-col w-full px-2 py-1 lg:w-1/3">
-                    <label class="text-paleBlue font-bold text-sm" for="region">Region</label>
-                    <input class="w-full border-none focus:ring-0" type="text" id="region" name="region">
-                </div>             
-                <div class="flex flex-col w-full px-2 py-1 lg:w-1/3">
-                    <label class="text-paleBlue font-bold text-sm" for="zipCode">Zip Code</label>
-                    <input class="w-full border-none focus:ring-0" type="text" id="zipCode" name="zipCode">
-                </div>
+            <div class="flex flex-col w-full px-2 py-2 lg:w-1/3">
+                <label class="text-paleBlue font-bold text-sm" for="city">City/Municipality</label>
+                <input placeholder="Enter City/Municipality" class="w-full border-none focus:ring-0" type="text" id="city" name="city">
             </div>
+        </div>
+        <div class="flex flex-col border border-t-0 border-myNavy divide-x-0 divide-y lg:divide-x lg:divide-y-0 divide-myNavy lg:flex-row">
+            <div class="flex flex-col w-full px-2 py-2 lg:w-1/3">
+                <label class="text-paleBlue font-bold text-sm" for="province">Province</label>
+                <input placeholder="Enter Province" class="w-full border-none focus:ring-0" type="text" id="province" name="province">
+            </div>              
+            <div class="flex flex-col w-full px-2 py-2 lg:w-1/3">
+                <label class="text-paleBlue font-bold text-sm" for="region">Region</label>
+                <input placeholder="Enter Region" class="w-full border-none focus:ring-0" type="text" id="region" name="region">
+            </div>             
+            <div class="flex flex-col w-full px-2 py-2 lg:w-1/3">
+                <label class="text-paleBlue font-bold text-sm" for="zipCode">Zip Code</label>
+                <input placeholder="Enter Zip Code" class="w-full border-none focus:ring-0" type="text" id="zipCode" name="zipCode">
+            </div>
+        </div>
 
-            <!--CONTACT DETAILS-->
-            <h3 class="bg-paleBlue mt-4 px-2 py-1 border border-myNavy divide-x-0 divide-y lg:divide-x lg:divide-y-0 divide-myNavy text-white font-bold text-sm">
-                CONTACT DETAILS
-            </h3>
-            <div class="flex flex-col border border-t-0 border-myNavy divide-x-0 divide-y lg:divide-x lg:divide-y-0 divide-myNavy lg:flex-row">
-                <div class="flex flex-col w-full px-2 py-1 lg:w-1/4">
-                    <label class="text-paleBlue font-bold text-sm" for="landline">Landline Number</label>
-                    <input class="w-full border-none focus:ring-0" type="text" id="landline" name="landline"></div>
-              
-                <div class="flex flex-col w-full px-2 py-1 lg:w-1/4">
-                    <label class="text-paleBlue font-bold text-sm" for="fax">Fax Number</label>
-                    <input class="w-full border-none focus:ring-0" type="text" id="fax" name="fax"></div>
-              
-                <div class="flex flex-col w-full px-2 py-1 lg:w-1/4">
-                    <label class="text-paleBlue font-bold text-sm" for="email">Email Address</label>
-                    <input class="w-full border-none focus:ring-0" type="email" id="email" name="email"></div>
-              
-                <div class="flex flex-col w-full px-2 py-1 lg:w-1/4">
-                    <label class="text-paleBlue font-bold text-sm" for="mobile">Mobile Number</label>
-                    <input class="w-full border-none focus:ring-0" type="text" id="mobile" name="mobile"></div>
+        <!--CONTACT DETAILS-->
+        <h3 class="bg-paleBlue px-2 py-1 border border-t-0 border-myNavy divide-x-0 divide-y lg:divide-x lg:divide-y-0 divide-myNavy text-white font-bold text-sm">
+            CONTACT DETAILS
+        </h3>
+        <div class="flex flex-col border border-t-0 border-myNavy divide-x-0 divide-y lg:divide-x lg:divide-y-0 divide-myNavy lg:flex-row">
+            <div class="flex flex-col w-full px-2 py-2 lg:w-1/4">
+                <label class="text-paleBlue font-bold text-sm" for="landline">Landline Number</label>
+                <input placeholder="Enter Landline Number" class="w-full border-none focus:ring-0" type="text" id="landline" name="landline">
             </div>
-
-            <div class="flex justify-between mt-12">
-                <a class="text-lg text-turquoise hover:text-skyBlue" href="{% url 'msme_profile' %}"><< Back</a>
-                <button class="rounded bg-turquoise hover:bg-skyBlue w-52 h-auto px-4 py-2 text-white font-bold" type="submit">SUBMIT</button>
+            <div class="flex flex-col w-full px-2 py-2 lg:w-1/4">
+                <label class="text-paleBlue font-bold text-sm" for="fax">Fax Number</label>
+                <input placeholder="Enter Fax Number" class="w-full border-none focus:ring-0" type="text" id="fax" name="fax">
+            </div>
+            <div class="flex flex-col w-full px-2 py-2 lg:w-1/4">
+                <label class="text-paleBlue font-bold text-sm" for="email">Email Address</label>
+                <input placeholder="Enter Email Address" class="w-full border-none focus:ring-0" type="email" id="email" name="email">
+            </div>
+            <div class="flex flex-col w-full px-2 py-2 lg:w-1/4">
+                <label class="text-paleBlue font-bold text-sm" for="mobile">Mobile Number</label>
+                <input placeholder="Enter Mobile Number" class="w-full border-none focus:ring-0" type="text" id="mobile" name="mobile" pattern="\d{11}">
+            </div>
+        </div>
+    
+        <!--CATEGORY OF CLIENT / MSME-->
+        <h2 class="bg-myNavy text-white font-bold px-4 py-2 text-xl lg:text-2xl mt-12">CATEGORY OF CLIENT / MSME</h2>
+        <!--STATUS OF CLIENT/MSMEs ASSISTED-->
+        <h3 class="px-2 py-1 font-bold text-base lg:text-lg border border-myNavy">STATUS OF CLIENT/MSMEs ASSISTED</h3>
+        <div class="flex flex-col border border-t-0 border-myNavy lg:flex-row">
+            <div class="flex flex-col w-full px-2 py-2 lg:w-1/2">
+                <div class="flex items-center space-x-2">
+                    <input type="radio" id="level_0" name="level[]" value="Level 0">
+                    <label class="" for="level_0">Level 0* - Would be or Potential Entrepreneurs</label>
+                </div>
+                <div class="flex items-center space-x-2 mt-1">
+                    <input type="radio" id="level_1" name="level[]" value="Level 1">
+                    <label class="" for="level_1">Level 1 - Nurturing Startup</label>
+                </div>
+                <div id="subLevelOptions" class="hidden ml-4">
+                    <div class="flex items-center space-x-2 mt-1" id="subLevelOptions">
+                        <input type="radio" id="level_1_1" name="level[]" value="Level 1.1">
+                        <label class="" for="level_1_1">Level 1.1 - (Unregistered)</label>
+                    </div>
+                    <div class="flex items-center space-x-2 mt-1" id="subLevelOptions">
+                        <input type="radio" id="level_1_2" name="level[]" value="Level 1.2">
+                        <label class="" for="level_1_2">Level 1.2 (Partially Registered)</label>
+                    </div>
+                </div>
+            </div>
+            <div class="flex flex-col w-full px-2 pb-2 lg:py-2 lg:w-1/2">
+                <div class="flex items-center space-x-2">
+                    <input type="radio" id="level_2" name="level[]" value="Level 2">
+                    <label class="" for="level_2">Level 2 - Growing Enterprises (Registered)</label>
+                </div>
+                <div class="flex items-center space-x-2 mt-1">
+                    <input type="radio" id="level_3" name="level[]" value="Level 3">
+                    <label class="" for="level_3">Level 3 - Expanding Enterprises (Registered)</label>
+                </div> 
+                <div class="flex items-center space-x-2 mt-1">
+                    <input type="radio" id="level_4" name="level[]" value="Level 4">
+                    <label class="" for="level_4">Level 4 - Sustaining Enterprises (Registered)</label>
+                </div>
+                <div class="flex items-center space-x-2 mt-1">
+                    <input type="radio" id="ceased" name="level[]" value="Ceased Operations">
+                    <label class="" for="ceased">Ceased Operations</label>
+                </div>
             </div>
         </div>
         
+        <p class="bg-paleBlue px-2 py-1 border border-t-0 border-myNavy divide-x-0 divide-y lg:divide-x lg:divide-y-0 divide-myNavy text-white font-bold text-sm">
+            * For Level 0, Please select where you might belong in the following. You may select more than one (1) category:
+        </p>
+        <div class="flex flex-col border border-t-0 border-myNavy divide-myNavy lg:flex-row">
+            <div class="flex flex-col w-full px-2 py-2 lg:w-1/3">
+                <div class="flex items-center space-x-2">
+                    <input type="checkbox" name="category[]" value="Agrarian Reform Beneficiaries">
+                    <label for="">Agrarian Reform Beneficiaries</label>
+                </div>
+                <div class="flex items-center space-x-2 mt-1">
+                    <input type="checkbox" name="category[]" value="Housewife/husband">
+                    <label for="">Housewife/husband</label>
+                </div>
+                <div class="flex items-center space-x-2 mt-1">
+                    <input type="checkbox" name="category[]" value="Professional">
+                    <label for="">Professional</label>
+                </div> 
+                <div class="flex items-center space-x-2 mt-1">
+                    <input type="checkbox" name="category[]" value="Private Employee">
+                    <label for="">Private Employee</label>
+                </div> 
+                <div class="flex items-center space-x-2 mt-1">
+                    <input type="checkbox" name="category[]" value="Self-Employed">
+                    <label for="">Self-Employed</label>
+                </div> 
+                <div class="flex items-center space-x-2 mt-1">
+                    <input type="checkbox" name="category[]" value="KIA/WIA/KIP/WIPO">
+                    <label for="">KIA/WIA/KIP/WIPO</label>
+                </div> 
+                <div class="flex items-center space-x-2 mt-1">
+                    <input type="checkbox" name="category[]" value="Student">
+                    <label for="">Student</label>
+                </div> 
+                <div class="flex items-center space-x-2 mt-1">
+                    <input type="checkbox" name="category[]" value="Person with Disabilities">
+                    <label for="">Person with Disabilities</label>
+                </div> 
+                <div class="flex items-center space-x-2 mt-1">
+                    <input type="checkbox" name="category[]" value="OFW">
+                    <label for="">OFW</label>
+                </div>     
+            </div>
+            <div class="flex flex-col w-full px-2 lg:py-2 lg:w-1/3">
+                <div class="flex items-center space-x-2">
+                    <input type="checkbox" name="category[]" value="Military/Police"> 
+                    <label for="">Military/Police</label>
+                </div>
+                <div class="flex items-center space-x-2 mt-1">
+                    <input type="checkbox" name="category[]" value="Drug Surrenderee"> 
+                    <label for="">Drug Surrenderee</label>
+                </div>
+                <div class="flex items-center space-x-2 mt-1">
+                    <input type="checkbox" name="category[]" value="Youth"> 
+                    <label for="">Youth</label>
+                </div>
+                <div class="flex items-center space-x-2 mt-1">
+                    <input type="checkbox" name="category[]" value="Out-of-School Youth"> 
+                    <label for="">Out-of-School Youth</label>
+                </div>
+                <div class="flex items-center space-x-2 mt-1">
+                    <input type="checkbox" name="category[]" value="Government Employee"> 
+                    <label for="">Government Employee</label>
+                </div>
+                <div class="flex items-center space-x-2 mt-1">
+                    <input type="checkbox" name="category[]" value="Unemployed"> 
+                    <label for="">Unemployed</label>
+                </div>
+                <div class="flex items-center space-x-2 mt-1">
+                    <input type="checkbox" name="category[]" value="Retiree"> 
+                    <label for="">Retiree</label>
+                </div>
+                <div class="flex items-center space-x-2 mt-1">
+                    <input type="checkbox" name="category[]" value="Ex-Convict">     
+                    <label for="">Ex-Convict</label>
+                </div>
+            </div>
+            <div class="flex flex-col w-full px-2 pb-2 lg:py-2 lg:w-1/3">
+                <div class="flex items-center space-x-2">
+                    <input type="checkbox" name="category[]" value="Urban Poor">
+                    <label for="">Urban Poor</label>
+                </div>
+                <div class="flex items-center space-x-2 mt-1">
+                    <input type="checkbox" name="category[]" value="Former Rebel">
+                    <label for="">Former Rebel</label>
+                </div>
+                <div class="flex items-center space-x-2 mt-1">
+                    <input type="checkbox" name="category[]" value="4Ps Beneficiary">
+                    <label for="">4Ps Beneficiary</label>
+                </div>
+                <div class="flex items-center space-x-2 mt-1">
+                    <input type="checkbox" name="category[]" value="Farmer">
+                    <label for="">Farmer</label>
+                </div>
+                <div class="flex items-center space-x-2 mt-1">
+                    <input type="checkbox" name="category[]" value="Alien/Foreigner">
+                    <label for="">Alien/Foreigner</label>
+                </div>
+                <div class="flex items-center space-x-2 mt-1">
+                    <input type="checkbox" name="category[]" value="Persons of Concern">
+                    <label for="">Persons of Concern</label>
+                </div>
+                <div class="flex items-center space-x-2 mt-1">
+                    <input type="checkbox" name="category[]" value="Person Deprived of Liberty">
+                    <label for="">Person Deprived of Liberty</label>
+                </div>
+                <div class="flex items-center space-x-2 mt-1">
+                    <input type="checkbox" name="category[]" value="Others">     
+                    <label for="">Others</label>
+                </div>
+            </div>
+        </div>
+
+        <div class="flex justify-between mt-12">
+            <a class="text-lg text-turquoise hover:text-skyBlue" href="{% url 'msme_profile' %}"><< Back</a>
+            <button class="rounded bg-turquoise hover:bg-skyBlue w-52 h-auto px-4 py-2 text-white font-bold" type="submit">SUBMIT</button>
+        </div>
     </form>
 </div>
 {% endblock pageContent %}
