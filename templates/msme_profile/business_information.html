@@ -9,7 +9,7 @@
         <h2 class="bg-myNavy text-white font-bold px-4 py-2 text-xl lg:text-2xl">BUSINESS REGISTRATION AND BUSINESS CONTACT INFORMATION</h2>
         <div class="flex justify-start items-center px-2 py-2 border border-t-0 border-myNavy divide-myNavy space-x-2">
             <!--STATUS OF BUSINESS-->
-            <label class="text-paleBlue font-bold text-sm" for="business_status">STATUS OF BUSINESS</label>
+            <p class="text-paleBlue font-bold text-sm">STATUS OF BUSINESS</p>
             <div class="flex items-center space-x-2">
                 <input type="radio" id="registered" name="business_status" value="Registered">
                 <label for="registered">Registered</label>
@@ -26,11 +26,11 @@
             </div>
             <div class="flex flex-col w-full px-2 py-2 lg:w-1/2">
                 <label class="text-paleBlue font-bold text-sm" for="registrationDate">DATE OF REGISTRATION</label>
-                <input class="ml-2 w-8/12 focus:outline-none focus:ring-0 focus:border-turquoise mt-2" type="date" id="registrationDate" name="registrationDate">
+                <input class="ml-2 w-8/12 focus:outline-none focus:ring-0 focus:border-turquoise mt-2 text-center" type="date" id="registrationDate" name="registrationDate">
             </div>
         </div>
         <!--Kindly provide if available:-->
-        <h3 class="bg-paleBlue px-2 py-1 border border-t-0 border-myNavy divide-x-0 divide-y lg:divide-x lg:divide-y-0 divide-myNavy text-white font-bold mt-4">
+        <h3 class="bg-paleBlue px-2 py-1 border border-t-0 border-myNavy divide-x-0 divide-y lg:divide-x lg:divide-y-0 divide-myNavy text-white font-bold mt-12">
             Kindly provide if available:
         </h3>
         <div class="flex flex-col border border-t-0 border-myNavy divide-x-0 divide-y lg:divide-x lg:divide-y-0 divide-myNavy lg:flex-row">
@@ -49,14 +49,14 @@
         </div>
 
         <!--REGISTRATIONS & LICENSES-->
-        <h3 class="bg-paleBlue px-2 py-1 border border-t-0 border-myNavy divide-x-0 divide-y lg:divide-x lg:divide-y-0 divide-myNavy text-white font-bold mt-4">
+        <h3 class="bg-paleBlue px-2 py-1 border border-t-0 border-myNavy divide-x-0 divide-y lg:divide-x lg:divide-y-0 divide-myNavy text-white font-bold mt-12">
             REGISTRATIONS & LICENSES
         </h3>
         <!--Business Name Registration Type-->
         <div class="flex flex-col border border-t-0 border-myNavy divide-x-0 divide-y lg:divide-x lg:divide-y-0 divide-myNavy lg:flex-row">
             <div class="flex flex-col w-full px-2 py-2 lg:w-1/3">
-                <label class="text-paleBlue font-bold text-sm" for="businessNameRegistrationType">Business Name Registration Type</label>
-                <select class="ml-2 w-8/12 focus:outline-none focus:ring-0 focus:border-turquoise mt-2" id="registeredBusinessName" name="registeredBusinessName">
+                <p class="text-paleBlue font-bold text-sm">Business Name Registration Type</p>
+                <select class="ml-2 w-4/5 focus:outline-none focus:ring-0 focus:border-turquoise mt-2" id="bn_registration_type" name="bn_registration_type">
                     <option value="">Select Registering Agency</option>
                     <option value="DTI">DTI</option>
                     <option value="SEC">SEC</option>
@@ -65,148 +65,148 @@
                 </select>
             </div>              
             <div class="flex flex-col w-full px-2 py-2 lg:w-1/3">
-                <label class="text-paleBlue font-bold text-sm" for="businessNameRegistrationNo">Registration No.</label>
-                <input placeholder="Enter Registration No." class="ml-2 w-full border-none focus:ring-0" type="text" id="businessNameRegistrationNo" name="businessNameRegistrationNo">
+                <label class="text-paleBlue font-bold text-sm" for="bn_registration_number">Registration No.</label>
+                <input placeholder="Enter Registration No." class="mt-1 ml-2 w-full border-none focus:ring-0" type="text" id="bn_registration_number" name="bn_registration_number">
             </div>
             <div class="flex flex-col w-full px-2 py-2 lg:w-1/3">
                 <label class="text-paleBlue font-bold text-sm" for="businessNameExpiry">Expiry</label>
-                <input placeholder="Enter Expiry" class="ml-2 w-8/12 focus:outline-none focus:ring-0 focus:border-turquoise mt-2" type="date" id="businessNameExpiry" name="businessNameExpiry">
+                <input placeholder="Enter Expiry" class="ml-2 w-8/12 focus:outline-none focus:ring-0 focus:border-turquoise mt-2 text-center" type="date" id="businessNameExpiry" name="businessNameExpiry">
             </div>
         </div>
         <!--Business Permit/Mayor's Permit-->
-        <div class="flex flex-col border border-t-0 border-myNavy divide-x-0 divide-y lg:divide-x lg:divide-y-0 divide-myNavy lg:flex-row">
+        <div class="flex flex-col border mt-4 border-myNavy divide-x-0 divide-y lg:divide-x lg:divide-y-0 divide-myNavy lg:flex-row">
             <div class="flex flex-col w-full px-2 py-2 lg:w-1/3">
-                <label class="text-paleBlue font-bold text-sm" for="businessPermit">Business Permit/Mayor's Permit</label>
-                <div class="flex items-center space-x-2 ml-2 mt-1">
-                    <input type="checkbox" id="registered_business_permit" name="businessPermit" value="Registered">
-                    <label for="registered_business_permit">Registered</label>
+                <p class="text-paleBlue font-bold text-sm" for="businessPermit">Business Permit/Mayor's Permit</p>
+                <div class="flex items-center space-x-2 ml-2 mt-2">
+                    <input type="checkbox" id="business_permit" name="business_permit" value="Registered">
+                    <label for="business_permit">Registered</label>
                 </div>
             </div>              
             <div class="flex flex-col w-full px-2 py-2 lg:w-1/3">
-                <label class="text-paleBlue font-bold text-sm" for="businessPermitRegistrationNo">Registration No.</label>
-                <input placeholder="Enter Registration No." class="ml-2 w-full border-none focus:ring-0" type="text" id="businessPermitRegistrationNo" name="businessPermitRegistrationNo">
+                <label class="text-paleBlue font-bold text-sm" for="business_permit_number">Registration No.</label>
+                <input placeholder="Enter Registration No." class="mt-1 ml-2 w-full border-none focus:ring-0" type="text" id="business_permit_number" name="business_permit_number">
             </div>
             <div class="flex flex-col w-full px-2 py-2 lg:w-1/3">
                 <label class="text-paleBlue font-bold text-sm" for="businessNameExpiry">Expiry</label>
-                <input placeholder="Enter Expiry" class="ml-2 w-8/12 focus:outline-none focus:ring-0 focus:border-turquoise mt-2" type="date" id="businessNameExpiry" name="businessNameExpiry">
+                <input placeholder="Enter Expiry" class="ml-2 w-8/12 focus:outline-none focus:ring-0 focus:border-turquoise mt-2 text-center" type="date" id="businessNameExpiry" name="businessNameExpiry">
             </div>
         </div>
         <!--BMBE-->
-        <div class="flex flex-col border border-t-0 border-myNavy divide-x-0 divide-y lg:divide-x lg:divide-y-0 divide-myNavy lg:flex-row">
+        <div class="flex flex-col border mt-4 border-myNavy divide-x-0 divide-y lg:divide-x lg:divide-y-0 divide-myNavy lg:flex-row">
             <div class="flex flex-col w-full px-2 py-2 lg:w-1/3">
-                <label class="text-paleBlue font-bold text-sm" for="bmbe_registration">BMBE Registration</label>
-                <div class="flex items-center space-x-2 ml-2 mt-1">
-                    <input type="checkbox" id="registered_bmbe" name="bmbe_registration" value="Registered">
-                    <label for="registered_bmbe">Registered</label>
+                <p class="text-paleBlue font-bold text-sm">BMBE Registration</p>
+                <div class="flex items-center space-x-2 ml-2 mt-2">
+                    <input type="checkbox" id="bmbe_registration" name="bmbe_registration" value="Registered">
+                    <label for="bmbe_registration">Registered</label>
                 </div>
             </div>              
             <div class="flex flex-col w-full px-2 py-2 lg:w-1/3">
                 <label class="text-paleBlue font-bold text-sm" for="bmbe_registration_number">Registration No.</label>
-                <input placeholder="Enter Registration No." class="ml-2 w-full border-none focus:ring-0" type="text" id="bmbe_registration_number" name="bmbe_registration_number">
+                <input placeholder="Enter Registration No." class="mt-1 ml-2 w-full border-none focus:ring-0" type="text" id="bmbe_registration_number" name="bmbe_registration_number">
             </div>
             <div class="flex flex-col w-full px-2 py-2 lg:w-1/3">
                 <label class="text-paleBlue font-bold text-sm" for="bmbe_expiry">Expiry</label>
-                <input placeholder="Enter Expiry" class="ml-2 w-8/12 focus:outline-none focus:ring-0 focus:border-turquoise mt-2" type="date" id="bmbe_expiry" name="bmbe_expiry">
+                <input placeholder="Enter Expiry" class="ml-2 w-8/12 focus:outline-none focus:ring-0 focus:border-turquoise mt-2 text-center" type="date" id="bmbe_expiry" name="bmbe_expiry">
             </div>
         </div>
         <!--BIR (TIN)-->
-        <div class="flex flex-col border border-t-0 border-myNavy divide-x-0 divide-y lg:divide-x lg:divide-y-0 divide-myNavy lg:flex-row">
+        <div class="flex flex-col border mt-4 border-myNavy divide-x-0 divide-y lg:divide-x lg:divide-y-0 divide-myNavy lg:flex-row">
             <div class="flex flex-col w-full px-2 py-2 lg:w-1/3">
-                <label class="text-paleBlue font-bold text-sm" for="bir_registration">BIR (TIN)</label>
-                <div class="flex items-center space-x-2 ml-2 mt-1">
-                    <input type="checkbox" id="registered_bir" name="bir_registration" value="Registered">
-                    <label for="registered_bir">Registered</label>
+                <p class="text-paleBlue font-bold text-sm">BIR (TIN)</p>
+                <div class="flex items-center space-x-2 ml-2 mt-2">
+                    <input type="checkbox" id="bir_registration" name="bir_registration" value="Registered">
+                    <label for="bir_registration">Registered</label>
                 </div>
             </div>              
             <div class="flex flex-col w-full px-2 py-2 lg:w-1/3">
                 <label class="text-paleBlue font-bold text-sm" for="bir_registration_number">Registration No.</label>
-                <input placeholder="Enter Registration No." class="ml-2 w-full border-none focus:ring-0" type="text" id="bir_registration_number" name="bir_registration_number">
+                <input placeholder="Enter Registration No." class="mt-1 ml-2 w-full border-none focus:ring-0" type="text" id="bir_registration_number" name="bir_registration_number">
             </div>
             <div class="flex flex-col w-full px-2 py-2 lg:w-1/3">
                 <label class="text-paleBlue font-bold text-sm" for="bir_expiry">Expiry</label>
-                <input placeholder="Enter Expiry" class="ml-2 w-8/12 focus:outline-none focus:ring-0 focus:border-turquoise mt-2" type="date" id="bir_expiry" name="bir_expiry">
+                <input placeholder="Enter Expiry" class="ml-2 w-8/12 focus:outline-none focus:ring-0 focus:border-turquoise mt-2 text-center" type="date" id="bir_expiry" name="bir_expiry">
             </div>
         </div>
         <!--FDA-->
-        <div class="flex flex-col border border-t-0 border-myNavy divide-x-0 divide-y lg:divide-x lg:divide-y-0 divide-myNavy lg:flex-row">
+        <div class="flex flex-col border mt-4 border-myNavy divide-x-0 divide-y lg:divide-x lg:divide-y-0 divide-myNavy lg:flex-row">
             <div class="flex flex-col w-full px-2 py-2 lg:w-1/3">
-                <label class="text-paleBlue font-bold text-sm" for="fda_registration">FDA</label>
-                <div class="flex items-center space-x-2 ml-2 mt-1">
-                    <input type="checkbox" id="registered_fda" name="fda_registration" value="Registered">
-                    <label for="registered_fda">Registered</label>
+                <p class="text-paleBlue font-bold text-sm">FDA</p>
+                <div class="flex items-center space-x-2 ml-2 mt-2">
+                    <input type="checkbox" id="fda_registration" name="fda_registration" value="Registered">
+                    <label for="fda_registration">Registered</label>
                 </div>
             </div>              
             <div class="flex flex-col w-full px-2 py-2 lg:w-1/3">
                 <label class="text-paleBlue font-bold text-sm" for="fda_registration_number">Registration No.</label>
-                <input placeholder="Enter Registration No." class="ml-2 w-full border-none focus:ring-0" type="text" id="fda_registration_number" name="fda_registration_number">
+                <input placeholder="Enter Registration No." class="mt-1 ml-2 w-full border-none focus:ring-0" type="text" id="fda_registration_number" name="fda_registration_number">
             </div>
             <div class="flex flex-col w-full px-2 py-2 lg:w-1/3">
                 <label class="text-paleBlue font-bold text-sm" for="fda_expiry">Expiry</label>
-                <input placeholder="Enter Expiry" class="ml-2 w-8/12 focus:outline-none focus:ring-0 focus:border-turquoise mt-2" type="date" id="fda_expiry" name="fda_expiry">
+                <input placeholder="Enter Expiry" class="ml-2 w-8/12 focus:outline-none focus:ring-0 focus:border-turquoise mt-2 text-center" type="date" id="fda_expiry" name="fda_expiry">
             </div>
         </div>
         
         <!--OTHER SECONDARY LICENSES / CERTIFICATION-->
-        <h3 class="bg-paleBlue px-2 py-1 border border-t-0 border-myNavy divide-x-0 divide-y lg:divide-x lg:divide-y-0 divide-myNavy text-white font-bold mt-4">
+        <h3 class="bg-paleBlue px-2 py-1 border border-t-0 border-myNavy divide-x-0 divide-y lg:divide-x lg:divide-y-0 divide-myNavy text-white font-bold mt-12">
             OTHER SECONDARY LICENSES / CERTIFICATION
         </h3>
         <!--Import Commodity Clearance (ICC)-->
         <div class="flex flex-col border border-t-0 border-myNavy divide-x-0 divide-y lg:divide-x lg:divide-y-0 divide-myNavy lg:flex-row">
             <div class="flex flex-col w-full px-2 py-2 lg:w-1/3">
-                <label class="text-paleBlue font-bold text-sm" for="icc_certification">Import Commodity Clearance (ICC)</label>
-                <div class="flex items-center space-x-2 ml-2 mt-1">
-                    <input type="checkbox" id="icc_certified" name="icc_certification" value="Registered">
-                    <label for="icc_certified">Certified</label>
+                <p class="text-paleBlue font-bold text-sm">Import Commodity Clearance (ICC)</p>
+                <div class="flex items-center space-x-2 ml-2 mt-2">
+                    <input type="checkbox" id="icc_certification" name="icc_certification" value="Registered">
+                    <label for="icc_certification">Certified</label>
                 </div>
             </div>              
             <div class="flex flex-col w-full px-2 py-2 lg:w-1/3">
                 <label class="text-paleBlue font-bold text-sm" for="icc_certification_number">License/Certification No.</label>
-                <input placeholder="Enter License/Certification No." class="ml-2 w-full border-none focus:ring-0" type="text" id="icc_Certification_number" name="icc_Certification_number">
+                <input placeholder="Enter License/Certification No." class="mt-1 ml-2 w-full border-none focus:ring-0" type="text" id="icc_Certification_number" name="icc_Certification_number">
             </div>
             <div class="flex flex-col w-full px-2 py-2 lg:w-1/3">
                 <label class="text-paleBlue font-bold text-sm" for="icc_expiry">Expiry</label>
-                <input placeholder="Enter Expiry" class="ml-2 w-8/12 focus:outline-none focus:ring-0 focus:border-turquoise mt-2" type="date" id="icc_expiry" name="icc_expiry">
+                <input placeholder="Enter Expiry" class="ml-2 w-8/12 focus:outline-none focus:ring-0 focus:border-turquoise mt-2 text-center" type="date" id="icc_expiry" name="icc_expiry">
             </div>
         </div>
         <!--ISO Certification-->
-        <div class="flex flex-col border border-t-0 border-myNavy divide-x-0 divide-y lg:divide-x lg:divide-y-0 divide-myNavy lg:flex-row">
+        <div class="flex flex-col border mt-4 border-myNavy divide-x-0 divide-y lg:divide-x lg:divide-y-0 divide-myNavy lg:flex-row">
             <div class="flex flex-col w-full px-2 py-2 lg:w-1/3">
-                <label class="text-paleBlue font-bold text-sm" for="iso_certification">ISO Certification</label>
-                <div class="flex items-center space-x-2 ml-2 mt-1">
-                    <input type="checkbox" id="iso_certified" name="iso_certification" value="Certified">
-                    <label for="iso_certified">Certified</label>
+                <p class="text-paleBlue font-bold text-sm">ISO Certification</p>
+                <div class="flex items-center space-x-2 ml-2 mt-2">
+                    <input type="checkbox" id="iso_certification" name="iso_certification" value="Certified">
+                    <label for="iso_certification">Certified</label>
                 </div>
             </div>              
             <div class="flex flex-col w-full px-2 py-2 lg:w-1/3">
                 <label class="text-paleBlue font-bold text-sm" for="iso_certification_number">License/Certification No.</label>
-                <input placeholder="Enter License/Certification No." class="ml-2 w-full border-none focus:ring-0" type="text" id="iso_certification_number" name="iso_certification_number">
+                <input placeholder="Enter License/Certification No." class="mt-1 ml-2 w-full border-none focus:ring-0" type="text" id="iso_certification_number" name="iso_certification_number">
             </div>
             <div class="flex flex-col w-full px-2 py-2 lg:w-1/3">
                 <label class="text-paleBlue font-bold text-sm" for="iso_expiry">Expiry</label>
-                <input placeholder="Enter Expiry" class="ml-2 w-8/12 focus:outline-none focus:ring-0 focus:border-turquoise mt-2" type="date" id="iso_expiry" name="iso_expiry">
+                <input placeholder="Enter Expiry" class="ml-2 w-8/12 focus:outline-none focus:ring-0 focus:border-turquoise mt-2 text-center" type="date" id="iso_expiry" name="iso_expiry">
             </div>
         </div>
         <!--Product Standard License-->
-        <div class="flex flex-col border border-t-0 border-myNavy divide-x-0 divide-y lg:divide-x lg:divide-y-0 divide-myNavy lg:flex-row">
+        <div class="flex flex-col border mt-4 border-myNavy divide-x-0 divide-y lg:divide-x lg:divide-y-0 divide-myNavy lg:flex-row">
             <div class="flex flex-col w-full px-2 py-2 lg:w-1/3">
-                <label class="text-paleBlue font-bold text-sm" for="product_standard_license">Product Standard License</label>
-                <div class="flex items-center space-x-2 ml-2 mt-1">
+                <p class="text-paleBlue font-bold text-sm">Product Standard License</p>
+                <div class="flex items-center space-x-2 ml-2 mt-2">
                     <input type="checkbox" id="product_standard_license" name="product_standard_license" value="Licensed">
                     <label for="product_standard_license">Licensed</label>
                 </div>
             </div>              
             <div class="flex flex-col w-full px-2 py-2 lg:w-1/3">
                 <label class="text-paleBlue font-bold text-sm" for="product_standard_license_number">License/Certification No.</label>
-                <input placeholder="Enter License/Certification No." class="ml-2 w-full border-none focus:ring-0" type="text" id="product_standard_license_number" name="product_standard_license_number">
+                <input placeholder="Enter License/Certification No." class="mt-1 ml-2 w-full border-none focus:ring-0" type="text" id="product_standard_license_number" name="product_standard_license_number">
             </div>
             <div class="flex flex-col w-full px-2 py-2 lg:w-1/3">
                 <label class="text-paleBlue font-bold text-sm" for="iso_expiry">Expiry</label>
-                <input placeholder="Enter Expiry" class="ml-2 w-8/12 focus:outline-none focus:ring-0 focus:border-turquoise mt-2" type="date" id="iso_expiry" name="iso_expiry">
+                <input placeholder="Enter Expiry" class="ml-2 w-8/12 focus:outline-none focus:ring-0 focus:border-turquoise mt-2 text-center" type="date" id="iso_expiry" name="iso_expiry">
             </div>
         </div>
 
         <!--BUSINESS CONTACT INFORMATION-->
-        <h3 class="bg-paleBlue px-2 py-1 border border-t-0 border-myNavy divide-x-0 divide-y lg:divide-x lg:divide-y-0 divide-myNavy text-white font-bold mt-4">
+        <h3 class="bg-paleBlue px-2 py-1 border border-t-0 border-myNavy divide-x-0 divide-y lg:divide-x lg:divide-y-0 divide-myNavy text-white font-bold mt-12">
             BUSINESS ADDRESS
         </h3>
         <!--Is the Address the same as in the Client/Contact Person Information?-->
@@ -260,7 +260,7 @@
             </div>
         </div>
 
-        <h3 class="bg-paleBlue px-2 py-1 border border-t-0 border-myNavy divide-x-0 divide-y lg:divide-x lg:divide-y-0 divide-myNavy text-white font-bold mt-4">
+        <h3 class="bg-paleBlue px-2 py-1 border border-t-0 border-myNavy divide-x-0 divide-y lg:divide-x lg:divide-y-0 divide-myNavy text-white font-bold mt-12">
             BUSINESS CONTACT DETAILS
         </h3>
         <!--Are the contact details the same as in the Client/Contact Person Information?-->
@@ -293,47 +293,115 @@
                 <input placeholder="Enter Mobile Number" class="w-full border-none focus:ring-0" type="text" id="mobile" name="mobile" pattern="\d{11}">
             </div>
         </div>
-        
-        <div class="mt-12">
-            <label for="fbAccount">Social Media Accounts: FB</label>
-            <input type="text" id="fbAccount" name="fbAccount">
-            
-            <label for="instagramAccount">Instagram</label>
-            <input type="text" id="instagramAccount" name="instagramAccount">
-            
-            <label for="linkedInAccount">Linked In</label>
-            <input type="text" id="linkedInAccount" name="linkedInAccount">
-            
-            <label for="otherSocialMedia">Others</label>
-            <input type="text" id="otherSocialMedia" name="otherSocialMedia">
-            
-            <label for="businessWebsite">Business Website:</label>
-            <input type="text" id="businessWebsite" name="businessWebsite">
-            
-            <label for="ecommercePlatform">Ecommerce Platform/s:</label>
-            <input type="text" id="ecommercePlatform" name="ecommercePlatform">
-            
-            <label for="thirdPartyPlatform">Third Party Platform/Applications enrolled in (if any):</label>
-            <input type="text" id="thirdPartyPlatform" name="thirdPartyPlatform">
-            
-            <label for="shopee">Shopee</label>
-            <input type="checkbox" id="shopee" name="shopee">
-            
-            <label for="lazada">Lazada</label>
-            <input type="checkbox" id="lazada" name="lazada">
-            
-            <label for="apecMsme">APEC MSME marketplace</label>
-            <input type="checkbox" id="apecMsme" name="apecMsme">
-            
-            <label for="goLokal">Go Lokal</label>
-            <input type="checkbox" id="goLokal" name="goLokal">
-            
-            <label for="othersPlatforms">Others (include those that we are already monitoring)</label>
-            <input type="text" id="othersPlatforms" name="othersPlatforms">
-            
-            <input type="submit" value="Submit">
+
+        <!--SOCIAL MEDIA ACCOUNTS-->
+        <h3 class="bg-paleBlue px-2 py-1 border border-t-0 border-myNavy divide-x-0 divide-y lg:divide-x lg:divide-y-0 divide-myNavy text-white font-bold mt-12">
+            SOCIAL MEDIA ACCOUNTS
+        </h3>
+        <div class="flex flex-col border border-t-0 border-myNavy divide-x-0 divide-y lg:divide-x lg:divide-y-0 divide-myNavy lg:flex-row">
+            <div class="flex flex-col w-full px-2 py-2 lg:w-1/3">
+                <p class="text-paleBlue font-bold text-sm">Social Media</p>
+                <select class="ml-2 w-4/5 focus:outline-none focus:ring-0 focus:border-turquoise mt-2" id="social_media" name="social_media">
+                    <option value="">Select Social Media</option>
+                    <option value="Facebook">Facebook</option>
+                    <option value="Instagram">Instagram</option>
+                    <option value="Linked In">Linked In</option>
+                    <option value="others">Others</option>
+                </select>
+            </div>              
+            <div class="flex flex-col w-full px-2 py-2 lg:w-2/3">
+                <label class="text-paleBlue font-bold text-sm" for="social_media_link">Social Media Account url/link</label>
+                <div class="flex mt-1 ml-2">
+                    <div class="w-5/6">
+                        <input placeholder="Enter Facebook account/profile link" class="w-full border-none focus:ring-0" type="text" id="social_media_link" name="social_media_link">
+                    </div>
+                    <button class="rounded bg-paleBlue hover:bg-myNavy text-sm h-auto px-2 py-1 text-white font-bold w-1/6" type="button" onclick="addSocialMedia()">Add</button>    
+                </div>
+            </div>
+        </div>
+        <!--Added Social Media-->
+        <div class="hidden" id="added_social_media">
+            <!--Added social media and link will be inserted here-->    
         </div>
 
+        <!--BUSINESS WEBSITE-->
+        <h3 class="bg-paleBlue px-2 py-1 border border-t-0 border-myNavy divide-x-0 divide-y lg:divide-x lg:divide-y-0 divide-myNavy text-white font-bold mt-12">
+            BUSINESS WEBSITE
+        </h3>
+        <!--Business Website-->
+        <div class="flex flex-col border border-t-0 border-myNavy divide-x-0 divide-y lg:divide-x lg:divide-y-0 divide-myNavy lg:flex-row">
+            <div class="flex flex-col w-full px-2 py-2 lg:w-1/3">
+                <p class="text-paleBlue font-bold text-sm">Business Website</p>
+                <div class="flex items-center space-x-2 ml-2 mt-2">
+                    <input type="checkbox" id="business_website" name="business_website" value="Business Website">
+                    <label for="business_website">Business Website</label>
+                </div>
+            </div>              
+            <div class="flex flex-col w-full px-2 py-2 lg:w-2/3">
+                <label class="text-paleBlue font-bold text-sm" for="business_website_url">Website url/link</label>
+                <div class="flex mt-1 ml-2">
+                    <div class="w-4/5">
+                        <input placeholder="Enter website url/link" class="w-full border-none focus:ring-0" type="text" id="business_website_url" name="business_website_url">
+                    </div>
+                    <button class="rounded bg-paleBlue hover:bg-myNavy text-sm h-auto px-2 py-1 text-white font-bold w-1/5" type="button">Add</button>    
+                </div>            
+            </div>
+        </div>
+        <!--Added Business Website-->
+        <div class="hidden flex-col border border-t-0 border-myNavy divide-x-0 divide-y lg:divide-x lg:divide-y-0 divide-myNavy lg:flex-row" id="added_website">
+            <div class="flex flex-col w-full px-2 py-2 lg:w-1/3">
+                <p class="ml-2" id="selected_website">
+                    <!--Selected website will be inserted here-->  
+                </p>
+            </div>              
+            <div class="flex flex-col w-full px-2 py-2 lg:w-2/3">
+                <p class="ml-2" id="selected_website_url">
+                    <!--Selected website url will be inserted here-->    
+                </p>
+            </div>
+        </div>
+
+        <!--ECOMMERCE PLATFORMS-->
+        <h3 class="bg-paleBlue px-2 py-1 border border-t-0 border-myNavy divide-x-0 divide-y lg:divide-x lg:divide-y-0 divide-myNavy text-white font-bold mt-12">
+            ECOMMERCE PLATFORMS
+        </h3>
+        <div class="flex flex-col border border-t-0 border-myNavy divide-x-0 divide-y lg:divide-x lg:divide-y-0 divide-myNavy lg:flex-row">
+            <div class="flex flex-col w-full px-2 py-2 lg:w-1/3">
+                <p class="text-paleBlue font-bold text-sm">Ecommerce Platform</p>
+                <select class="ml-2 w-4/5 focus:outline-none focus:ring-0 focus:border-turquoise mt-2" id="ecommerce" name="ecommerce">
+                    <option value="">Select Ecommerce Platform</option>
+                    <option value="Shopee">Shopee</option>
+                    <option value="Lazada">Lazada</option>
+                    <option value="APEC MSME marketplace">APEC MSME marketplace</option>
+                    <option value="Go Lokal">Go Lokal</option>
+                    <option value="Others">Others</option>
+                </select>
+            </div>              
+            <div class="flex flex-col w-full px-2 py-2 lg:w-2/3">
+                <label class="text-paleBlue font-bold text-sm" for="ecommerce_url">Ecommerce Platform url/link</label>
+                <div class="flex mt-1 ml-2">
+                    <div class="w-4/5">
+                        <input placeholder="Enter Ecommerce Platform url/link" class="w-full border-none focus:ring-0" type="text" id="ecommerce_url" name="ecommerce_url">
+                    </div>
+                    <button class="rounded bg-paleBlue hover:bg-myNavy text-sm h-auto px-2 py-1 text-white font-bold w-1/5" type="button">Add</button>    
+                </div>            
+            </div>
+        </div>
+        <!--Added Ecommerce-->
+        <div class="hidden flex-col border border-t-0 border-myNavy divide-x-0 divide-y lg:divide-x lg:divide-y-0 divide-myNavy lg:flex-row" id="added_ecommerce">
+            <div class="flex flex-col w-full px-2 py-2 lg:w-1/3">
+                <p class="ml-2" id="selected_ecommerce">
+                    <!--Selected ecommerce will be inserted here-->  
+                </p>
+            </div>              
+            <div class="flex flex-col w-full px-2 py-2 lg:w-2/3">
+                <p class="ml-2" id="selected_ecommerce_url">
+                    <!--Selected ecommerce url will be inserted here-->
+                </p>
+            </div>
+        </div>
+
+        <!--SUBMIT / BACK Button-->
         <div class="flex justify-between mt-12">
             <a class="text-lg text-turquoise hover:text-skyBlue" href="{% url 'msme_profile' %}"><< Back</a>
             <button class="rounded bg-turquoise hover:bg-skyBlue w-52 h-auto px-4 py-2 text-white font-bold" type="submit">SUBMIT</button>
