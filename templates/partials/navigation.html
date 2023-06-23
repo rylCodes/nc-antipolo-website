@@ -14,19 +14,19 @@
                     <img class="h-16 w-auto" src="{% static 'img/dti_nc.png' %}" alt="">
                 </a>
                 <!--Main Navigation-->
-                <div id="mainNavigation" class="hidden min-w-fit md:flex">
+                <div id="mainNavigation" class="hidden min-w-fit md:flex text-sm text-gray-600 font-bold">
                     <a class="{% if request.path == '/' %}border-b-4 border-turquoise{% endif %} px-3 py-2 hover:border-b-4 hover:border-turquoise ml-2"
-                        href="{% url 'home' %}">Home</a>
+                        href="{% url 'home' %}">HOME</a>
                     <a class="{% if request.path == '/about/' %}border-b-4 border-turquoise{% endif %} px-3 py-2 hover:border-b-4 hover:border-turquoise"
-                        href="{% url 'about' %}">About</a>
+                        href="{% url 'about' %}">ABOUT</a>
                     <a class="{% if request.path == '/resources/' %}border-b-4 border-turquoise{% endif %} px-3 py-2 hover:border-b-4 hover:border-turquoise"
-                        href="{% url 'resources' %}">Resources</a>
+                        href="{% url 'resources' %}">RESOURCES</a>
                     <a class="{% if request.path == '/faqs/' %}border-b-4 border-turquoise{% endif %} px-3 py-2 hover:border-b-4 hover:border-turquoise"
                         href="{% url 'faqs' %}">FAQs</a>
                     <a class="{% if request.path == '/contact/' %}border-b-4 border-turquoise{% endif %} px-3 py-2 hover:border-b-4 hover:border-turquoise"
-                        href="{% url 'contact_us' %}">Contact Us</a>
+                        href="{% url 'contact_us' %}">CONTACT US</a>
                     <a class="{% if request.path == '/assistance/' %}border-b-4 border-turquoise{% endif %} px-3 py-2 hover:border-b-4 hover:border-turquoise"
-                        href="{% url 'assistance' %}">Assistance</a>
+                        href="{% url 'assistance' %}">ASSISTANCE</a>
                 </div>
             </div>
             {% if user.is_authenticated %}

@@ -42,7 +42,7 @@ function addSocialMedia() {
         var newSocialMediaElement = document.createElement("div");
         newSocialMediaElement.className = "w-full px-2 py-2 lg:w-1/3";
         newSocialMediaElement.innerHTML =
-            "<p class='ml-2'><span class='font-bold text-green-500'>Added: </span>"
+            "<p class='ml-2 text-green-500'><span class='font-bold '>Added: </span>"
             + socialMedia +
             "</p>";
   
