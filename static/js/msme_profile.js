@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 const level0Radio = document.getElementById("level_0");
 const level1Radio = document.getElementById("level_1");
 const level2Radio = document.getElementById("level_2");
@@ -29,7 +28,6 @@ level2Radio.addEventListener("change", handleOtherLevelsChange);
 level3Radio.addEventListener("change", handleOtherLevelsChange);
 level4Radio.addEventListener("change", handleOtherLevelsChange);
 ceased.addEventListener("change", handleOtherLevelsChange);
-=======
 // BUSINESS INFORMATION
 function addSocialMedia() {
     var socialMedia = document.getElementById("social_media").value;
@@ -77,4 +75,3 @@ function addSocialMedia() {
     }
 }
   
->>>>>>> eeb4aa0b18407102a3d1240a780aa9d0b13b9646
