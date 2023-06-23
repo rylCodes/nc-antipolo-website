@@ -14,18 +14,18 @@
                     <img class="h-16 w-auto" src="{% static 'img/dti_nc.png' %}" alt="">
                 </a>
                 <!--Main Navigation-->
-                <div id="mainNavigation" class="hidden min-w-fit md:flex text-sm text-gray-600 font-bold">
-                    <a class="{% if request.path == '/' %}border-b-4 border-turquoise{% endif %} px-3 py-2 hover:border-b-4 hover:border-turquoise ml-2"
+                <div id="mainNavigation" class="hidden min-w-fit md:flex text-sm text-gray-500 font-bold">
+                    <a class="{% if request.path == '/' %}text-gray-800{% endif %} px-3 py-2 hover:text-gray-800 ml-2"
                         href="{% url 'home' %}">HOME</a>
-                    <a class="{% if request.path == '/about/' %}border-b-4 border-turquoise{% endif %} px-3 py-2 hover:border-b-4 hover:border-turquoise"
+                    <a class="{% if request.path == '/about/' %}text-gray-800{% endif %} px-3 py-2 hover:text-gray-800"
                         href="{% url 'about' %}">ABOUT</a>
-                    <a class="{% if request.path == '/resources/' %}border-b-4 border-turquoise{% endif %} px-3 py-2 hover:border-b-4 hover:border-turquoise"
+                    <a class="{% if request.path == '/resources/' %}text-gray-800{% endif %} px-3 py-2 hover:text-gray-800"
                         href="{% url 'resources' %}">RESOURCES</a>
-                    <a class="{% if request.path == '/faqs/' %}border-b-4 border-turquoise{% endif %} px-3 py-2 hover:border-b-4 hover:border-turquoise"
+                    <a class="{% if request.path == '/faqs/' %}text-gray-800{% endif %} px-3 py-2 hover:text-gray-800"
                         href="{% url 'faqs' %}">FAQs</a>
-                    <a class="{% if request.path == '/contact/' %}border-b-4 border-turquoise{% endif %} px-3 py-2 hover:border-b-4 hover:border-turquoise"
+                    <a class="{% if request.path == '/contact_us/' %}text-gray-800{% endif %} px-3 py-2 hover:text-gray-800"
                         href="{% url 'contact_us' %}">CONTACT US</a>
-                    <a class="{% if request.path == '/assistance/' %}border-b-4 border-turquoise{% endif %} px-3 py-2 hover:border-b-4 hover:border-turquoise"
+                    <a class="{% if request.path == '/assistance/' %}text-gray-800{% endif %} px-3 py-2 hover:text-gray-800"
                         href="{% url 'assistance' %}">ASSISTANCE</a>
                 </div>
             </div>
@@ -53,7 +53,7 @@
     </div>
     <div>
         <!--Mobile Navigation-->
-        <div id="mobileNavigation" class="hidden transform transition-all duration-300  divide-y h-auto w-full bg-turquoise shadow flex-col justify-center text-lg font-bold text-white text-center md:hidden">
+        <div id="mobileNavigation" class="hidden divide-y h-auto w-full bg-turquoise shadow flex-col justify-center text-lg font-bold text-white text-center md:hidden">
             <a class="{% if request.path == '/' %}rounded-md bg-skyBlue{% endif %} px-2 py-1 hover:rounded-md hover:bg-skyBlue min-w-full mx-auto"
                 href="{% url 'home' %}">Home</a>
             <a class="{% if request.path == '/about/' %}rounded-md bg-skyBlue{% endif %} px-2 py-1 hover:rounded-md hover:bg-skyBlue min-w-full mx-auto" 

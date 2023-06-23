@@ -28,6 +28,8 @@ level2Radio.addEventListener("change", handleOtherLevelsChange);
 level3Radio.addEventListener("change", handleOtherLevelsChange);
 level4Radio.addEventListener("change", handleOtherLevelsChange);
 ceased.addEventListener("change", handleOtherLevelsChange);
+
+
 // BUSINESS INFORMATION
 function addSocialMedia() {
     var socialMedia = document.getElementById("social_media").value;

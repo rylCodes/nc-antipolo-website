@@ -4,88 +4,97 @@
 {% block pageContent %}
    <section id="">
         <div class="items-center max-w-4xl mx-auto px-6 my-12 space-x-0 lg:items-start lg:max-w-6xl">
-            <!--Heading-->
             <h1 class="text-4xl font-bold lg:text-5xl text-myNavy">Assistance - 
                 <span class="text-turquoise">Business Registration</span>
             </h1>  
 
             <div class="flex flex-col mt-8 space-y-6">
-                <h2 class="text-4xl font-bold text-myNavy px-2">Begin your business journey</h2>
-                <p class="text-justify text-lg px-4">
+                <h2 class="text-4xl font-bold text-myNavy ">Begin your business journey</h2>
+                <p class="text-justify text-lg">
                     Starting a business can be both exciting and challenging, requiring careful planning, a strong work ethic, and the ability to adapt to changing circumstances.
                     A crucial step towards establishing your business as a legal entity is registering it, providing benefits such as limiting personal liability and building credibility.</p>
             </div>
-            <div class="text-xl text-turquoise px-4 lg:text-2xl mt-6">
+            <div class="text-xl text-turquoise lg:text-2xl mt-4">
                 <a href="{% static 'downloads/start-your-own-business.pdf' %}" target="_blank" class="hover:text-skyBlue">
                     How to start a business?
                 </a>
             </div>
-
-            <!--Select Business Registration-->
-            <div class="flex flex-col md:flex-row space-y-3 md:space-y-0 mt-8">
-                <div class="text-xl font-bold text-myNavy px-2 lg:text-2xl">Register your business now!</div>
-                <button class="relative group bg-turquoise rounded-md shadow hover:bg-skyBlue w-40">
-                    <p class="font-bold px-4 py-1 text-white">SELECT ONE</p>
-                    <div class="absolute hidden group-hover:block min-w-full">
-                        <ul class="text-left font-bold shadow">
-                            <li id="businessNameSelect" class="bg-gray-200 border-b hover:bg-gray-200 px-4 py-1">Business Name</li>
-                            <li id="birSelect" class="border-b hover:bg-gray-200 px-4 py-1">BIR Registration</li>
-                            <li id="lguSelect" class="border-b hover:bg-gray-200 px-4 py-1">LGU Registration</li>
-                            <li id="socialAgencySelect" class="border-b hover:bg-gray-200 px-4 py-1">Social Agencies</li>
-                        </ul>    
-                    </div>
-                </button>
-            </div>
+            
+            <div class="font-bold text-myNavy mt-12 text-2xl lg:text-3xl">Register your business now!</div>
 
             <!--Business Name Registration-->
-            <div id="businessNameRegister" class="block mt-5">
-                <!--Heading-->
-                <div class="bg-myNavy text-white text-center font-bold text-xl px-4 py-1 lg:text-2xl">Business Name Registration</div>
-
-                <div class="container flex flex-col max-w-4xl justify-center mx-auto mt-5 space-y-10 space-x-0 lg:space-y-0 lg:flex-row lg:items-start lg:max-w-6xl">
+            <div id="businessNameRegister" class="pb-4 bg-slate-100 border border-myNavy mt-4 rounded">
+                <h3 class="bg-myNavy text-white text-center font-bold text-xl px-4 py-1 lg:text-2xl">
+                    Business Name Registration
+                </h3>
+                <div class="container flex flex-col max-w-4xl justify-center mx-auto mt-4 space-y-8 lg:space-y-0 lg:flex-row lg:items-start lg:max-w-6xl">
                     <!--Office Address-->
                     <div class="flex flex-col px-3 space-y-2 lg:w-1/2">
-                        <h3 class="font-bold text-center text-xl">Office Address</h3>
+                        <h4 class="font-bold text-center text-xl">Office Address</h4>
                         <div class="flex flex-col px-3 space-y-1">
                             <!--DTI Rizal / NC Antipolo-->
-                            <p id="dtiButton" class="text-center bg-turquoise rounded-md text-white text-lg px-2 py-1 hover:bg-skyBlue">
-                                Negosyo Center Antipolo / DTI-Rizal</p>
-                            <ul id="dtiList" class="hidden list-disc pl-6 space-y-2 bg-gray-100">
-                                <li><span class="font-bold">Negosyo Center Antipolo:</span><br>
+                            <p id="dtiButton" class="relative group text-center bg-turquoise rounded-md text-white text-lg px-2 py-1 hover:bg-skyBlue">
+                                Negosyo Center Antipolo / DTI-Rizal
+                                <!--Tooltip-->
+                                <span class="hidden absolute -top-6 group-hover:block bg-white border shadow text-black text-sm px-2 py-1 rounded">
+                                    for Single Ownership / Sole Proprietorship<span class="absolute w-0 h-0 border-t-white border-t-8 border-r-transparent border-r-8 border-l-transparent border-l-8 transform -translate-x-1/2 top-7 left-1/2"></span>
+                                </span>
+                            </p>
+                            <ul id="dtiList" class="hidden list-disc pl-6 space-y-2 bg-white rounded shadow">
+                                <li class="py-2"><span class="font-bold">Negosyo Center Antipolo:</span><br>
                                     3F City Mall of Antipolo, Olalia Road, Brgy. Dela Paz, Antipolo City</li>
-                                <li><span class="font-bold">DTI-Rizal Provincial Office:</span><br>
+                                <li class="py-2"><span class="font-bold">DTI-Rizal Provincial Office:</span><br>
                                     2F Altica Arcade 83 Circumferential Road corner, Sto. Niño St., Brgy. San Jose, Antipolo City, Rizal</li>
                             </ul>
                             <!--SEC Office Address-->
-                            <p id="secButton" class="text-center bg-turquoise rounded-md text-white text-lg px-2 py-1 hover:bg-skyBlue">
-                                Securities and Exchange Commission (SEC)</p>
-                            <ul id="secList" class="hidden list-disc pl-6 space-y-2 bg-gray-100">
-                                <li>5th Floor, SEC Building, EDSA, Greenhills, Mandaluyong City</li>
+                            <p id="secButton" class="relative group text-center bg-turquoise rounded-md text-white text-lg px-2 py-1 hover:bg-skyBlue">
+                                Securities and Exchange Commission (SEC)
+                                <!--Tooltip-->
+                                <span class="hidden absolute -top-6 group-hover:block bg-white border shadow text-black text-sm px-2 py-1 rounded">
+                                    for Partnership / Corporation / OPC<span class="absolute w-0 h-0 border-t-white border-t-8 border-r-transparent border-r-8 border-l-transparent border-l-8 transform -translate-x-1/2 top-7 left-1/2"></span>
+                                </span>
+                            </p>
+                            <ul id="secList" class="hidden list-disc pl-6 space-y-2 bg-white rounded shadow">
+                                <li class="py-2">5th Floor, SEC Building, EDSA, Greenhills, Mandaluyong City</li>
                             </ul>
                             <!--CDA Office Address-->
-                            <p id="cdaButton" class="text-center bg-turquoise rounded-md text-white text-lg px-2 py-1 hover:bg-skyBlue">
-                                Cooperative Development Authority (CDA)</p>
-                            <ul id="cdaList" class="hidden list-disc pl-6 space-y-2 bg-gray-100">
-                                <li>6/F Benlor Bldg., Quezon Avenue, Quezon City</li>
+                            <p id="cdaButton" class="relative group text-center bg-turquoise rounded-md text-white text-lg px-2 py-1 hover:bg-skyBlue">
+                                Cooperative Development Authority (CDA)
+                                <!--Tooltip-->
+                                <span class="hidden absolute -top-6 group-hover:block bg-white border shadow text-black text-sm px-2 py-1 rounded">
+                                    for Cooperative<span class="absolute w-0 h-0 border-t-white border-t-8 border-r-transparent border-r-8 border-l-transparent border-l-8 transform -translate-x-1/2 top-7 left-1/2"></span>
+                                </span>
+                            </p>
+                            <ul id="cdaList" class="hidden list-disc pl-6 space-y-2 bg-white rounded shadow">
+                                <li class="py-2">6/F Benlor Bldg., Quezon Avenue, Quezon City</li>
                             </ul>
                         </div>
                     </div>
                     <!--Online Services-->
                     <div class="flex flex-col justify-between px-3 space-y-2 lg:w-1/2">
-                        <h3 class="text-center font-bold text-xl">Online Services</h3>
+                        <h4 class="text-center font-bold text-xl">Online Services</h4>
                         <div class="flex flex-col text-center px-3 space-y-1">
                             <a href="https://bnrs.dti.gov.ph" target="_blank" class="relative group bg-turquoise rounded-md text-white text-lg px-2 py-1 hover:bg-skyBlue">
+                                bnrs.dti.gov.ph
+                                <!--Tooltip-->
                                 <span class="hidden absolute -top-6 group-hover:block bg-white border shadow text-black text-sm px-2 py-1 rounded">
-                                    for Sole Proprietorship<span class="absolute w-0 h-0 border-t-white border-t-8 border-r-transparent border-r-8 border-l-transparent border-l-8 transform -translate-x-1/2 top-7 left-1/2"></span></span>
-                                bnrs.dti.gov.ph</a>
+                                    for Single Ownership / Sole Proprietorship<span class="absolute w-0 h-0 border-t-white border-t-8 border-r-transparent border-r-8 border-l-transparent border-l-8 transform -translate-x-1/2 top-7 left-1/2"></span>
+                                </span>
+                            </a>
                             <a href="https://www.sec.gov.ph/#gsc.tab=0" target="_blank" class="relative group bg-turquoise rounded-md text-white text-lg px-2 py-1 hover:bg-skyBlue">
+                                www.sec.gov.ph
+                                <!--Tooltip-->
                                 <span class="hidden absolute -top-6 group-hover:block bg-white border shadow text-black text-sm px-2 py-1 rounded">
-                                    for Partnership/Corporation/OPC<span class="absolute w-0 h-0 border-t-white border-t-8 border-r-transparent border-r-8 border-l-transparent border-l-8 transform -translate-x-1/2 top-7 left-1/2"></span></span>
-                                    www.sec.gov.ph</a>
+                                    for Partnership / Corporation / OPC<span class="absolute w-0 h-0 border-t-white border-t-8 border-r-transparent border-r-8 border-l-transparent border-l-8 transform -translate-x-1/2 top-7 left-1/2"></span>
+                                </span>
+                            </a>
                             <a href="https://cs.cda.gov.ph/users/login" target="_blank" class="relative group bg-turquoise rounded-md text-white text-lg px-2 py-1 hover:bg-skyBlue">
+                                cs.cda.gov.ph
+                                <!--Tooltip-->
                                 <span class="hidden absolute -top-6 group-hover:block bg-white border shadow text-black text-sm px-2 py-1 rounded">
-                                    for Cooperative<span class="absolute w-0 h-0 border-t-white border-t-8 border-r-transparent border-r-8 border-l-transparent border-l-8 transform -translate-x-1/2 top-7 left-1/2"></span></span>
-                                cs.cda.gov.ph</a>
+                                    for Cooperative<span class="absolute w-0 h-0 border-t-white border-t-8 border-r-transparent border-r-8 border-l-transparent border-l-8 transform -translate-x-1/2 top-7 left-1/2"></span>
+                                </span>
+                            </a>
                         </div>
                     </div>
                 </div>
@@ -93,10 +102,10 @@
                 <div class="px-8 mt-4">
                 <label id="learnBusinessTypeLabel" href="" class="text-turquoise hover:text-skyBlue text-xl">What are the types of business entities?</label>
                 </div>
-                <div id="learnBusinessTypeList" class="hidden max-w-5xl mx-auto space-y-4 mt-4">
+                <div id="learnBusinessTypeList" class="hidden px-4 mx-auto mt-2 space-y-2">
                     {% for business_type in business_types %}
-                    <div id="learnBusinessTypeDetails" class="px-4 py-2 bg-gray-100 rounded space-y-2">
-                        <h3 class="text-lg font-bold">{{ business_type.title }}</h3>
+                    <div id="learnBusinessTypeDetails" class="px-4 py-2 bg-white rounded shadow-sm space-y-2">
+                        <h4 class="text-lg font-bold">{{ business_type.title }}</h4>
                         <p class="text-justify">{{ business_type.details }}</p>
                     </div>
                     {% endfor %}
@@ -104,25 +113,25 @@
             </div>
 
             <!--BIR Registration-->
-            <div id="birRegister" class="hidden mt-5">
-                <!--Heading-->
-                <div class="bg-myNavy text-white text-center font-bold text-xl px-4 py-1 lg:text-2xl">BIR Registration</div>
-
-                <div class="container flex flex-col max-w-4xl justify-center mx-auto mt-5 space-y-10 space-x-0 lg:space-y-0 lg:flex-row lg:items-start lg:max-w-6xl">
+            <div id="birRegister" class="pb-4 bg-slate-100 border border-myNavy mt-8 rounded">
+                <h3 class="bg-myNavy text-white text-center font-bold text-xl px-4 py-1 lg:text-2xl">
+                    BIR Registration
+                </h3>
+                <div class="container flex flex-col max-w-4xl justify-center mx-auto mt-4 space-y-8 lg:space-y-0 lg:flex-row lg:items-start lg:max-w-6xl">
                     <!--Office Address-->
                     <div class="flex flex-col px-3 space-y-2 lg:w-1/2">
-                        <h3 class="font-bold text-center text-xl">Office Address</h3>
+                        <h4 class="font-bold text-center text-xl">Office Address</h4>
                         <div class="flex flex-col px-3 space-y-1">
                             <!--BIR Office Address-->
                             <p id="birButton" class="text-center bg-turquoise rounded-md text-white text-lg px-2 py-1 hover:bg-skyBlue">
                                 BIR District Office No.45</p>
-                            <ul id="birList" class="hidden list-disc pl-6 space-y-2 bg-gray-100">
-                                <li>Antonio Luz Arcade Cirma St. cor Toyota Ave., Sto. Niño, Marikina City</li>
+                            <ul id="birList" class="hidden list-disc pl-6 space-y-2 bg-white rounded shadow">
+                                <li class="py-2">Antonio Luz Arcade Cirma St. cor Toyota Ave., Sto. Niño, Marikina City</li>
                         </div>
                     </div>
                     <!--Online Services-->
                     <div class="flex flex-col justify-between px-3 space-y-2 lg:w-1/2">
-                        <h3 class="text-center font-bold text-xl">Online Services</h3>
+                        <h4 class="text-center font-bold text-xl">Online Services</h4>
                         <div class="flex flex-col text-center px-3 space-y-1">
                             <a href="https://www.bir.gov.ph/newbizreg/" target="_blank" class="bg-turquoise rounded-md text-white text-lg px-2 py-1 hover:bg-skyBlue">
                                 www.bir.gov.ph</a>
@@ -132,25 +141,25 @@
             </div>
 
             <!--LGU Registration-->
-            <div id="lguRegister" class="hidden mt-5">
-                <!--Heading-->
-                <div class="bg-myNavy text-white text-center font-bold text-xl px-4 py-1 lg:text-2xl">LGU Registration</div>
-
-                <div class="container flex flex-col max-w-4xl justify-center mx-auto mt-5 space-y-10 space-x-0 lg:space-y-0 lg:flex-row lg:items-start lg:max-w-6xl">
+            <div id="lguRegister" class="pb-4 bg-slate-100 border border-myNavy mt-8 rounded">
+                <h3 class="bg-myNavy text-white text-center font-bold text-xl px-4 py-1 lg:text-2xl">
+                    LGU Registration
+                </h3>
+                <div class="container flex flex-col max-w-4xl justify-center mx-auto mt-4 space-y-8 lg:space-y-0 lg:flex-row lg:items-start lg:max-w-6xl">
                     <!--Office Address-->
                     <div class="flex flex-col px-3 space-y-2 lg:w-1/2">
-                        <h3 class="font-bold text-center text-xl">Office Address</h3>
+                        <h4 class="font-bold text-center text-xl">Office Address</h4>
                         <div class="flex flex-col px-3 space-y-1">
                             <!--BPLO Office Address-->
                             <p id="lguButton" class="text-center bg-turquoise rounded-md text-white text-lg px-2 py-1 hover:bg-skyBlue">
                                 BPLO Antipolo City</p>
-                            <ul id="lguList" class="hidden list-disc pl-6 space-y-2 bg-gray-100">
-                                <li>1st Floor, Antipolo City Hall, M. Santos Street, Antipolo, 1870 Rizal</li>
+                            <ul id="lguList" class="hidden list-disc pl-6 space-y-2 bg-white rounded shadow">
+                                <li class="py-2">1st Floor, Antipolo City Hall, M. Santos Street, Antipolo, 1870 Rizal</li>
                         </div>
                     </div>
                     <!--Online Services-->
                     <div class="flex flex-col justify-between px-3 space-y-2 lg:w-1/2">
-                        <h3 class="font-bold text-center text-xl">Online Services</h3>
+                        <h4 class="font-bold text-center text-xl">Online Services</h4>
                         <div class="text-center flex flex-col px-3 space-y-1">
                             <a href="https://antipoloonline.egapsonline.com/antipoloos/public/login" target="_blank" class="bg-turquoise rounded-md text-white text-lg px-2 py-1 hover:bg-skyBlue">
                                 antipoloonline.egapsonline.com</a>
@@ -160,40 +169,40 @@
             </div>
 
             <!--Social Agencies Registration-->
-            <div id="socialAgencyRegister" class="hidden mt-5">
-                <!--Heading-->
-                <div class="bg-myNavy text-white text-center font-bold text-xl px-4 py-1 lg:text-2xl">Social Agencies</div>
-
-                <div class="container flex flex-col max-w-4xl justify-center mx-auto mt-5 space-y-10 space-x-0 lg:space-y-0 lg:flex-row lg:items-start lg:max-w-6xl">
+            <div id="socialAgencyRegister" class="pb-4 bg-slate-100 border border-myNavy mt-8 rounded">
+                <h3 class="bg-myNavy text-white text-center font-bold text-xl px-4 py-1 lg:text-2xl">
+                    Social Agencies
+                </h3>
+                <div class="container flex flex-col max-w-4xl justify-center mx-auto mt-4 space-y-8 lg:space-y-0 lg:flex-row lg:items-start lg:max-w-6xl">
                     <!--Office Address-->
                     <div class="flex flex-col px-3 space-y-2 lg:w-1/2">
-                        <h3 class="text-center font-bold text-xl">Office Address</h3>
+                        <h4 class="text-center font-bold text-xl">Office Address</h4>
                         <div class="flex flex-col px-3 space-y-1">
                             <!--Social Security System (SSS)-->
                             <p id="sssButton" class="text-center bg-turquoise rounded-md text-white text-lg px-2 py-1 hover:bg-skyBlue">
                                 SSS Office - Antipolo</p>
-                            <ul id="sssList" class="hidden list-disc pl-6 space-y-2 bg-gray-100">
-                                <li>2/F Triangle Mall, L. Sumulong Memorial Circle, Antipolo, 1870 Rizal</li>
+                            <ul id="sssList" class="hidden list-disc pl-6 space-y-2 bg-white rounded shadow">
+                                <li class="py-2">2/F Triangle Mall, L. Sumulong Memorial Circle, Antipolo, 1870 Rizal</li>
                             </ul>
                             <!--PhilHealth-->
                             <p id="philHealthButton" class="text-center bg-turquoise rounded-md text-white text-lg px-2 py-1 hover:bg-skyBlue">
                                 PhilHealth Office - Antipolo</p>
-                            <ul id="philHealthList" class="hidden list-disc pl-6 space-y-2 bg-gray-100">
-                                <li>Lingkod Pinoy Center, Levels 1 & 2 Robinsons Place Antipolo Sumulong Highway cor. Circumferential Rd. Brgy, Antipolo</li>
-                                <li>Fibertex Bldg., cor. Don Mariano Subd., Ortigas Ext., Brgy San Juan, Cainta, Rizal</li>
-                                <li>Level 4 Lingkod Pinoy Center, Marcos Highway, Brgy. Dela Paz, Santolan, Pasig City</li>
+                            <ul id="philHealthList" class="hidden list-disc pl-6 space-y-2 bg-white rounded shadow">
+                                <li class="py-2">Lingkod Pinoy Center, Levels 1 & 2 Robinsons Place Antipolo Sumulong Highway cor. Circumferential Rd. Brgy, Antipolo</li>
+                                <li class="py-2">Fibertex Bldg., cor. Don Mariano Subd., Ortigas Ext., Brgy San Juan, Cainta, Rizal</li>
+                                <li class="py-2">Level 4 Lingkod Pinoy Center, Marcos Highway, Brgy. Dela Paz, Santolan, Pasig City</li>
                             </ul>
                             <!--Pag-IBIG Fund-->
                             <p id="pagIbigButton" class="text-center bg-turquoise rounded-md text-white text-lg px-2 py-1 hover:bg-skyBlue">
                                 Pag-IBIG Office - Antipolo</p>
-                            <ul id="pagIbigList" class="hidden list-disc pl-6 space-y-2 bg-gray-100">
-                                <li>Budgetlane Shopping Center, Circumferrential Road, Barangay San Jose, Antipolo City</li>
+                            <ul id="pagIbigList" class="hidden list-disc pl-6 space-y-2 bg-white rounded shadow">
+                                <li class="py-2">Budgetlane Shopping Center, Circumferrential Road, Barangay San Jose, Antipolo City</li>
                             </ul>
                         </div>
                     </div>
                     <!--Online Services-->
                     <div class="flex flex-col justify-between px-3 space-y-2 lg:w-1/2">
-                        <h3 class="text-center font-bold text-xl">Online Services</h3>
+                        <h4 class="text-center font-bold text-xl">Online Services</h4>
                         <div class="text-center flex flex-col px-3 space-y-1">
                             <a href="https://employer.sss.gov.ph/" target="_blank" class="bg-turquoise rounded-md text-white text-lg px-2 py-1 hover:bg-skyBlue">
                                 employer.sss.gov.ph</a>
@@ -206,15 +215,6 @@
                 </div>
             </div>
 
-            <!--BNR Images-->
-            <div id="imgBNR" class="flex justify-between items-center mt-5">
-                <div class="hidden max-w-lg mx-auto lg:w-1/2 lg:block">
-                    <img class="rounded" src="{% static 'img/Walk-in_BNR.jpg' %}" alt="Walk-in Business Name Registration">
-                </div>    
-                <div class="hidden max-w-lg mx-auto lg:w-1/2 lg:block">
-                    <img class="rounded" src="{% static 'img/DTI_registerOnline.jpg' %}" alt="DTI-Business Name Registration Online">
-                </div>
-            </div>
         </div>  
     </section>
 {% endblock pageContent %}
