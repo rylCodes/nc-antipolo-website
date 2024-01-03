@@ -34,16 +34,19 @@
             <a href="{% url 'user_logout' %}">
                 <div class="{% if request.path == '/user_logout/' %}hidden{% endif %} flex items-center py-2 px-1 text-white font-bold bg-myNavy rounded-lg hover:bg-paleBlue lg:space-x-1 lg:px-2">
                     <p class="hidden lg:block">Logout</p>
-                    <div class="lg:w-1/2">
+                    <span class="material-icons text-white font-medium">login</span>
+
+                    {% comment %} <div class="lg:w-1/2">
                         <img class="h-5 w-auto lg:h-6" src="{% static 'img/logout.png' %}" alt="">
-                    </div>
+                    </div> {% endcomment %}
                 </div>
             </a>
             {% else %}
             <!--Login Button-->
             <a href="{% url 'user_login' %}">
                 <div class="{% if request.path == '/user_login/' %}hidden{% endif %} flex items-center py-2 px-1 text-white font-bold bg-myNavy rounded-lg hover:bg-paleBlue lg:space-x-1 lg:px-2">
-                    <img class="h-5 w-auto lg:h-6" src="{% static 'img/login.png' %}" alt="">
+                    {% comment %} <img class="h-5 w-auto lg:h-6" src="{% static 'img/login.png' %}" alt=""> {% endcomment %}
+                    <span class="material-icons text-white font-medium">login</span>
                     <p class="hidden w-1/2 lg:block">Login</p>
                 </div>
             </a>

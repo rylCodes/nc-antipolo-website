@@ -1,5 +1,11 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block pageContent %}
+
 <div class="items-center max-w-4xl mx-auto px-6 my-12 lg:items-start lg:max-w-6xl">
     <form>
+      {% csrf_token %}
         <h3>BUSINESS PROFILE</h3>
         
         <label for="yearEstablished">YEAR ESTABLISHED:</label>
@@ -71,7 +77,12 @@
         <label for="tradeAssociation">TRADE ASSOCIATION AFFILIATION/S:</label>
         <input type="text" id="tradeAssociation" name="tradeAssociation">
         
-        <input type="submit" value="Submit">
+        <!--SUBMIT / BACK Button-->
+        <div class="flex justify-between mt-12">
+            <a class="text-lg text-turquoise hover:text-skyBlue" href="{% url 'msme_profile' %}"><< Back</a>
+            <button class="rounded bg-turquoise hover:bg-skyBlue w-52 h-auto px-4 py-2 text-white font-bold" type="submit">SUBMIT</button>
+        </div>
       </form>
-      
 </div>
+
+{% endblock pageContent %}

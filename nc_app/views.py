@@ -105,10 +105,11 @@ def contact_us(request):
     if request.method == 'POST':
         name = request.POST['fullname']
         business_name = request.POST['business_name']
+        address = request.POST['address']
         email = request.POST['email']
         contact_number = request.POST['contact_number']
         comment = request.POST['comment']
-        client_feedback = ClientFeedback(name=name, business_name=business_name, email=email, contact_number=contact_number, comment=comment)
+        client_feedback = ClientFeedback(name=name, business_name=business_name, email=email, contact_number=contact_number, comment=comment, address=address)
         client_feedback.save()
         messages.success(request, 'Your feedback has been received. Thank you!')
         return redirect('contact_us')

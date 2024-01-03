@@ -15,11 +15,10 @@ function handleLevelChange() {
 }
 
 function handleOtherLevelsChange() {
-    if (level0Radio.checked || level2Radio.checked || level3Radio.checked || level4Radio.checked || ceased.checked) {
-        subLevelOptions.style.display = "none";
-    } else {
+    if (level1Radio.checked) {
         subLevelOptions.style.display = "block";
-    }
+    };
+    subLevelOptions.style.display = "none";
 }
 
 level0Radio.addEventListener("change", handleOtherLevelsChange);
