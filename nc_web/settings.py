@@ -45,6 +45,7 @@ INSTALLED_APPS = [
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
+    'whitenoise.middleware.WhiteNoiseMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
@@ -59,7 +60,7 @@ ROOT_URLCONF = 'nc_web.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [BASE_DIR/'templates'],
+        'DIRS': ['templates','static'],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -149,5 +150,6 @@ INTERNAL_IPS = ['.vercel.app','now.sh','127.0.0.1','localhost'],
 
 LOGIN_URL = 'user_login'
 
-STATICFILES_DIRS = os.path.join(BASE_DIR, 'static'),
+STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles_build', 'static')
