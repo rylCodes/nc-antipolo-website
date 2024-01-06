@@ -1,0 +1,4 @@
+{
+    "appService.defaultWebAppToDeploy": "/subscriptions/ac897c7d-94ca-448b-bd86-3f20130c3a0f/resourceGroups/appsvc_linux_centralus/providers/Microsoft.Web/sites/negosyocenter-antipolo",
+    "appService.deploySubpath": "."
+}

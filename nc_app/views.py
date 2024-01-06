@@ -91,13 +91,13 @@ def assistance(request):
 
 
 # Registration Page.
-def registration(request):
+def business_registration(request):
     business_types = BusinessType.objects.all()
     context = {
         'page_title': 'Business Registration',
         'business_types': business_types
     }
-    return render(request, 'registration.html', context)
+    return render(request, 'business-registration.html', context)
 
 
 # Contact Us Page.
