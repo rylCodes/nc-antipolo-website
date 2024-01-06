@@ -25,16 +25,11 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-nidqmhf*cc#kv4o0v$uq=-winrd+@#@w&#+njkde3!!-w7ib+z'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-hostname = socket.gethostname
-
-if hostname == '127.0.0.1' or hostname == 'localhost':
-    DEBUG = True
-else:
-    DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = ['negosyocenter-antipolo.azurewebsites.net', '127.0.0.1', 'localhost']
 
-CSRF_TRUSTED_ORIGINS = ['https://negosyocenter-antipolo.azurewebsites.net', '127.0.0.1', 'localhost']
+CSRF_TRUSTED_ORIGINS = ['https://negosyocenter-antipolo.azurewebsites.net']
 
 
 # Application definition
